@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace-manifest.json",
+  "name": "humanizer-hu",
+  "owner": {
+    "name": "Dexxter182",
+    "url": "https://github.com/Dexxter182"
+  },
+  "description": "A Humanizer-hu telepítése Claude pluginként.",
+  "plugins": [
+    {
+      "name": "humanizer-hu",
+      "source": "./",
+      "description": "AI-jellegű magyar szöveg átírása úgy, hogy természetesen szóljon, és a tartalma ne változzon.",
+      "license": "MIT",
+      "keywords": ["writing", "editing", "humanize", "prose", "style", "hungarian", "magyar"]
+    }
+  ]
+}
