@@ -1,22 +1,22 @@
 ---
 name: humanizer-hu
-description: |
-  Rewrite AI-sounding Hungarian text so it reads like the writer without changing what it says.
-  Use when editing or reviewing Hungarian prose for AI tells. For English text use blader/humanizer.
-  Magyar nyelvű, AI-jellegű szöveg átírása úgy, hogy az író hangján szóljon, és a tartalma ne változzon.
-  Használd, ha magyar prózát kell szerkeszteni vagy átnézni AI-jelek miatt: "nem X, hanem Y" ellentétek,
-  egysoros zárások, felvezetések, erőltetett hármasok, gondolatjelek mindenhol, felfújt jelentőség,
-  reklámnyelv, AI-szavak, "kerül" passzív, tükörfordítás, félkövér címkék, töltelék, tegezés és magázás keveredése.
+description: >
+  AI-jellegű magyar szöveg átírása vagy új magyar szöveg megírása úgy, hogy ne legyenek benne az AI-írás jelei,
+  és a tartalom ne változzon. Használd, ha magyar prózát kell szerkeszteni, átnézni vagy megfogalmazni, vagy ha
+  a kérés ilyesmi: "humanizáld", "írd meg emberi hangon", "ne hangozzon AI-nak", "írd át természetesre". Jelek:
+  "nem X, hanem Y" ellentétek, egysoros zárások, felvezetések, erőltetett hármasok, gondolatjelek mindenhol,
+  felfújt jelentőség, reklámnyelv, AI-szavak, "kerül" passzív, tükörfordítás, félkövér címkék, töltelék,
+  tegezés és magázás keveredése.
 license: MIT
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
 ---
 
-# Humanizer-hu: AI-írásminták eltávolítása magyar szövegből
+# Humanizer-hu: magyar szöveg AI-jelek nélkül
 
-Írd át az AI-jellegű magyar szöveget úgy, hogy az íróra hasonlítson, ne chatbotra. Tartsd meg, amit mond. Ne találj ki semmit.
+Írj vagy írj át magyar szöveget úgy, hogy ne legyenek benne az alábbi jelek. Átíráskor tartsd meg, amit a szöveg mond, és ne találj ki semmit. Új szöveg írásakor ugyanezeket a jeleket kerüld el már az első vázlatban, és csak azt állítsd, amit a kérés vagy a forrás tartalmaz.
 
-Ez a skill csak magyar szöveget kezel. Ha a kapott szöveg angol vagy más nyelvű, jelezd, és javasold az eredeti blader/humanizer skillt.
+Ez a skill csak magyar szöveget kezel. Ha a kapott vagy megírandó szöveg angol vagy más nyelvű, jelezd, és javasold az eredeti blader/humanizer skillt.
 
 ## Miért hangzik így az AI-szöveg
 
