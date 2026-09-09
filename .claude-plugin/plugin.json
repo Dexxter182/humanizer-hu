@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "humanizer-hu",
+  "description": "AI-jellegű magyar szöveg átírása úgy, hogy természetesen szóljon, és a tartalma ne változzon.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dexxter182",
+    "url": "https://github.com/Dexxter182"
+  },
+  "homepage": "https://github.com/Dexxter182/humanizer-hu",
+  "repository": "https://github.com/Dexxter182/humanizer-hu",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "humanize", "prose", "style", "hungarian", "magyar"],
+  "skills": ["./"]
+}
