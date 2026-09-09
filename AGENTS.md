@@ -4,14 +4,14 @@ Ez a fájl elmondja, hogyan lehet a Humanizer-hu-t módosítani anélkül, hogy 
 
 ## Mi van a repóban
 
-A Humanizer-hu egy Markdownban írt ügynök-skill, a blader/humanizer 3.0.0 magyar adaptációja. A `SKILL.md` a prompt, amit az ügynökök olvasnak. Nincs build lépés.
+A Humanizer-hu egy Markdownban írt ügynök-skill: a magyar próza megfogalmazási szabályait adja szöveg generálásához. A szerkezetet a hívó feladat adja, ez a skill a nyelvet. A `SKILL.md` a prompt, amit az ügynökök olvasnak. Nincs build lépés.
 
 Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két ügynök-eszközre korlátozza.
 
 ## Fő fájlok
 
-- `SKILL.md` az igazság forrása és a repo egyetlen skill fájlja. Hordozható YAML metaadatot, egy magyarázatot arról, miért hangzik így az AI-szöveg, és hat csoportba rendezett, számozott mintákat tartalmaz, erősség és gyakoriság szerint sorrendben.
-- `README.md` a telepítést, a használatot, a mintákat, az eredetire való leképezést és a verziótörténetet írja le.
+- `SKILL.md` az igazság forrása és a repo egyetlen skill fájlja. Hordozható YAML metaadatot, egy magyarázatot arról, miért hangzik így az AI-szöveg, egy dokumentumszintű réteget (számozatlan, az első mondat előtti döntések), hat csoportba rendezett számozott mintákat és egy ellenőrző kört tartalmaz.
+- `README.md` a telepítést, a használatot, a mintákat, az eredetet és a verziótörténetet írja le.
 - `.claude-plugin/plugin.json` a Claude plugint írja le, és a skill betöltőjét a gyökér `SKILL.md`-re irányítja.
 - `.claude-plugin/marketplace.json` teszi lehetővé, hogy a repót Claude marketplace-ként lehessen hozzáadni.
 - `agents/openai.yaml` a megjelenített nevet, a rövid leírást és az alapértelmezett promptot tartalmazza OpenAI-kompatibilis ügynökökhöz.
@@ -19,15 +19,15 @@ Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két üg
 
 ## Viszony az eredetihez
 
-A minták számozása az eredeti 3.0.0-t követi, hogy egy későbbi upstream változás könnyen átvezethető legyen. Az eltérések: a 10. minta cserélődött (anglicizmusok és tükörfordítások), a 11. bővült ("kerül" passzív), a 26. új. A leképezés a README-ben van.
+A 2.0.0 óta a két projekt célja eltér: a blader/humanizer meglévő szöveget ír át, a Humanizer-hu generáláshoz ad szabályokat. A 26 minta számozása azért követi az eredeti 3.0.0-t, mert onnan indult a lista, és a hivatkozások erre épülnek. Az eltérések: a 10. minta cserélődött (anglicizmusok és tükörfordítások), a 11. bővült ("kerül" passzív), a 26. új, a dokumentumszintű rétegnek pedig nincs upstream megfelelője. A leképezés a README "Eredet" szakaszában van.
 
-Upstream változás átvezetésekor: nézd meg az eredeti verziótörténetét, azonosítsd az érintett mintát a számozás alapján, vezesd át magyarul, és a README verziótörténetében hivatkozz az upstream verzióra.
+Az upstream továbbra is hasznos bemenet egy új mintához, de nem kötelező tükör. Ha átveszel onnan valamit, fogalmazd meg generálási szabályként, és a README verziótörténetében hivatkozz az upstream verzióra.
 
 ## Szabályok a változtatáshoz
 
 Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
-- Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új jel csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, a leképezést és minden §hivatkozást. A validátor a címsorokból számolja a darabszámot.
+- Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új jel csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. A validátor a címsorokból számolja a darabszámot.
 - Verzió: ugyanaz a verzió legyen a `SKILL.md`-ben a `metadata.version` alatt, a README első verzióbejegyzésében és a `.claude-plugin/plugin.json`-ban. Ne adj a skillhez felső szintű `version` mezőt.
 - Kompatibilitás: a telepítési és használati utasítás maradjon ügynök-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
 - Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet.
@@ -35,7 +35,7 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
 ## Tipográfia a repóban
 
-A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett, félkövér csak ott, ahol a promptban szerkezeti címke (Figyeld, Probléma, Előtte, Utána). A `README.md` és ez a fájl nem használ félkövért. A `SKILL.md` "Előtte" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell észrevenni.
+A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett, félkövér csak ott, ahol a promptban szerkezeti címke (Figyeld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
 
 ## Írásmód
 
@@ -58,5 +58,7 @@ Használj közérthető nyelvet a megjegyzésekben, promptokban, dokumentációb
 
 - A YAML metaadat maradjon érvényes.
 - A metaadat alatti prompt a termék.
+- A skill generálásra való. Ne írj bele átíró folyamatot, kimeneti jelentést vagy fájlkezelést; azok a hívó feladat dolgai.
+- Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Figyeld:` szólista, a `Ne írd` egy mondat; ahol a jel szerkezeti, ott állhat több soros példa.
 - Egy rövid, világos utasítás jobb, mint még egy kivétel vagy ismételt magyarázat.
 - A 12. minta szólistája megfigyelésen alapul. Új szó csak akkor kerüljön be, ha több AI-szövegben előfordult, és emberi szövegben ritka.

@@ -1,4 +1,4 @@
 interface:
   display_name: "Humanizer-hu"
-  short_description: "AI-jellegű magyar szöveg átírása az író hangjára"
-  default_prompt: "Use $humanizer-hu to rewrite this Hungarian text in my voice without changing its facts."
+  short_description: "Magyar próza megfogalmazási szabályai szöveg generálásához"
+  default_prompt: "Use $humanizer-hu for the Hungarian prose rules while you write this document."
