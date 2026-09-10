@@ -87,10 +87,10 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
-| 1 | Nem X, hanem Y | "Nem csupán technikai módosítás, hanem a teljes ügyfélélmény újragondolása" | Mondd ki a lényeget |
-| 2 | Egysoros zárások és töredékek | "Nem volt előfeltevése. Nem volt kedvence. Ennyi." | Természetes mondathossz, konkrét állítás |
-| 3 | Mélynek hangzó szólamok | "A következetesség a bizalom nyelve" | A konkrét állítás |
-| 4 | Felvezetés a lényeg előtt | "Nézzük meg közelebbről", "Őszintén?" | Kezdd a tartalommal |
+| 1 | Hamis ellentét (nem X, hanem Y) | "Nem csupán technikai módosítás, hanem a teljes ügyfélélmény újragondolása" | Mondd ki a lényeget |
+| 2 | Egysoros zárások és töredékek | "Nincs migráció. Nincs leállás. Nincs kockázat. Ez a lényeg." | Természetes mondathossz, konkrét állítás |
+| 3 | Mélynek hangzó szólamok | "A naplózás a rendszer memóriája" | A konkrét állítás |
+| 4 | Felvezetés a lényeg előtt | "Az alábbiakban áttekintjük", "Nézzük meg közelebbről" | Kezdd a tartalommal |
 | 5 | Vita senkivel | "Csábító megoldás lenne..., de" | Csak valódi alternatíva; ADR-ben rovat |
 
 ### B. Ritmus és tükörfordítás
