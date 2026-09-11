@@ -188,3 +188,57 @@ gondosan fogalmaznak, mint a fordítók. Ez pontosan a skill célterülete.
   ha megtartjuk.
 - "-ra/-re fókuszál" kiesett: a -ra/-re a magyar vonzat, az "összpontosít" is
   azt kéri, a "fókuszál" pedig meghonosodott szó.
+
+## §11. Passzív szerkezetek és elrejtett cselekvő
+
+A magyar nyelvművelés neve erre a családra **terpeszkedő szerkezet**, a
+nyelvészeti irodalomban **funkcióigés szerkezet**. A névszó viszi a fogalmi
+jelentést, az ige a nyelvtanit; az "aláírásra kerül" is ide tartozik. A
+szerkezet létrehozásának két fő indítéka a személytelen fogalmazásra és a
+formális stílusra való törekvés.
+
+Heltai Pál és Gósy Mária empirikus vizsgálata három dolgot mond, és kettő
+óvatosságra int:
+
+1. A teljes mintán nincs szignifikáns feldolgozási különbség a terpeszkedő és
+   az egyszerű alak között; az eltérés 45 ms, tendencia.
+2. A nyelvművelés által helytelenített részhalmazban viszont a különbség
+   140 ms, és szignifikáns (p<0,016).
+3. A fordított szövegekben nem volt több terpeszkedő szerkezet, mint az
+   eredeti magyarokban, inkább kevesebb. Ez tehát nem fordításnyelv, hanem
+   magyar hivatali regiszter, ellentétben a §10-zel.
+
+B. Kovács Mária jogi nyelvi elemzése hozzáteszi, hogy gyakran nincs olyan
+egyszerű ige, ami megfelelne a szerkezetnek, vagy az mást jelent. Ezért a
+minta nem tilt, hanem feltételhez köti: egyszerű ige ott, ahol van azonos
+jelentésű.
+
+- Heltai Pál - Gósy Mária: A terpeszkedő szerkezetek hatása a feldolgozásra.
+  Magyar Nyelvőr.
+  http://nyelvor.c3.hu/period/1294/129406.pdf
+- B. Kovács Mária: A funkcióigés szerkezetek a jogi szaknyelvben. Magyar
+  Nyelvőr, 1999/4.
+  http://nyelvor.c3.hu/period/1234/123403.htm
+- Lanstyák István: A funkcióigés szerkezetek néhány általános kérdéséről.
+  https://web.unideb.hu/~tkis/li_funkcioiges_szerk_alt.pdf
+- Terpeszkedő kifejezések, nyelvhelyesség, fordítás. Filológia.hu.
+  http://www.filologia.hu/kisebb-kozlemenyek/terpeszkedo-kifejezesek-nyelvhelyesseg-forditas.html
+
+A cím "hiányzó alany" helyett "elrejtett cselekvő" lett, mert a magyar
+pro-drop nyelv: az alany elhagyása szabályos, és a §7 elő is írja. A
+"alanytalan tőmondat" tétel kiesett, mert a példamondatnak ("Konfigurációs
+fájl nem szükséges.") van alanya, és jó magyar.
+
+## Nyitott kérdések
+
+Ide gyűlik, amit menet közben félretettünk.
+
+- "jó eséllyel": kikerült a §10-ből, mert nem anglicizmus. A §9-be tenném
+  bizonytalanítóként, de a §9 már lezárult. Döntés kell.
+- "ez csak következtetés": kikerült a §9-ből. A §23-ba való, amikor odaérünk.
+- Szándékos ködösítés: van, amikor a homályos fogalmazás a feladat, például
+  release note-ban vagy nagyon magas szintű összefoglalóban. A §11, §14 és
+  §17 ilyenkor túl szigorú. A dokumentumszintű réteg kezelhetné, de egyelőre
+  nincs benne. Megbeszélendő a kör végén.
+- A forrásgyűjtemény megjelenítése: README-szakasz, ez a fájl linkelve, vagy
+  a SKILL.md "Forrás" szakaszának bővítése.

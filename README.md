@@ -102,7 +102,7 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 | 8 | Gondolatjel mint kötőelem | "## Teljesítmény — mit mértünk" | Kettőspont a címben; pont, vessző, zárójel a mondatban |
 | 9 | Halmozott bizonytalanítás | "esetleg akár talán" | "lehet" |
 | 10 | Anglicizmusok és tükörfordítások | "Ez egy jelentős kihívás", "navigálni a kihívások között" | Magyar szerkezet, a szakszó marad |
-| 11 | Passzív és hiányzó alany | "betöltésre kerülnek", "a mentés automatikusan történik" | Nevezd meg, ki mit csinál |
+| 11 | Passzív és elrejtett cselekvő | "betöltésre kerülnek", "a mentés automatikusan történik" | Nevezd meg, ki mit csinál |
 
 ### C. Felfújás
 
@@ -180,7 +180,7 @@ A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír á
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) a mintalista forrása, a [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) gondozza.
 - [blader/humanizer](https://github.com/blader/humanizer) az eredeti skill, amelyből ez a projekt indult.
-- A magyar nyelvi jelek (10, 11, 26), a 12. minta szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.
+- A magyar nyelvi megfigyelések (10, 11, 26), a 12. minta szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.
 
 ## Verziótörténet
 

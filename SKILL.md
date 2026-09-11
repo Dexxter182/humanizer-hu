@@ -98,14 +98,14 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 ### 4. Felvezetés a lényeg előtt
 
 **Kerüld:** nézzük meg közelebbről, vágjunk bele, lássuk, vegyük sorra, íme, amit tudnod kell, most nézzük, az alábbiakban áttekintjük, ebben a szakaszban bemutatjuk, mielőtt belemennénk a részletekbe, kezdjük az alapokkal, egy fontos megjegyzés, gyors megjegyzés, Őszintén?, Nézd, A helyzet az, hogy, Az igazság az, hogy, Legyünk őszinték, Mondjuk ki
-**Probléma:** Bejelenti a pontot vagy megrendezi az őszinteség pillanatát ahelyett, hogy kimondaná a pontot. Kezdd a tartalommal. Az "őszintén" vagy a "nézd" egy laza mondat belsejében hétköznapi; a jel az önálló nyitás egy rutin állítás előtt.
+**Probléma:** Bejelenti a pontot vagy megrendezi az őszinteség pillanatát ahelyett, hogy kimondaná a pontot. Kezdd a tartalommal. Az "őszintén" vagy a "nézd" egy laza mondat belsejében hétköznapi; gépiessé az teszi, ha önálló nyitás áll egy rutin állítás előtt.
 **Ne írd:** "Az alábbiakban áttekintjük, hogyan működik a gyorsítótár a mobil kliensben. Mielőtt belemennénk a részletekbe, kezdjük az alapokkal."
 **Így írd:** "A mobil kliens három szinten gyorsítótáraz: a kérés, a válasz és a navigáció szintjén."
 
 ### 5. Vita senkivel
 
 **Kerüld:** ez nem (elsősorban) arról szól, nem azt mondom, tisztázzuk, félreértés ne essék, ez nem jelenti, hogy, felmerülhet a kérdés, hogy, elsőre úgy tűnhet, hogy... valójában azonban, sokan gondolják úgy, hogy, egyesek szerint... de, csábító megoldás lenne, könnyű lenne azt gondolni, kézenfekvő megközelítés lenne, azt gondolhatnánk... de
-**Probléma:** Olyan ellenvetésre válaszol vagy olyan lehetőséget utasít el, ami sehol máshol nem jelenik meg. Ne találj ki ellenvetést azért, hogy megcáfold. Azt az alternatívát írd le, amit az olvasó tényleg mérlegelne, vagy amit a hívó feladat kér. Ahol a feladat maga kéri az alternatívák mérlegelését, ott az elvetett opció tartalom, nem jel.
+**Probléma:** Olyan ellenvetésre válaszol vagy olyan lehetőséget utasít el, ami sehol máshol nem jelenik meg. Ne találj ki ellenvetést azért, hogy megcáfold. Azt az alternatívát írd le, amit az olvasó tényleg mérlegelne, vagy amit a hívó feladat kér. Ahol a feladat maga kéri az alternatívák mérlegelését, ott az elvetett opció tartalom, nem gépiesség.
 **Ne írd:** "Csábító megoldás lenne a hitelesítő szolgáltatás újraindításával cserélni a tokeneket, de az minden aktív munkamenetet eldobna."
 **Így írd:** "A hitelesítő szolgáltatás 24 óránként helyben cseréli a munkamenet-tokeneket, a kliensek észrevétlenül frissítenek."
 
@@ -113,7 +113,7 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 
 ### 6. Erőltetett hármasok
 
-**Probléma:** A gondolatok hármasával érkeznek, hogy teljesnek hangozzanak, akár három részű a jelentés, akár nem. Két alakja a leggyakoribb: három értékelő melléknév, és három rövid, párhuzamos szerkezet. A hármas magában klasszikus alakzat, a magyar stilisztika halmozásként tartja számon, ezért a forma önmagában nem jel; akkor válik azzá, ha üres, vagy ha ott áll, ahol senki nem bajlódna stílusfogással. Annyi elemet írj, amennyit a jelentés kér; ha tényleg három van, írj hármat.
+**Probléma:** A gondolatok hármasával érkeznek, hogy teljesnek hangozzanak, akár három részű a jelentés, akár nem. Két alakja a leggyakoribb: három értékelő melléknév, és három rövid, párhuzamos szerkezet. A hármas magában klasszikus alakzat, a magyar stilisztika halmozásként tartja számon, ezért a forma önmagában nem gépies; akkor válik azzá, ha üres, vagy ha ott áll, ahol senki nem bajlódna stílusfogással. Annyi elemet írj, amennyit a jelentés kér; ha tényleg három van, írj hármat.
 **Ne írd:**
 > Az új export gyors, megbízható és könnyen bővíthető. A felhasználók időt, energiát és költséget takarítanak meg vele.
 **Így írd:**
@@ -121,7 +121,7 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 
 ### 7. Ismétlődő mondatkezdés
 
-**Probléma:** Több egymást követő mondat ugyanúgy kezdődik ("Ez", "A rendszer", "A felhasználó") vagy ugyanazzal az igei szerkezettel. A magyar elhagyja az alanyt, ha az előző mondatból folytatódik; a kiírt alany újramondása az angol szerkezet nyoma, mert ott az alany kötelező. Az "ez" is tipikusan a megelőző mondat nem topik elemére mutat vissza, nem a folytatódó alanyra. Hagyd el az alanyt, vond össze a mondatokat, vagy kezdj a cselekvéssel. Egy mondat továbbra is kezdődhet "A rendszer"-rel, és a sablon kötött, ismétlődő formája szándékos, nem jel.
+**Probléma:** Több egymást követő mondat ugyanúgy kezdődik ("Ez", "A rendszer", "A felhasználó") vagy ugyanazzal az igei szerkezettel. A magyar elhagyja az alanyt, ha az előző mondatból folytatódik; a kiírt alany újramondása az angol szerkezet nyoma, mert ott az alany kötelező. Az "ez" is tipikusan a megelőző mondat nem topik elemére mutat vissza, nem a folytatódó alanyra. Hagyd el az alanyt, vond össze a mondatokat, vagy kezdj a cselekvéssel. Egy mondat továbbra is kezdődhet "A rendszer"-rel, és a sablon kötött, ismétlődő formája szándékos, nem gépies.
 **Ne írd:**
 > A rendszer ellenőrzi a jogosultságot. A rendszer naplózza a kérést a kérés-azonosítóval együtt. A rendszer ezután elküldi a választ.
 **Így írd:**
@@ -130,7 +130,7 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 ### 8. Gondolatjel mint univerzális kötőelem
 
 **Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar.
-**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a jel maga a szokás, nem a karakter, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
+**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
 **Ne írd:**
 > ## Teljesítmény — mit mértünk
 >
@@ -143,21 +143,21 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 ### 9. Egymásra halmozott bizonytalanítás
 
 **Kerüld:** az is lehetséges, esetleg akár, elképzelhető, hogy, adott esetben, bizonyos esetekben előfordulhat, bizonyos mértékben, nem feltétlenül, talán mondhatni, általánosságban elmondható
-**Probléma:** Egyik bizonytalanító a másik után, míg minden állítás bizonytalannak hangzik. Magyarban a halmozás gyakran a szón belül kezdődik: a -hat/-het képző maga is lehetőséget jelöl ("előfordulhat"), a modell pedig erre rak még egy-két szót. A készlet nagyrészt közös a hivatali nyelvvel. Egy bizonytalanítót akkor írj, ha a forrás alátámasztja és a jelentésnek kell. A hatókör-megjelölés, a jogi és biztonsági figyelmeztetés és a hétköznapi óvatosság ("általában") nem jel.
+**Probléma:** Egyik bizonytalanító a másik után, míg minden állítás bizonytalannak hangzik. Magyarban a halmozás gyakran a szón belül kezdődik: a -hat/-het képző maga is lehetőséget jelöl ("előfordulhat"), a modell pedig erre rak még egy-két szót. A készlet nagyrészt közös a hivatali nyelvvel. Egy bizonytalanítót akkor írj, ha a forrás alátámasztja és a jelentésnek kell. A hatókör-megjelölés, a jogi és biztonsági figyelmeztetés és a hétköznapi óvatosság ("általában") nem gépies.
 **Ne írd:** "Esetleg akár azt is lehetne mondani, hogy a változtatás bizonyos esetekben talán hatással lehet a teljesítményre."
 **Így írd:** "A változtatás hatással lehet a teljesítményre."
 
 ### 10. Anglicizmusok és tükörfordítások
 
 **Kerüld:** "Ez egy..." és a határozatlan névelő ott, ahol a magyar nem tesz ("ez egy fontos lépés", "egy jelentős kihívás"); kihívás probléma vagy feladat helyett; navigálni a kihívások között; címezni a problémát; biztosítja, hogy; lehetővé teszi, hogy; képes arra, hogy; amikor arról van szó, hogy; egy olyan X, amely; Íme; -val/-vel kapcsolatban; jelentős mértékben; [valami] szinten; felesleges "az, hogy" beékelés; a birtokos szerkezet megfordítása ("a teljesítménye a rendszernek"); angol szórend, ahol az időhatározó a mondat végére csúszik ("A csapat befejezte a migrációt a múlt héten")
-**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. Ennek magyar neve van, fordításnyelv, és a szaknyelvben a legerősebb, mert a szakszöveg angol forrásból készül. A jel a szerkezet, nem a szókincs. Az angol szakszavak (sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
+**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. Ennek magyar neve van, fordításnyelv, és a szaknyelvben a legerősebb, mert a szakszöveg angol forrásból készül. A gépiesség a szerkezetben van, nem a szókincsben. Az angol szakszavak (sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
 **Ne írd:** "Ez egy jelentős kihívás a csapat számára, és a migráció egy jó lehetőség arra, hogy címezzük a technikai adósságot."
 **Így írd:** "A migráció nehéz feladat a csapatnak, de közben a technikai adósság egy részét is ledolgozzuk."
 
-### 11. Passzív szerkezetek és hiányzó alany
+### 11. Passzív szerkezetek és elrejtett cselekvő
 
-**Kerüld:** kerül + -ra/-re főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); történik + főnév (a mentés automatikusan történik); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után); alanytalan tőmondat ("Konfigurációs fájl nem szükséges.")
-**Probléma:** A szöveg elrejti, ki cselekszik, vagy elhagyja az alanyt. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös jele, és sűrűn jön, ezért erős. Nevezd meg, ki mit csinál. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem jel.
+**Kerüld:** kerül + -ra/-re főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); sor kerül arra, hogy; történik + főnév (a mentés automatikusan történik); terpeszkedő szerkezet ott, ahol van azonos jelentésű egyszerű ige (módosítást hajt végre, ellenőrzést végez, döntést hoz); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után)
+**Probléma:** A szöveg elrejti, ki cselekszik. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös jele, és sűrűn jön, ezért erős; a modell azért nyúl érte, mert személytelen és formális akar lenni. Nevezd meg, ki mit csinál, és írj egyszerű igét ott, ahol van azonos jelentésű; ahol nincs, a szerkezet marad. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem gépies, és a folytatódó alany elhagyása sem az: az a §7 szerint helyes magyar.
 **Ne írd:** "A bejelentkezés elvégzését követően a felhasználói adatok betöltésre kerülnek. Az eredmények mentése automatikusan történik."
 **Így írd:** "Bejelentkezés után a rendszer betölti a felhasználói adatokat, és automatikusan menti az eredményeket."
 
@@ -167,24 +167,24 @@ A tény alatta általában rendben van. Írd le a tényt, öltözet nélkül.
 
 ### 12. Túlhasznált AI-szavak
 
-**Kerüld:** átfogó, alapvető fontosságú, dinamikus, elengedhetetlen, ezáltal, egyaránt, érdemes megjegyezni, fontos kiemelni, fontos megjegyezni, gondosan, hatékonyan, holisztikus, innovatív, izgalmas, jelentős, kiemelkedő, kulcsfontosságú, kulcsszerep, meghatározó, mélyreható, mérföldkő, mindemellett, nem utolsósorban, ökoszisztéma, összességében, összességében elmondható, precíz, robusztus (átvitt; a technikai értelem marad), sokszínű, számos, támogatja ("segít" helyett), tanúbizonyság, továbbá, tükrözi, valamint (halmozva), zökkenőmentes, csendben ("quietly"), "környezet" és "tájkép" a "landscape" fordításaként
-**Probléma:** A modell ezeket jóval gyakrabban használja, mint az emberek, főleg csoportosan. Írj köznapi szót, vagy konkrétumot az értékelő jelző helyett. Ez a skill egyetlen szólistája, és megfigyelésen alapul, nem korpuszon: egy ide nem tartozó választékos szó nem jel, és egy itt szereplő szó egyszeri előfordulása sem az.
+**Kerüld:** átfogó, alapvető fontosságú, dinamikus (átvitt; a technikai értelem marad), elengedhetetlen, ezáltal, egyaránt, érdemes megjegyezni, fontos kiemelni, fontos megjegyezni, gondosan, hatékonyan, holisztikus, innovatív, izgalmas, jelentős, kiemelkedő, kulcsfontosságú, kulcsszerep, meghatározó, mélyreható, mérföldkő, mindemellett, nem utolsósorban, ökoszisztéma, összességében, összességében elmondható, precíz, robusztus (átvitt; a technikai értelem marad), sokszínű, számos, támogatja ("segít" helyett), tanúbizonyság, továbbá, tükrözi, valamint (halmozva), zökkenőmentes
+**Probléma:** A modell ezeket jóval gyakrabban használja, mint az emberek, főleg csoportosan. Írj köznapi szót, vagy konkrétumot az értékelő jelző helyett. Egy ide nem tartozó választékos szó nem gépies, és egy itt szereplő szó egyszeri előfordulása sem az.
 **Ne írd:** "A platform átfogó és robusztus megoldást kínál, amely zökkenőmentes integrációt biztosít a meglévő SAP rendszerrel."
 **Így írd:** "A platform csatlakozik a meglévő SAP rendszerhez."
 
 ### 13. Felfújt jelentőség
 
-**Kerüld:** mérföldkövet jelent, fordulópont, kulcsszerepet játszik, meghatározó pillanat, kiemeli a fontosságát, szélesebb tendenciát tükröz, maradandó örökség, megalapozza, folyamatosan fejlődő környezet, kitörölhetetlen nyomot hagy; a kihívások ellenére... továbbra is fejlődik; Kihívások és kilátások, Jövőbeli tervek, Díjak és elismerések; a jövő fényes, izgalmas idők várnak, lépés a helyes irányba
-**Probléma:** Egy hétköznapi részletről azt állítja, hogy változást jelöl, örökséget bizonyít vagy jövőt ígér. Három léptékben jelenik meg: kifejezésként, sablon "kihívások és kilátások" szakaszként és búcsúzó bekezdésként. Írd a tényt, és zárj az utolsó konkrétummal; búcsúzó bekezdést ne írj. Ha a forrás valódi terveket ad, azokat használd.
-**Ne írd:** "Az önkiszolgáló portál bevezetése mérföldkövet jelentett a cég digitalizációjában. A jövő fényes, izgalmas idők várnak a csapatra."
-**Így írd:** "Az önkiszolgáló portál 2019-ben indult."
+**Kerüld:** mérföldkövet jelent, fordulópont, kulcsszerepet játszik, meghatározó pillanat, jelentős előrelépés, alapjaiban változtatja meg, új korszakot nyit, megalapozza, megnyitja az utat, kiemeli a fontosságát, szélesebb tendenciát tükröz, folyamatosan változó környezet; a jövő fényes, izgalmas idők várnak, lépés a helyes irányba
+**Probléma:** Egy hétköznapi részletről azt állítja, hogy változást jelöl vagy jövőt ígér. Három léptékben jelenik meg: kifejezésként, új tényt nem adó záró "Összegzés" vagy "Kitekintés" szakaszként, és búcsúzó bekezdésként. Írd a tényt, és zárj az utolsó konkrétummal; búcsúzó bekezdést ne írj. Ha a forrás valódi terveket ad, azokat használd.
+**Ne írd:** "A háttérfeldolgozás átállítása mérföldkövet jelent a platform fejlődésében, és megalapozza a jövőbeli skálázást. Izgalmas idők várnak a csapatra."
+**Így írd:** "A háttérfeldolgozás 2026 márciusától a sorkezelőn fut, így a csúcsterhelés nem blokkolja a kéréseket."
 
 ### 14. Homályos kapcsolat
 
 **Kerüld:** kapcsolódik, összefüggésben áll, köthető, kötődik, kapcsolatban áll, összefüggésbe hozható, együttműködésben
-**Probléma:** Azt mondja, két dolog összefügg, de nem mondja, hogyan. "A vezetéshez kötődik" elrejti, hogy vezérigazgató, igazgatósági tag vagy tanácsadó. Nevezd meg a viszonyt, amit a forrás ad. Ha a forrás nem mondja, maradj a homályos megfogalmazásnál, és ne találj ki szerepet.
-**Ne írd:** "Kovács a Mobilfizetés csapathoz kötődik. A workshopot az évfordulós rendezvényekkel összefüggésben szervezték."
-**Így írd:** "Kovács alapította és vezeti a Mobilfizetés csapatot. A workshop az évfordulós rendezvények része volt."
+**Probléma:** Azt mondja, két dolog összefügg, de nem mondja, hogyan. "A hiba a gyorsítótárhoz köthető" elrejti, hogy a gyorsítótár okozza, elszenvedi, vagy csak egyszerre romlott el vele. Nevezd meg a viszonyt, amit a forrás ad. A sejtés akkor rendben van, ha sejtésként áll, és ott van mellette, mi támasztja alá vagy mi hiányzik hozzá. Az a baj, amikor a homályos kötőelem elfedi, feltevésről vagy megállapításról van-e szó.
+**Ne írd:** "A lassulás összefüggésbe hozható a legutóbbi release-szel. A gyorsítótár-modul kapcsolatban áll a fizetési szolgáltatással."
+**Így írd:** "A lassulás a 4.2-es release után kezdődött; a legvalószínűbb ok a gyorsítótár érvénytelenítése, de ezt még nem mértük ki. A gyorsítótár-modul a fizetési szolgáltatás REST API-ját hívja."
 
 ### 15. Felületes -va/-ve farkak
 
@@ -203,7 +203,7 @@ A tény alatta általában rendben van. Írd le a tényt, öltözet nélkül.
 ### 17. Kölcsönzött tekintély
 
 **Kerüld:** szakértők szerint, megfigyelők szerint, iparági jelentések, egyes kritikusok, több publikáció; idézte, bemutatta, szerepelt [médialista]; szakmai lapok, független sajtó; aktív jelenlét a közösségi médiában, N követő
-**Probléma:** Egy név vagy egy meg nem nevezett tekintély áll ott ahelyett, amit mondtak. Névtelen szakértők támasztanak alá egy állítást; egy presztízslista támaszt alá egy személyt. Ha a forrás megnevezi a valódi forrást és azt, amit mondott, azt írd; egyébként hagyd el az állítást. Forrást soha ne találj ki. A hiányzó hivatkozás önmagában nem jel; a legtöbb írás forrás nélküli.
+**Probléma:** Egy név vagy egy meg nem nevezett tekintély áll ott ahelyett, amit mondtak. Névtelen szakértők támasztanak alá egy állítást; egy presztízslista támaszt alá egy személyt. Ha a forrás megnevezi a valódi forrást és azt, amit mondott, azt írd; egyébként hagyd el az állítást. Forrást soha ne találj ki. A hiányzó hivatkozás önmagában nem gépies; a legtöbb írás forrás nélküli.
 **Ne írd:** "A szakértők szerint a rendszer kulcsszerepet játszik a hazai fizetési piacon. Munkáját idézte a Portfolio, a HVG, a Forbes és az Index."
 **Így írd:** "A rendszert kutatók és szakemberek vizsgálják az egyedi jellemzői miatt."
 
@@ -216,7 +216,7 @@ A tény alatta általában rendben van. Írd le a tényt, öltözet nélkül.
 
 ## D. Formázás
 
-Sablonok és vizuális szerkesztők is tiszta formázást adnak. A jel a díszítés minden elemen.
+Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a díszítés minden elemen.
 
 ### 19. Félkövér mint dekoráció
 
@@ -232,7 +232,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A jel a díszí
 ### 20. Dekoratív címsorok
 
 **Szabály:** A címsor mondatkezdő nagybetűs. Ne tegyél emojit, nyilat (→) vagy más díszt címsorba és listaelembe, és ne rakj vízszintes vonalat a szakaszok közé. A dokumentum ne induljon a saját címét ismétlő első szintű címsorral.
-**Probléma:** A címsor Minden Szavát Nagybetűvel írni angol szokás (Title Case), a magyar helyesírásban nem létezik, ezért egy előfordulás is egyértelmű jel.
+**Probléma:** A címsor Minden Szavát Nagybetűvel írni angol szokás (Title Case), a magyar helyesírásban nem létezik, ezért egy előfordulás is egyértelműen gépies.
 **Ne írd:**
 > ## Stratégiai Tárgyalások És Globális Partnerségek
 >
@@ -245,7 +245,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A jel a díszí
 ### 21. Tipográfiai idézőjelek
 
 **Szabály:** Egyenes idézőjelet írj ("..."), a magyar „..." és az angol “...” helyett is. Kódblokkban, inline kódban és idézett azonosítóban ne nyúlj hozzá.
-**Probléma:** A magyar „..." önmagában nem AI-jel, mert a legtöbb szerkesztő automatikusan görbít; itt tipográfiai egységesítésről van szó. Az angol “...” viszont jel is: magyar szövegben egyik szerkesztő sem állítja elő.
+**Probléma:** A magyar „..." önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít; itt tipográfiai egységesítésről van szó. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
 
 ## E. Maradványok
 
@@ -304,14 +304,14 @@ Mielőtt visszaadod a szöveget, olvasd át egyszer, és nézd meg ezt a hetet. 
 6. "Kerül" passzív (§11)
 7. Tény, név, szám, dátum vagy forrás, ami nem a kérésből és nem a forrásból jön (§17, §23)
 
-Nézd a bekezdések alakját is, ne csak a mondatokat: a két mondatra osztott ellentét, a három párhuzamos példa és a minden szakasz után ismétlődő zárás ugyanaz a jel, nagyobb léptékben. Ha egy mondat suta marad, írd át a bekezdést a fő pontja köré.
+Nézd a bekezdések alakját is, ne csak a mondatokat: a két mondatra osztott ellentét, a három párhuzamos példa és a minden szakasz után ismétlődő zárás ugyanaz a gépiesség, nagyobb léptékben. Ha egy mondat suta marad, írd át a bekezdést a fő pontja köré.
 
 ## Mit hagyj békén
 
-A figyelt kifejezés nem jel idézetben, címben és tulajdonnévben, sem olyan szövegrészben, ami magáról a kifejezésről beszél. A levél és a hozzászólás megszólítása és elköszönése régebbi a chatbotoknál.
+A kerülendő kifejezés idézetben, címben és tulajdonnévben nem számít annak, sem olyan szövegrészben, ami magáról a kifejezésről beszél. A levél és a hozzászólás megszólítása és elköszönése régebbi a chatbotoknál.
 
 Változatlanul marad a kódblokk, az inline kód, a parancs, az útvonal, az URL, az azonosító, a sémamező, a YAML metaadat, az adat és a linkcél. A sablon rovatcímei és kötelező formája szintén: ha a hívó feladat formát ad, az nyer.
 
 ## Forrás
 
-A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvi jelek (§10, a §11 bővítése, §26), a §12 szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.
+A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvi megfigyelések (§10, a §11 bővítése, §26), a §12 szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.

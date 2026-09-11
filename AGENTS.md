@@ -27,7 +27,7 @@ Az upstream továbbra is hasznos bemenet egy új mintához, de nem kötelező t�
 
 Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
-- Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új jel csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. A validátor a címsorokból számolja a darabszámot.
+- Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új megfigyelés csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. A validátor a címsorokból számolja a darabszámot.
 - Verzió: ugyanaz a verzió legyen a `SKILL.md`-ben a `metadata.version` alatt, a README első verzióbejegyzésében és a `.claude-plugin/plugin.json`-ban. Ne adj a skillhez felső szintű `version` mezőt.
 - Kompatibilitás: a telepítési és használati utasítás maradjon ügynök-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
 - Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet.
@@ -59,6 +59,6 @@ Használj közérthető nyelvet a megjegyzésekben, promptokban, dokumentációb
 - A YAML metaadat maradjon érvényes.
 - A metaadat alatti prompt a termék.
 - A skill generálásra való. Ne írj bele átíró folyamatot, kimeneti jelentést vagy fájlkezelést; azok a hívó feladat dolgai.
-- Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Kerüld:` szólista, a `Ne írd` egy mondat; ahol a jel szerkezeti, ott állhat több soros példa.
+- Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Kerüld:` szólista, a `Ne írd` egy mondat; ahol a gépiesség szerkezeti, ott állhat több soros példa.
 - Egy rövid, világos utasítás jobb, mint még egy kivétel vagy ismételt magyarázat.
 - A 12. minta szólistája megfigyelésen alapul. Új szó csak akkor kerüljön be, ha több AI-szövegben előfordult, és emberi szövegben ritka.
