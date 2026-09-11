@@ -42,11 +42,11 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 
 ### Hosszúság
 
-Írj annyit, amennyit a feladat kér, és ne többet. Egy user story nem lesz jobb bevezető bekezdéstől, egy ADR-nek nem kell összefoglalnia magát a végén, és semmihez nem kell záró gondolat. Ha a sablon rovatokat ad, azok a határok.
+Írj annyit, amennyit a feladat kér, és ne többet. A rövid dokumentum nem lesz jobb bevezető bekezdéstől, semminek nem kell összefoglalnia magát a végén, és semmihez nem kell záró gondolat. Ha a sablon rovatokat ad, azok a határok.
 
 ### Próza vagy felsorolás
 
-Az összefüggő gondolatok bekezdésben állnak. Felsorolást akkor írj, ha a tartalom tényleg tételes: lépések sorrendben, egymást kizáró opciók, mezők, feltételek, elfogadási kritériumok. Egy gondolatmenet nem lesz áttekinthetőbb attól, hogy minden mondata külön pontba kerül: a felsorolás elrejti a tagmondatok közötti viszonyt, amit a próza kimond.
+Az összefüggő gondolatok bekezdésben állnak. Felsorolást akkor írj, ha a tartalom tényleg tételes: lépések sorrendben, egymást kizáró opciók, mezők, feltételek. Egy gondolatmenet nem lesz áttekinthetőbb attól, hogy minden mondata külön pontba kerül: a felsorolás elrejti a tagmondatok közötti viszonyt, amit a próza kimond.
 
 ### Alcímek
 
@@ -58,7 +58,7 @@ Zárójelbe akkor tegyél valamit, ha új információt ad. Ne fordítsd le zár
 
 ### Regiszter
 
-Egy szövegben egy forma van végig: tegezés, magázás (ön, maga) vagy személytelen fogalmazás ("a felhasználó", "a rendszer"). A dokumentum fajtája dönt: specifikáció, ADR, dokumentáció és belső jegy személytelen, ügyfélnek szóló szöveg önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
+Egy szövegben egy forma van végig: tegezés, magázás (ön, maga) vagy személytelen fogalmazás ("a felhasználó", "a rendszer"). A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen, az ügyfélnek szóló önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
 
 ### Hang és szakszavak
 
@@ -104,54 +104,60 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 
 ### 5. Vita senkivel
 
-**Kerüld:** ez nem (elsősorban) arról szól, nem azt mondom, tisztázzuk, félreértés ne essék, ez nem jelenti azt, egyesek szerint... de, csábító megoldás lenne, könnyű lenne azt gondolni, egy kézenfekvő megközelítés az lenne, azt gondolhatnád... de, egyszerű lenne csak
-**Probléma:** Olyan ellenvetésre válaszol vagy olyan lehetőséget utasít el, ami sehol máshol nem jelenik meg. Ne találj ki ellenvetést azért, hogy megcáfold. Azt az alternatívát írd le, amit az olvasó tényleg mérlegelne, vagy amit a hívó feladat kér: ADR-ben az elvetett opciók tartalom, nem jel.
+**Kerüld:** ez nem (elsősorban) arról szól, nem azt mondom, tisztázzuk, félreértés ne essék, ez nem jelenti, hogy, felmerülhet a kérdés, hogy, elsőre úgy tűnhet, hogy... valójában azonban, sokan gondolják úgy, hogy, egyesek szerint... de, csábító megoldás lenne, könnyű lenne azt gondolni, kézenfekvő megközelítés lenne, azt gondolhatnánk... de
+**Probléma:** Olyan ellenvetésre válaszol vagy olyan lehetőséget utasít el, ami sehol máshol nem jelenik meg. Ne találj ki ellenvetést azért, hogy megcáfold. Azt az alternatívát írd le, amit az olvasó tényleg mérlegelne, vagy amit a hívó feladat kér. Ahol a feladat maga kéri az alternatívák mérlegelését, ott az elvetett opció tartalom, nem jel.
 **Ne írd:** "Csábító megoldás lenne a hitelesítő szolgáltatás újraindításával cserélni a tokeneket, de az minden aktív munkamenetet eldobna."
-**Így írd:** "A munkamenet-tokenek 24 óránként helyben cserélődnek, a kliensek észrevétlenül frissítenek."
+**Így írd:** "A hitelesítő szolgáltatás 24 óránként helyben cseréli a munkamenet-tokeneket, a kliensek észrevétlenül frissítenek."
 
 ## B. Ritmus és tükörfordítás
 
 ### 6. Erőltetett hármasok
 
-**Probléma:** A gondolatok hármasával érkeznek, hogy teljesnek hangozzanak, akár három részű a jelentés, akár nem. Megjelenik egy mondaton belül, három párhuzamos példaként, vagy három rövid tény és egy tanulság alakjában. Annyi elemet írj, amennyit a jelentés kér; ha tényleg három van, írj hármat.
+**Probléma:** A gondolatok hármasával érkeznek, hogy teljesnek hangozzanak, akár három részű a jelentés, akár nem. Két alakja a leggyakoribb: három értékelő melléknév, és három rövid, párhuzamos szerkezet. A hármas magában klasszikus alakzat, a magyar stilisztika halmozásként tartja számon, ezért a forma önmagában nem jel; akkor válik azzá, ha üres, vagy ha ott áll, ahol senki nem bajlódna stílusfogással. Annyi elemet írj, amennyit a jelentés kér; ha tényleg három van, írj hármat.
 **Ne írd:**
-> A workshop előadásokat, panelbeszélgetéseket és networking lehetőségeket kínál. A résztvevők innovációra, inspirációra és iparági betekintésre számíthatnak.
+> Az új export gyors, megbízható és könnyen bővíthető. A felhasználók időt, energiát és költséget takarítanak meg vele.
 **Így írd:**
-> A workshopon előadások és panelbeszélgetések lesznek, a szünetekben pedig idő a kötetlen beszélgetésre.
+> Az új export egy 50 ezer soros táblát 12 másodperc alatt ír ki, a korábbi négy perc helyett.
 
 ### 7. Ismétlődő mondatkezdés
 
-**Probléma:** Több egymást követő mondat ugyanúgy kezdődik ("Ez", "A rendszer", "A felhasználó") vagy ugyanazzal az igei szerkezettel. A magyar elhagyja a névmást, ezért itt a mutató névmás és a mondatkezdő alany ismétlődik. Vond össze a mondatokat, cseréld az alanyt, vagy kezdj a cselekvéssel. Egy mondat továbbra is kezdődhet "A rendszer"-rel, és a sablonos forma (user story, elfogadási feltétel) szándékos ismétlés, nem jel.
+**Probléma:** Több egymást követő mondat ugyanúgy kezdődik ("Ez", "A rendszer", "A felhasználó") vagy ugyanazzal az igei szerkezettel. A magyar elhagyja az alanyt, ha az előző mondatból folytatódik; a kiírt alany újramondása az angol szerkezet nyoma, mert ott az alany kötelező. Az "ez" is tipikusan a megelőző mondat nem topik elemére mutat vissza, nem a folytatódó alanyra. Hagyd el az alanyt, vond össze a mondatokat, vagy kezdj a cselekvéssel. Egy mondat továbbra is kezdődhet "A rendszer"-rel, és a sablon kötött, ismétlődő formája szándékos, nem jel.
 **Ne írd:**
-> A rendszer ellenőrzi a jogosultságot. A rendszer naplózza a kérést. A rendszer elküldi a választ.
+> A rendszer ellenőrzi a jogosultságot. A rendszer naplózza a kérést a kérés-azonosítóval együtt. A rendszer ezután elküldi a választ.
 **Így írd:**
-> A rendszer ellenőrzi a jogosultságot, naplózza a kérést, majd elküldi a választ.
+> A rendszer ellenőrzi a jogosultságot, majd a kérés-azonosítóval együtt naplózza a kérést. Ezután elküldi a választ.
 
 ### 8. Gondolatjel mint univerzális kötőelem
 
-**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre.
-**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A hosszú gondolatjel a magyar tipográfiában nem létezik, egy előfordulás is egyértelmű jel. A nagykötőjel (–) szabályos magyar írásjel: a közbevetésben állót cseréld, a számintervallumot (2024–2025) és a kötőjeles tulajdonnevet (Budapest–Bécs) hagyd. Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
-**Ne írd:** "Az új szabályzat — amit előzetes egyeztetés nélkül jelentettek be — több ezer dolgozót érint."
-**Így írd:** "Az új szabályzat, amit előzetes egyeztetés nélkül jelentettek be, több ezer dolgozót érint."
+**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar.
+**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a jel maga a szokás, nem a karakter, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
+**Ne írd:**
+> ## Teljesítmény — mit mértünk
+>
+> A migráció — amit eredetileg a következő sprintre terveztünk — hétfőn indul.
+**Így írd:**
+> ## Teljesítmény: mit mértünk
+>
+> A migráció hétfőn indul, bár eredetileg a következő sprintre terveztük.
 
 ### 9. Egymásra halmozott bizonytalanítás
 
-**Kerüld:** hogy őszinte legyek, az is lehetséges, esetleg akár, talán mondhatni, bizonyos esetekben előfordulhat, ez csak következtetés
-**Probléma:** Egyik bizonytalanító a másik után, míg minden állítás bizonytalannak hangzik. Egy bizonytalanítót akkor írj, ha a forrás alátámasztja és a jelentésnek kell. A hatókör-megjelölés, a jogi és biztonsági figyelmeztetés és a hétköznapi óvatosság ("általában") nem jel.
+**Kerüld:** az is lehetséges, esetleg akár, elképzelhető, hogy, adott esetben, bizonyos esetekben előfordulhat, bizonyos mértékben, nem feltétlenül, talán mondhatni, általánosságban elmondható
+**Probléma:** Egyik bizonytalanító a másik után, míg minden állítás bizonytalannak hangzik. Magyarban a halmozás gyakran a szón belül kezdődik: a -hat/-het képző maga is lehetőséget jelöl ("előfordulhat"), a modell pedig erre rak még egy-két szót. A készlet nagyrészt közös a hivatali nyelvvel. Egy bizonytalanítót akkor írj, ha a forrás alátámasztja és a jelentésnek kell. A hatókör-megjelölés, a jogi és biztonsági figyelmeztetés és a hétköznapi óvatosság ("általában") nem jel.
 **Ne írd:** "Esetleg akár azt is lehetne mondani, hogy a változtatás bizonyos esetekben talán hatással lehet a teljesítményre."
 **Így írd:** "A változtatás hatással lehet a teljesítményre."
 
 ### 10. Anglicizmusok és tükörfordítások
 
-**Kerüld:** "Ez egy..." és a határozatlan névelő ott, ahol a magyar nem tesz ("ez egy fontos lépés", "egy jelentős kihívás"); kihívás probléma vagy feladat helyett; navigálni a kihívások között; címezni a problémát; -ra/-re fókuszál; biztosítja, hogy; képes arra, hogy; sor kerül arra, hogy; Íme; -val/-vel kapcsolatban; jó eséllyel; jelentős mértékben; [valami] szinten; felesleges "az, hogy" beékelés; angol szórend, ahol az időhatározó a mondat végére csúszik ("A csapat sikeresen befejezte a migrációt a múlt héten")
-**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. A jel a szerkezet, nem a szókincs. Az angol szakszavak (sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
-**Ne írd:** "Ez egy jelentős kihívás a csapat számára, és a migráció egy jó lehetőség arra, hogy a technikai adósságra fókuszáljunk."
+**Kerüld:** "Ez egy..." és a határozatlan névelő ott, ahol a magyar nem tesz ("ez egy fontos lépés", "egy jelentős kihívás"); kihívás probléma vagy feladat helyett; navigálni a kihívások között; címezni a problémát; biztosítja, hogy; lehetővé teszi, hogy; képes arra, hogy; amikor arról van szó, hogy; egy olyan X, amely; Íme; -val/-vel kapcsolatban; jelentős mértékben; [valami] szinten; felesleges "az, hogy" beékelés; a birtokos szerkezet megfordítása ("a teljesítménye a rendszernek"); angol szórend, ahol az időhatározó a mondat végére csúszik ("A csapat befejezte a migrációt a múlt héten")
+**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. Ennek magyar neve van, fordításnyelv, és a szaknyelvben a legerősebb, mert a szakszöveg angol forrásból készül. A jel a szerkezet, nem a szókincs. Az angol szakszavak (sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
+**Ne írd:** "Ez egy jelentős kihívás a csapat számára, és a migráció egy jó lehetőség arra, hogy címezzük a technikai adósságot."
 **Így írd:** "A migráció nehéz feladat a csapatnak, de közben a technikai adósság egy részét is ledolgozzuk."
 
 ### 11. Passzív szerkezetek és hiányzó alany
 
 **Kerüld:** kerül + -ra/-re főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); történik + főnév (a mentés automatikusan történik); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után); alanytalan tőmondat ("Konfigurációs fájl nem szükséges.")
-**Probléma:** A szöveg elrejti, ki cselekszik, vagy elhagyja az alanyt. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös jele, és sűrűn jön, ezért erős. Nevezd meg, ki mit csinál. A bevett specifikációs fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem jel.
+**Probléma:** A szöveg elrejti, ki cselekszik, vagy elhagyja az alanyt. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös jele, és sűrűn jön, ezért erős. Nevezd meg, ki mit csinál. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem jel.
 **Ne írd:** "A bejelentkezés elvégzését követően a felhasználói adatok betöltésre kerülnek. Az eredmények mentése automatikusan történik."
 **Így írd:** "Bejelentkezés után a rendszer betölti a felhasználói adatokat, és automatikusan menti az eredményeket."
 
@@ -273,7 +279,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A jel a díszí
 
 ### 25. Az előző verzióról írni
 
-**Probléma:** A dokumentáció és a kódmegjegyzés azt írja le, amit a kód lecserélt, a jelenlegi működés helyett. Az előző megoldást csak akkor említsd, ha a dokumentum a változásról szól: changelog, release note, migrációs útmutató, vagy az ADR elvetett alternatívákat tárgyaló rovata.
+**Probléma:** A dokumentáció és a kódmegjegyzés azt írja le, amit a kód lecserélt, a jelenlegi működés helyett. Az előző megoldást csak akkor említsd, ha a dokumentum maga a változásról szól.
 **Ne írd:** "Ez a függvény a korábbi megközelítést váltja ki, amely az összes elemen végigment, és O(n²) futásidőt okozott."
 **Így írd:** "Ez a függvény hash táblát használ O(1) kereséshez, így elkerüli a naiv bejárás O(n²) költségét."
 

@@ -61,7 +61,7 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 - Csak magyar szöveget kezel. Ha angolt kap, jelzi, és az eredeti humanizert ajánlja.
 - Dokumentumszintű réteg: hosszúság, próza vagy felsorolás, alcímek, zárójel, regiszter, hang. Ezek a döntések az első mondat előtt születnek, és az eredeti skillben nincsenek benne.
 - Persona: tapasztalt magyar elemző, aki emberi olvasónak ír dokumentációt. Nem chatbot és nem hivatalnok.
-- Regiszter: egy szövegben egy forma. A dokumentum fajtája dönt, döntetlennél specifikációban és dokumentációban személytelen, ügyfélnek szóló szövegben önözés.
+- Regiszter: egy szövegben egy forma. A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen, az ügyfélnek szóló önöz.
 - Az angol szakzsargon (sprint, backlog, deploy, ticket, endpoint) marad angolul, és nem kap zárójeles magyar fordítást. A tükörfordítás-minta csak a szerkezetet nézi.
 - Gondolatjel: hosszú gondolatjel (—) nincs a szövegben. A nagykötőjel (–) szabályos magyar írásjel: a közbevetésben álló cserélődik, a számintervallum és a kötőjeles tulajdonnév marad.
 - Idézőjel: egyenes idézőjel ("...") áll a szövegben; a magyar „...” és az angol “...” egyaránt cserélődik.
@@ -91,15 +91,15 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 | 2 | Egysoros zárások és töredékek | "Nincs migráció. Nincs leállás. Nincs kockázat. Ez a lényeg." | Természetes mondathossz, konkrét állítás |
 | 3 | Mélynek hangzó szólamok | "A naplózás a rendszer memóriája" | A konkrét állítás |
 | 4 | Felvezetés a lényeg előtt | "Az alábbiakban áttekintjük", "Nézzük meg közelebbről" | Kezdd a tartalommal |
-| 5 | Vita senkivel | "Csábító megoldás lenne..., de" | Csak valódi alternatíva; ADR-ben rovat |
+| 5 | Vita senkivel | "Csábító megoldás lenne..., de" | Csak valódi alternatíva |
 
 ### B. Ritmus és tükörfordítás
 
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
-| 6 | Erőltetett hármasok | "innováció, inspiráció és betekintés" | Annyi elem, amennyit a jelentés kér |
+| 6 | Erőltetett hármasok | "gyors, megbízható és könnyen bővíthető" | Annyi elem, amennyit a jelentés kér |
 | 7 | Ismétlődő mondatkezdés | "A rendszer... A rendszer... A rendszer..." | Vond össze, vagy cseréld az alanyt |
-| 8 | Gondolatjel mint kötőelem | "a szabályzat — amit bejelentettek — érinti" | Pont, vessző, kettőspont, zárójel |
+| 8 | Gondolatjel mint kötőelem | "## Teljesítmény — mit mértünk" | Kettőspont a címben; pont, vessző, zárójel a mondatban |
 | 9 | Halmozott bizonytalanítás | "esetleg akár talán" | "lehet" |
 | 10 | Anglicizmusok és tükörfordítások | "Ez egy jelentős kihívás", "navigálni a kihívások között" | Magyar szerkezet, a szakszó marad |
 | 11 | Passzív és hiányzó alany | "betöltésre kerülnek", "a mentés automatikusan történik" | Nevezd meg, ki mit csinál |
