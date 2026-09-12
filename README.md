@@ -2,7 +2,7 @@
 
 Humanizer-hu is a Hungarian writing-style skill for agents: it supplies the prose rules for generating Hungarian documents that do not read as AI-written, while the calling task supplies the structure. It handles Hungarian only; for English use [blader/humanizer](https://github.com/blader/humanizer), which this project adapts. The rest of this README is in Hungarian.
 
-A Humanizer-hu a magyar próza megfogalmazási szabályait adja szöveg generálásához. Nem sablon és nem folyamat: a szerkezetet a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), ez a skill a nyelvet. Egyetlen Markdown fájl, ezért minden skilleket támogató ügynökkel működik. A [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatából indult, a magyar nyelvhez igazított mintákkal és egy dokumentumszintű réteggel, ami az eredetiben nincs.
+A Humanizer-hu a magyar szöveg megfogalmazási szabályait adja szöveg generálásához. Nem sablon és nem folyamat: a szerkezetet a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), ez a skill a nyelvet. Egyetlen Markdown fájl, ezért minden skilleket támogató ügynökkel működik. A [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatából indult, a magyar nyelvhez igazított mintákkal és egy dokumentumszintű réteggel, ami az eredetiben nincs.
 
 ## Telepítés
 
@@ -33,12 +33,12 @@ A tipikus hívás egy generáló feladat mellé teszi:
 Írj egy ADR-t a fizetési szolgáltató cseréjéről, és használd hozzá a humanizer-hu skillt.
 ```
 
-Az ADR adja a rovatokat és a szerkezetet, a Humanizer-hu a nyelvet. Ugyanígy működik user storyval, specifikációval, jeggyel, dokumentációval és ügyfélnek szóló szöveggel. A kimenet a kész dokumentum, vázlat és jellista nélkül.
+Az ADR adja a szakaszokat és a szerkezetet, a Humanizer-hu a nyelvet. Ugyanígy működik user storyval, specifikációval, jeggyel, dokumentációval és ügyfélnek szóló szöveggel. A kimenet a kész dokumentum, vázlat és jellista nélkül.
 
 Ha a már legenerált szövegen iterálsz, ugyanazok a szabályok érvényesek rá:
 
 ```
-A második rovat túl hosszú, írd rövidebbre, a humanizer-hu szabályai szerint.
+A második szakasz túl hosszú, írd rövidebbre, a humanizer-hu szabályai szerint.
 ```
 
 Gép-gép kimenetre (JSON, log, séma, parancs, strukturált adat) ne használd.
@@ -59,7 +59,7 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 ## Mit ad hozzá a magyar verzió
 
 - Csak magyar szöveget kezel. Ha angolt kap, jelzi, és az eredeti humanizert ajánlja.
-- Dokumentumszintű réteg: hosszúság, próza vagy felsorolás, alcímek, zárójel, regiszter, hang. Ezek a döntések az első mondat előtt születnek, és az eredeti skillben nincsenek benne.
+- Dokumentumszintű réteg: hosszúság, folyó szöveg vagy felsorolás, alcímek, zárójel, regiszter, részletesség, hang. Ezek a döntések az első mondat előtt születnek, és az eredeti skillben nincsenek benne.
 - Persona: tapasztalt magyar elemző, aki emberi olvasónak ír dokumentációt. Nem chatbot és nem hivatalnok.
 - Regiszter: egy szövegben egy forma. A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen, az ügyfélnek szóló önöz.
 - Az angol szakzsargon (sprint, backlog, deploy, ticket, endpoint) marad angolul, és nem kap zárójeles magyar fordítást. A tükörfordítás-minta csak a szerkezetet nézi.
@@ -75,10 +75,11 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 | Döntés | Szabály |
 | --- | --- |
 | Hosszúság | Annyit, amennyit a feladat kér. Nincs bevezető és nincs záró gondolat. |
-| Próza vagy felsorolás | Összefüggő gondolat bekezdésbe. Felsorolás csak tételes tartalomhoz. |
-| Alcímek | Csak ha az olvasó ugrani akar. A sablon rovatai a címsorok. |
+| Folyó szöveg vagy felsorolás | Összefüggő gondolat bekezdésbe. Felsorolás csak tételes tartalomhoz. |
+| Alcímek | Csak ha az olvasó ugrani akar. A sablon szakaszai a címsorok. |
 | Zárójel | Csak új információ. Nincs zárójeles fordítás és nincs magyarázat az egyértelműhöz. |
 | Regiszter | Egy forma végig. A dokumentum fajtája dönt. |
+| Részletesség | Az első mondat előtt dönts. Általánosítani szabad, kitalálni nem. |
 | Hang | Semleges és szakmai, váltakozó mondathosszal. Az írásminta felülír. |
 
 ## A 26 minta
@@ -120,7 +121,7 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
-| 19 | Félkövér mint dekoráció | "**jelentősen** javítja", "**Teljesítmény:** A teljesítmény javult" | Kiemelés nélkül, prózában |
+| 19 | Félkövér mint dekoráció | "**jelentősen** javítja", "**Teljesítmény:** A teljesítmény javult" | Kiemelés nélkül, folyó szövegben |
 | 20 | Dekoratív címsorok | "Migrációs Terv És Visszaállítás", emoji, nyíl, vonal | Mondatkezdő nagybetű, dísz nélkül |
 | 21 | Tipográfiai idézőjelek | „a projekt”, “a projekt” | "a projekt" |
 

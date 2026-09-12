@@ -4,7 +4,7 @@ Ez a fájl elmondja, hogyan lehet a Humanizer-hu-t módosítani anélkül, hogy 
 
 ## Mi van a repóban
 
-A Humanizer-hu egy Markdownban írt ügynök-skill: a magyar próza megfogalmazási szabályait adja szöveg generálásához. A szerkezetet a hívó feladat adja, ez a skill a nyelvet. A `SKILL.md` a prompt, amit az ügynökök olvasnak. Nincs build lépés.
+A Humanizer-hu egy Markdownban írt ügynök-skill: a magyar szöveg megfogalmazási szabályait adja szöveg generálásához. A szerkezetet a hívó feladat adja, ez a skill a nyelvet. A `SKILL.md` a prompt, amit az ügynökök olvasnak. Nincs build lépés.
 
 Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két ügynök-eszközre korlátozza.
 
