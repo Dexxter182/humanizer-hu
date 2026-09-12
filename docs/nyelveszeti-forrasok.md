@@ -305,7 +305,7 @@ mi hiányzik az igazolásához.
 A Részletesség alszakasz működött: az ügyfélnek szóló szövegben a magas
 szintű, cselekvő nélküli fogalmazás nyugodtan benne maradt.
 
-### Javítandó
+### Javítandó (mind a hét lezárva a 2.3.0-ban)
 
 1. **A fiktív feladat esete.** Ez a legmélyebb, és nemcsak a §23-at érinti.
    A skill végig azt feltételezi, hogy van forrás. Ha a feladat maga kéri,
@@ -364,9 +364,12 @@ befektetés lenne, hanem állandó karbantartás") és egyszer a §12-t
 
 ## Nyitott kérdések
 
-A 26 minta végigjárása és a nyitott kérdések lezárása 2026-09-12-én megtörtént
-(2.2.0). Az éles próba viszont hét javítanivalót hozott, lásd fent. Amíg
-azokról nincs döntés, a lista itt üres.
+Nincs nyitott tétel. A 26 minta végigjárása, a nyitott kérdések és az éles
+próba hét javítása is lezárult 2026-09-12-én, a 2.3.0 verzióval.
+
+Ha újra elő kell venni a skillt, a docs/proba-prompt.md újrafuttatható friss
+sessionben. A mostani próba a 2.2.0 verziót mérte; a hét javítás utáni
+állapotot még nem mérte senki.
 
 ### Lezárt tételek
 
