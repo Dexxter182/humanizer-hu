@@ -32,7 +32,7 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 - Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új megfigyelés csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. Ha egy minta nyelvtani vagy helyesírási állítást tesz, a hivatkozás a `docs/nyelveszeti-forrasok.md` fájlba kerüljön, ne a SKILL.md-be. A validátor a címsorokból számolja a darabszámot.
 - Verzió: ugyanaz a verzió legyen a `SKILL.md`-ben a `metadata.version` alatt, a README első verzióbejegyzésében és a `.claude-plugin/plugin.json`-ban. Ne adj a skillhez felső szintű `version` mezőt.
 - Kompatibilitás: a telepítési és használati utasítás maradjon agent-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
-- Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet.
+- Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet. A verziótörténetet felhasználó olvassa, ezért azt írd le, mi változott, ne azt, hogy miért. Az indoklás a commit üzenetbe és a `docs/nyelveszeti-forrasok.md` fájlba való.
 - Ellenőrzés: publikálás előtt futtasd: `python3 scripts/validate-package.py`, `npx skills add . --list`, `claude plugin validate .`.
 
 ## Tipográfia a repóban
