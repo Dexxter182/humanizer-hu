@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.2.0"
+  version: "2.3.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -34,7 +34,7 @@ A nyelvi modell azt írja, ami a legvalószínűbb folytatás, ezért alapból a
 
 A szóhasználat modellkiadásonként változik, a szerkezeti szokások maradnak, ezért azok vezetik a listát.
 
-Két szabály következik ebből. Minden mondatnak adnia kell valamit, amit az olvasó még nem tudott. És csak azt állítsd, amit a kérés, a forrás vagy a hívó feladat tartalmaz: tényt, nevet, számot, dátumot, idézetet vagy hivatkozást ne találj ki. Ha egy mondathoz olyan részlet kellene, amid nincs, kérd el, vagy írj egyszerűbb mondatot. Vélemény és reakció megengedett, ha a szöveg fajtája kívánja; tényállítás nem. A szépirodalom kivétel, ott a kitalált részlet a feladat.
+Két szabály következik ebből. Minden mondatnak adnia kell valamit, amit az olvasó még nem tudott. És csak azt állítsd, amit a kérés, a forrás vagy a hívó feladat tartalmaz: tényt, nevet, számot, dátumot, idézetet vagy hivatkozást ne találj ki. Ha egy mondathoz olyan részlet kellene, amid nincs, kérd el, vagy írj egyszerűbb mondatot. Vélemény és reakció megengedett, ha a szöveg fajtája kívánja; tényállítás nem. A szépirodalom kivétel, ott a kitalált részlet a feladat. Ugyanígy a példa- és mintadokumentum: ha a feladat kitalált tartalmat kér, a kitalált érték a munka része, de maradjon felismerhetően példa, és ne tálald valódi tényként.
 
 ## Dokumentumszintű döntések
 
@@ -58,11 +58,11 @@ Zárójelbe akkor tegyél valamit, ha új információt ad. Ne fordítsd le zár
 
 ### Regiszter
 
-Egy szövegben egy forma van végig: tegezés, magázás (ön, maga) vagy személytelen fogalmazás ("a felhasználó", "a rendszer"). A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen, az ügyfélnek szóló önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
+Egy szövegben egy forma van végig: tegezés, magázás (ön, maga), személytelen fogalmazás ("a felhasználó", "a rendszer") vagy szerkesztői T/1 ("javasoljuk", "a következőket mértük"). A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen vagy szerkesztői T/1, az ügyfélnek szóló önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
 
 ### Részletesség
 
-Döntsd el az első mondat előtt, mennyit árul el a szöveg. Alapértelmezésben a §11, a §14 és a §17 érvényes: nevezd meg a cselekvőt, a viszonyt és a forrást. A hívó feladat és a dokumentum fajtája viszont felülírja ezt. Ha a szöveg szélesebb közönségnek szól, vagy a feladat összefoglalást kér, az általános, cselekvő nélküli megfogalmazás tartalom, nem gépiesség. A határ ugyanaz, mint a §23-ban: általánosítani szabad, kitalálni nem. Ha nem dönthető el, mennyit árulhatsz el, kérdezz.
+Döntsd el az első mondat előtt, mennyit árul el a szöveg. Alapértelmezésben a §11, a §14 és a §17 érvényes: nevezd meg a cselekvőt, a viszonyt és a forrást. A hívó feladat és a dokumentum fajtája viszont felülírja ezt. Ha a szöveg szélesebb közönségnek szól, vagy a feladat összefoglalást kér, az általános, cselekvő nélküli megfogalmazás tartalom, nem gépiesség. A határ ugyanaz, mint a §23-ban: általánosítani szabad, kitalálni nem. Ha nem dönthető el, mennyit árulhatsz el, kérdezz; ha nincs kit kérdezned, hagyd el a mondatot vagy nevezd meg, mi hiányzik. Tartalmatlan mondatot ne írj csak azért, hogy a hely be legyen töltve.
 
 ### Hang és szakszavak
 
@@ -133,7 +133,7 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 
 ### 8. Gondolatjel mint univerzális kötőelem
 
-**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar.
+**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar. Felsorolásban, ahol a tétel és a hozzá tartozó szöveg között tényleg elválasztó kell és a kettőspont foglalt (idővonal, változásnapló), a szóközös nagykötőjel ( – ) marad.
 **Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
 **Ne írd:**
 > ## Migráció — mikor indul
@@ -160,7 +160,7 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 
 ### 11. Passzív szerkezetek és elrejtett cselekvő
 
-**Kerüld:** kerül + -ra/-re főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); sor kerül arra, hogy; történik + főnév (a mentés automatikusan történik); terpeszkedő szerkezet ott, ahol van azonos jelentésű egyszerű ige (módosítást hajt végre, ellenőrzést végez, döntést hoz); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után)
+**Kerüld:** kerül + -ra/-re igéből képzett főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); a lexikális használat ("a lista elejére kerül", "szóba kerül") nem ide tartozik; sor kerül arra, hogy; történik + főnév (a mentés automatikusan történik); terpeszkedő szerkezet ott, ahol van azonos jelentésű egyszerű ige (módosítást hajt végre, ellenőrzést végez, döntést hoz); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után)
 **Probléma:** A szöveg elrejti, ki cselekszik. A "kerül" passzívpótló a gépi magyar szöveg és a hivatali nyelv közös vonása, és sűrűn jön, ezért erős; a modell azért nyúl érte, mert személytelen és formális akar lenni. Nevezd meg, ki mit csinál, és írj egyszerű igét ott, ahol van azonos jelentésű; ahol nincs, a szerkezet marad. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem gépies, és a folytatódó alany elhagyása sem az: az a §7 szerint helyes magyar.
 **Ne írd:** "A bejelentkezés elvégzését követően a felhasználói adatok betöltésre kerülnek. Az eredmények mentése automatikusan történik."
 **Így írd:** "Bejelentkezés után a rendszer betölti a felhasználói adatokat, és automatikusan menti az eredményeket."
@@ -224,7 +224,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 19. Félkövér mint dekoráció
 
-**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd.
+**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd. A fejblokk mezőcímkéi ("Státusz:", "Súlyosság:") sem dekoráció, azok maradhatnak.
 **Probléma:** Két külön szokás. A szövegközi kiemelés akkor működik, ha ritka; ha sok szó félkövér, semmi nem emelkedik ki. A félkövér címkés felsorolás pedig szerkezetet mutat ott, ahol nincs: ha a címkék önmagukban nem hordoznak információt, a lista folyó szövegben rövidebb és pontosabb.
 **Ne írd:**
 > A frissítés **jelentősen** javítja a **teljesítményt**.
@@ -250,8 +250,8 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 21. Tipográfiai idézőjelek
 
-**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „...” és az angol “...” helyett is. Ugyanez a belső idézőjelre (»...«). Kódblokkban, inline kódban és idézett azonosítóban ne nyúlj hozzá.
-**Probléma:** A magyar „...” a szabályos alak, és önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít. Ez a skill mégis egyenest kér, egységesítésből: így a szöveg Markdownban, kódban és terminálban is ugyanúgy viselkedik. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
+**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „...” és az angol “...” helyett is. Ugyanez a belső idézőjelre (»...«). Kódblokkban, inline kódban, idézett azonosítóban és publikálandó ügyfélszövegben ne nyúlj hozzá.
+**Probléma:** A magyar „...” a szabályos alak, és önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít. Ez a skill mégis egyenest kér, egységesítésből: így a szöveg Markdownban, kódban és terminálban is ugyanúgy viselkedik. Publikálandó ügyfélszövegben viszont marad a „...”, mert ott ez az indok nem áll. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
 **Ne írd:** A hibaüzenet szövege „A kérés lejárt”, az ügyfél pedig a “Mégse” gombot látja.
 **Így írd:** A hibaüzenet szövege "A kérés lejárt", az ügyfél pedig a "Mégse" gombot látja.
 
