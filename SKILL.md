@@ -72,7 +72,7 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 
 ### 1. Hamis ellentét (nem X, hanem Y)
 
-**Kerüld:** nem X, hanem Y; nem csak, nem csupán, nem pusztán X, hanem Y is; nem X-ről van szó, hanem Y-ról; nem arról szól, hogy; a fordított forma: Y, nem pedig X; a mondatokra szétosztott ellentét ("Ez nem azt jelenti, hogy X. Azt jelenti, hogy Y."); a lecsípett tagadó farok (", nem találgatás")
+**Kerüld:** nem X, hanem Y; nem csak, nem csupán, nem pusztán X, hanem Y is; nem X-ről van szó, hanem Y-ról; nem arról szól, hogy; a fordított forma: Y, nem pedig X; a mondatokra szétosztott ellentét ("Ez nem azt jelenti, hogy X. Azt jelenti, hogy Y."); a mondat végére csapott tagadás (", nem pedig találgatás")
 **Probléma:** A tagadó fél olyat nevez meg, aminek nincs állító előzménye: sem a szöveg, sem az olvasó közös tudása nem tartalmazza. Súlyt ad, állítást nem. Ellentétet csak akkor írj, ha a tagadó fél egy tényleg létező olvasói hiedelmet javít, vagy ha mindkét fél hordoz információt.
 **Ne írd:** "Az új jóváhagyási folyamat nem csupán technikai módosítás, hanem a teljes ügyfélélmény újragondolása."
 **Így írd:** "Az új jóváhagyási folyamatban az ügyfél minden lépésnél látja, hol tart a kérelme."
@@ -186,31 +186,31 @@ A tény alatta általában rendben van. Írd le a tényt, öltözet nélkül.
 **Ne írd:** "A lassulás összefüggésbe hozható a legutóbbi release-szel. A gyorsítótár-modul kapcsolatban áll a fizetési szolgáltatással."
 **Így írd:** "A lassulás a 4.2-es release után kezdődött; a legvalószínűbb ok a gyorsítótár érvénytelenítése, de ezt még nem mértük ki. A gyorsítótár-modul a fizetési szolgáltatás REST API-ját hívja."
 
-### 15. Felületes -va/-ve farkak
+### 15. Felületes határozói igenevek (-va/-ve)
 
-**Kerüld:** hangsúlyozva, kiemelve, biztosítva, tükrözve, szimbolizálva, hozzájárulva, elősegítve, támogatva, megteremtve, bemutatva, ezzel is
-**Probléma:** Határozói igeneves tagmondat egy egyszerű tényre csavarozva, hogy mélyebbnek hangozzon. Írd a tényt. A farkat csak akkor, ha a forrás alátámasztja, amit állít; a nevesített forrás ("a vezérigazgató kiemelte a tartós hatást") ettől még nem teszi igazzá.
-**Ne írd:** "Az új felület színvilága a cég arculatát tükrözi, szimbolizálva a megbízhatóságot, ezzel is hangsúlyozva a minőség iránti elkötelezettséget."
-**Így írd:** "Az új felület a cég arculati színeit használja: kéket, zöldet és szürkét."
+**Kerüld:** hangsúlyozva, kiemelve, biztosítva, garantálva, tükrözve, szimbolizálva, hozzájárulva, elősegítve, támogatva, lehetővé téve, minimalizálva, megteremtve, bemutatva, ezzel is
+**Probléma:** Határozói igeneves szerkezet egy egyszerű tényre csavarozva, hogy mélyebbnek hangozzon. Írd a tényt. Két próbája van: ad-e új tényt, és ugyanaz-e az alanya, mint a főmondaté. A magyar határozói igenév alanya a főmondat alanya, ezért ha a szerkezet máshonnan venné, a mondat megcsúszik. Az igenevet csak akkor írd ki, ha a forrás alátámasztja, amit állít.
+**Ne írd:** "A szolgáltatás újrapróbálkozik a sikertelen kéréseknél, biztosítva a megbízható kézbesítést, ezzel is támogatva a rendszer stabilitását."
+**Így írd:** "A szolgáltatás a sikertelen kéréseket háromszor küldi újra, 2, 4 és 8 másodperc múlva."
 
 ### 16. Reklámnyelv
 
-**Kerüld:** lenyűgöző, gazdag (átvitt), páratlan, elkötelezett, elkötelezettség, festői, a szívében, megbújik, úttörő (átvitt), elismert, világszínvonalú, széles választék, kihagyhatatlan, egyedülálló, prémium, élvonalbeli, korszerű (töltelékként)
-**Probléma:** A szöveg hirdetésnek hangzik, főleg helyről, kultúráról, termékről vagy szervezetről. Mondd meg, mi a dolog.
-**Ne írd:** "A cég szívében megbújó, elismert fejlesztőcsapat páratlan szakértelemmel szállít világszínvonalú mobilalkalmazásokat."
-**Így írd:** "A fejlesztőcsapat Android és iOS alkalmazásokat készít."
+**Kerüld:** lenyűgöző, gazdag (átvitt), páratlan, elkötelezett, elkötelezettség, intuitív, piacvezető, forradalmasítja, új szintre emeli, mindent egy helyen, a szívében, úttörő (átvitt), elismert, világszínvonalú, széles választék, kihagyhatatlan, egyedülálló, prémium, élvonalbeli, korszerű (töltelékként)
+**Probléma:** A szöveg hirdetésnek hangzik, főleg termékről, felületről vagy csapatról. Mondd meg, mi a dolog. Ha a feladat maga hirdetés, a lelkesedés belefér, de a konkrétum ott is többet mond, mint a jelző.
+**Ne írd:** "Az új irányítópult intuitív, letisztult felületen hozza egy helyre az összes mérőszámot, és új szintre emeli a csapatod munkáját."
+**Így írd:** "Az új irányítópulton egy képernyőn látszik a válaszidő és a hibaarány, óránkénti bontásban."
 
 ### 17. Kölcsönzött tekintély
 
-**Kerüld:** szakértők szerint, megfigyelők szerint, iparági jelentések, egyes kritikusok, több publikáció; idézte, bemutatta, szerepelt [médialista]; szakmai lapok, független sajtó; aktív jelenlét a közösségi médiában, N követő
-**Probléma:** Egy név vagy egy meg nem nevezett tekintély áll ott ahelyett, amit mondtak. Névtelen szakértők támasztanak alá egy állítást; egy presztízslista támaszt alá egy személyt. Ha a forrás megnevezi a valódi forrást és azt, amit mondott, azt írd; egyébként hagyd el az állítást. Forrást soha ne találj ki. A hiányzó hivatkozás önmagában nem gépies; a legtöbb írás forrás nélküli.
-**Ne írd:** "A szakértők szerint a rendszer kulcsszerepet játszik a hazai fizetési piacon. Munkáját idézte a Portfolio, a HVG, a Forbes és az Index."
-**Így írd:** "A rendszert kutatók és szakemberek vizsgálják az egyedi jellemzői miatt."
+**Kerüld:** szakértők szerint, megfigyelők szerint, iparági jelentések, egyes kritikusok, több publikáció; a best practice szerint, az iparági sztenderd szerint, általánosan elfogadott, hogy, a tapasztalatok azt mutatják; egy nagy szolgáltató neve indoklás helyett ("a Netflix is így csinálja")
+**Probléma:** Egy meg nem nevezett tekintély áll ott ahelyett, amit mondtak. Névtelen szakértők vagy egy ismert cég neve támaszt alá egy döntést, ahelyett hogy a saját követelmény tenné. Ha a forrás megnevezi a valódi forrást és azt, amit mondott, azt írd; egyébként hagyd el az állítást, és azzal indokolj, amit tudsz. Forrást soha ne találj ki. A hiányzó hivatkozás önmagában nem gépies; a legtöbb írás forrás nélküli.
+**Ne írd:** "A best practice szerint a mikroszolgáltatásokra bontás a helyes irány, és a nagy szolgáltatók is így csinálják."
+**Így írd:** "A riportok havonta futnak, a számlázás folyamatosan, ezért a kettő külön skálázódik. Emiatt választjuk szét őket."
 
-### 18. A létige és a "van" kerülése
+### 18. A létige kerülése
 
-**Kerüld:** szolgál, funkcionál, működik [valamiként], képez, jelent, testesít meg, tölt be; büszkélkedhet, rendelkezik, kínál, biztosít, helyet ad; alatt értendő, jelöli
-**Probléma:** Egyszerű szerkezet helyett hosszabb körülírás. A magyar harmadik személyben elhagyja a létigét, a modell ezt körülíró igével pótolja. Írd: X az Y; X-nek Y-ja van.
+**Kerüld:** szolgál, funkcionál, működik [valamiként], képez, jelent, testesít meg, tölt be, minősül, számít [valaminek]; büszkélkedhet, rendelkezik, bír [valamivel], kínál, biztosít, nyújt; található, alatt értendő, jelöli
+**Probléma:** Egyszerű szerkezet helyett hosszabb körülírás. A magyar harmadik személyben elhagyja a létigét, a modell ezt körülíró igével pótolja. Írd le egyszerűen, mi micsoda, és minek mije van.
 **Ne írd:** "A Portál modul a rendszer ügyfélkapcsolati felületeként szolgál, négy nézettel rendelkezik, és 3000 aktív felhasználóval büszkélkedhet."
 **Így írd:** "A Portál modul a rendszer ügyfélkapcsolati felülete. Négy nézete és 3000 aktív felhasználója van."
 

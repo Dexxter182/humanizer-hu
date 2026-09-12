@@ -242,3 +242,29 @@ Ide gyűlik, amit menet közben félretettünk.
   nincs benne. Megbeszélendő a kör végén.
 - A forrásgyűjtemény megjelenítése: README-szakasz, ez a fájl linkelve, vagy
   a SKILL.md "Forrás" szakaszának bővítése.
+
+## §15. Felületes határozói igenevek (-va/-ve)
+
+Terminológiai tisztázás: a -va/-ve **határozói igenévképző**, tehát képző, nem
+rag. A magyar három toldalékfajtát különböztet meg. A képző közvetlenül a tő
+után áll, új szót és új ragozási sort hoz létre; a jel a nyelvtani kategóriát
+jelöli; a rag lezárja a szóalakot és a mondatbeli szerepet jelöli (-ban/-ben,
+-ra/-re, -val/-vel). Ahogy a -ni a főnévi igenévképző, úgy a -va/-ve a
+határozói igenévé.
+
+A minta második próbája az **alanyazonosság**: a határozói igenév alanya a
+főmondat alanya. Ha a szerkezet máshonnan venné az alanyát, a mondat
+megcsúszik. Ez ellenőrizhető szabály, nem ízlés kérdése.
+
+- Kis magyar grammatika, 2.4.2. A toldalékmorféma-típusok elhatárolása:
+  képzők, jelek és ragok. MeRSZ.
+  https://mersz.hu/dokumentum/m559kmg__36
+- A határozói igenév. Sulinet Tudásbázis.
+  https://tudasbazis.sulinet.hu/hu/magyar-nyelv-es-irodalom/magyar-nyelv/magyar-nyelv/2/fogalomgyujtemeny/hatarozoi-igenev
+- Határozói igenév. Wikipédia.
+  https://hu.wikipedia.org/wiki/Hat%C3%A1roz%C3%B3i_igen%C3%A9v
+
+A "farok" megnevezés az angol "tail" tükre volt, és a csomagból mindenhonnan
+kikerült: a §15 címéből és szövegéből, a README táblájából, valamint a §1
+"lecsípett tagadó farok" tételéből, ami helyett most "a mondat végére csapott
+tagadás" áll.

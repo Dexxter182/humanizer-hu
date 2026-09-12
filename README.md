@@ -111,10 +111,10 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 | 12 | Túlhasznált AI-szavak | "átfogó, robusztus, zökkenőmentes, kulcsfontosságú" | Köznapi szó vagy konkrétum |
 | 13 | Felfújt jelentőség | "mérföldkövet jelentett", "a jövő fényes" | A tény, zárás az utolsó konkrétummal |
 | 14 | Homályos kapcsolat | "a csapathoz kötődik" | Nevezd meg a viszonyt, ha a forrás adja |
-| 15 | Felületes -va/-ve farkak | "ezzel is hangsúlyozva az elkötelezettséget" | Csak amit a forrás alátámaszt |
-| 16 | Reklámnyelv | "a cég szívében megbújó, elismert csapat" | Mondd meg, mi a dolog |
-| 17 | Kölcsönzött tekintély | "szakértők szerint", "idézte a Portfolio és a Forbes" | Valódi forrás, vagy hagyd el |
-| 18 | A létige kerülése | "felületeként szolgál", "nézettel rendelkezik" | "X az Y", "X-nek Y-ja van" |
+| 15 | Felületes határozói igenevek | "biztosítva a megbízható kézbesítést" | Csak amit a forrás alátámaszt |
+| 16 | Reklámnyelv | "az új irányítópult intuitív, letisztult felületen" | Mondd meg, mi a dolog |
+| 17 | Kölcsönzött tekintély | "a best practice szerint", "a Netflix is így csinálja" | Valódi forrás, vagy hagyd el |
+| 18 | A létige kerülése | "felületeként szolgál", "nézettel rendelkezik" | Mi micsoda, és minek mije van |
 
 ### D. Formázás
 
