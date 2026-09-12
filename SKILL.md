@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.4.0"
+  version: "2.4.1"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -25,12 +25,12 @@ Csak magyar folyó szövegre való. Gép-gép kimenetre (JSON, log, séma, paran
 
 A nyelvi modell azt írja, ami a legvalószínűbb folytatás, ezért alapból azt választja, ami a legtöbb olvasónak és témának megfelel. Az ember egy olvasónak és egy témának ír, ezért a választásai egyenetlenek és konkrétak. Hat szokás következik ebből, és a mintacsoportok ezeket követik:
 
-- **Színpadiasság.** A mondat jelzi a fontosságot ahelyett, hogy tényt adna.
-- **Ritmus és tükörfordítás.** Hármasok és gondolatjelek mindenhová; angol szerkezet magyar szavakkal.
-- **Felfújás.** Hétköznapi tények meghatározóként vagy szakértők által igazoltként tálalva.
-- **Formázás.** Félkövér és cím minden elemre.
-- **Maradványok.** Chat-keretek és vázlatolási mozdulatok, amiket sosem az olvasónak szántak.
-- **Regiszter.** Mondatonként újra eldöntött megszólítás.
+- Színpadiasság. A mondat jelzi a fontosságot ahelyett, hogy tényt adna.
+- Ritmus és tükörfordítás. Hármasok és gondolatjelek mindenhová; angol szerkezet magyar szavakkal.
+- Felfújás. Hétköznapi tények meghatározóként vagy szakértők által igazoltként tálalva.
+- Formázás. Félkövér és cím minden elemre.
+- Maradványok. Chat-keretek és vázlatolási mozdulatok, amiket sosem az olvasónak szántak.
+- Regiszter. Mondatonként újra eldöntött megszólítás.
 
 A szóhasználat modellkiadásonként változik, a szerkezeti szokások maradnak, ezért azok vezetik a listát.
 
