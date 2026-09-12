@@ -44,7 +44,7 @@ amit a script nem lát:
 - §23 kitalált tény: név, útvonal, verzió, érték, ami nincs a forrásban.
 - §24 a címsort megismétlő első mondat.
 - §25 az előző verzió leírása a mostani működés helyett.
-- §26 regiszterkeveredés: tegezés és magázás, `Ön` és `ön`, szerkesztői T/1 és
+- §26 megszólításkeveredés: tegezés és magázás, `Ön` és `ön`, szerkesztői T/1 és
   személytelen váltakozása.
 
 Nézd a bekezdések alakját is, ne csak a mondatokat.

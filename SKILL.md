@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.4.2"
+  version: "2.4.3"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -30,7 +30,7 @@ A nyelvi modell azt írja, ami a legvalószínűbb folytatás, ezért alapból a
 - Felfújás. Hétköznapi tények meghatározóként vagy szakértők által igazoltként tálalva.
 - Formázás. Félkövér és cím minden elemre.
 - Maradványok. Chat-keretek és vázlatolási mozdulatok, amiket sosem az olvasónak szántak.
-- Regiszter. Mondatonként újra eldöntött megszólítás.
+- Megszólítás. Mondatonként újra eldöntve.
 
 A szóhasználat modellkiadásonként változik, a szerkezeti szokások maradnak, ezért azok vezetik a listát.
 
@@ -56,7 +56,7 @@ Alcím akkor kell, ha az olvasó ugrani akar. Néhány bekezdésnyi szöveg alc�
 
 Zárójelbe akkor tegyél valamit, ha új információt ad. Ne fordítsd le zárójelben a szakszót a másik nyelvre ("story (történet)", "endpoint (végpont)"), ne oldd fel a rövidítést, amit az olvasó ismer, és ne magyarázz el egyértelmű kifejezést.
 
-### Regiszter
+### Megszólítás
 
 Egy szövegben egy forma van végig: tegezés, magázás (ön, maga), személytelen fogalmazás ("a felhasználó", "a rendszer") vagy szerkesztői T/1 ("javasoljuk", "a következőket mértük"). A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen vagy szerkesztői T/1, az ügyfélnek szóló önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
 
@@ -154,7 +154,7 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 ### 10. Anglicizmusok és tükörfordítások
 
 **Kerüld:** "Ez egy..." és a határozatlan névelő ott, ahol a magyar nem tesz ("ez egy fontos lépés", "egy jelentős kihívás"); kihívás probléma vagy feladat helyett; navigálni a kihívások között; címezni a problémát; biztosítja, hogy; lehetővé teszi, hogy; képes arra, hogy; amikor arról van szó, hogy; egy olyan X, amely; Íme; -val/-vel kapcsolatban; jelentős mértékben; [valami] szinten; felesleges "az, hogy" beékelés; a birtokos szerkezet megfordítása ("a teljesítménye a rendszernek"); angol szórend, ahol az időhatározó a mondat végére csúszik ("A csapat befejezte a migrációt a múlt héten")
-**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. Ennek magyar neve van, fordításnyelv, és a szaknyelvben a legerősebb, mert a szakszöveg angol forrásból készül. A gépiesség a szerkezetben van, nem a szókincsben. Az angol szakszavak (sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
+**Probléma:** A modell angolul gondolkodik és magyarul ír: az angol szerkezet magyar szavakkal jelenik meg. Ennek magyar neve van, fordításnyelv, és a szaknyelvben a legerősebb, mert a szakszöveg angol forrásból készül. A gépiesség a szerkezetben van, nem a szókincsben. Az angol szakszavak (agent, sprint, deploy, backlog, ticket, release, endpoint, feature, pull request) a csapat nyelve: hagyd őket angolul, és ne fordítsd le zárójelben.
 **Ne írd:** "Ez egy jelentős kihívás a csapat számára, és a migráció egy jó lehetőség arra, hogy címezzük a technikai adósságot."
 **Így írd:** "A migráció nehéz feladat a csapatnak, de közben a technikai adósság egy részét is ledolgozzuk."
 
@@ -291,12 +291,12 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 **Ne írd:** "Ez a függvény a korábbi megközelítést váltja ki, amely az összes elemen végigment, és O(n²) futásidőt okozott."
 **Így írd:** "Ez a függvény hash táblában keresi az elemet, ezért a keresés O(1)."
 
-## F. Regiszter
+## F. Megszólítás
 
 ### 26. Tegezés és magázás keveredése
 
 **Kerüld:** tegező és magázó alak ugyanabban a szövegben ("kattints", majd "kattintson"); ön és maga váltakozása; az Ön és az ön váltakozása egy szövegen belül; személytelen szövegbe csúszó tegező mondat ("A rendszer naplózza a kérést. Ezt bármikor megnézheted."); a szerkesztői T/1 és a személytelen keveredése ("javasoljuk", majd "ajánlott"); felszólító mód váltakozása E/2 és T/1 között ("nyisd meg", majd "nyissuk meg")
-**Probléma:** Az ember egyszer dönt a regiszterről, a modell mondatonként. A keveredés magyar szövegben feltűnő és szinte mindig gépi. Az Ön nagy kezdőbetűje külön eset: a kisbetűs alak a szabályos, a nagybetűs a levélben szokásos tiszteletadás, egyik sem hiba, csak a váltogatásuk. A választás szabálya a Regiszter szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
+**Probléma:** Az ember egyszer dönt a megszólításról, a modell mondatonként. A keveredés magyar szövegben feltűnő és szinte mindig gépi. Az Ön nagy kezdőbetűje külön eset: a kisbetűs alak a szabályos, a nagybetűs a levélben szokásos tiszteletadás, egyik sem hiba, csak a váltogatásuk. A választás szabálya a Megszólítás szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
 **Ne írd:** "A beállítások menüben módosíthatja a nyelvet. Kattints a Mentés gombra, és a rendszer elmenti a választásod."
 **Így írd:** "A beállítások menüben módosíthatja a nyelvet. Kattintson a Mentés gombra, a rendszer elmenti a választását."
 
@@ -322,4 +322,4 @@ Változatlanul marad a kódblokk, az inline kód, a parancs, az útvonal, az URL
 
 ## Forrás
 
-A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvtani hátteret és a hozzá tartozó hivatkozásokat a repo `docs/nyelveszeti-forrasok.md` fájlja gyűjti. A §12 szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem korpuszon.
+A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvtani hátteret és a hozzá tartozó hivatkozásokat a repo `docs/nyelveszeti-forrasok.md` fájlja gyűjti. A §12 szójegyzéke és a dokumentumszintű döntések megfigyelésen alapulnak, nem korpuszon.

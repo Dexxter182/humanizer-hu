@@ -2,9 +2,7 @@
 
 Humanizer-hu is a Hungarian writing-style skill for agents. The calling task supplies the structure of the document, this skill supplies the prose rules, so the generated Hungarian does not read as AI-written. It is a single Markdown file and works with any agent that can load skills. Hungarian only; for English use [blader/humanizer](https://github.com/blader/humanizer), which this project adapts. The rest of this README is in Hungarian.
 
-Az ügynökkel íratott magyar dokumentumon látszik, hogy gép írta: erőltetett hármasok, "kerül" passzív, felfújt jelzők, gondolatjel minden tagmondat között, tegezés és magázás váltakozva. A Humanizer-hu ezt a réteget cseréli le. 26 mintát ad hat csoportban, és egy dokumentumszintű döntéssort, ami az első mondat előtt lefut. A szerkezetet továbbra is a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), a skill a nyelvet adja hozzá.
-
-A [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatából indult, magyar példákkal, magyar nyelvtani háttérrel és két olyan mintával, aminek angolul nincs értelme: a tükörfordítással és a regiszterrel.
+Az agenttel íratott magyar dokumentumon látszik, hogy gép írta: erőltetett hármasok, "kerül" passzív, felfújt jelzők, gondolatjel minden tagmondat között, tegezés és magázás váltakozva. A Humanizer-hu ezt a réteget cseréli le. 26 mintát ad hat csoportban, és egy dokumentumszintű döntéssort, ami az első mondat előtt lefut. A szerkezetet továbbra is a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), a skill a nyelvet adja hozzá. A minták magyar példákon állnak, magyar nyelvtani háttérrel, és kettőnek angolul nincs is értelme: a tükörfordításnak és a megszólításnak.
 
 ## Példa
 
@@ -39,7 +37,7 @@ A Skills CLI-vel:
 npx skills add Dexxter182/humanizer-hu --global
 ```
 
-A `--global` nélkül csak az aktuális projektbe települ. A `--agent <n>` vagy `--agent '*'` kapcsolóval választható, melyik ügynök kapja meg; utána töltsd újra a skilleket. A skill a `/humanizer-hu` parancsra hallgat.
+A `--global` nélkül csak az aktuális projektbe települ. A `--agent <n>` vagy `--agent '*'` kapcsolóval választható, melyik agent kapja meg; utána töltsd újra a skilleket. A skill a `/humanizer-hu` parancsra hallgat.
 
 Claude Code 2.1.142 vagy újabb alatt pluginként is telepíthető:
 
@@ -50,7 +48,7 @@ Claude Code 2.1.142 vagy újabb alatt pluginként is telepíthető:
 
 Így a skill neve `/humanizer-hu:humanizer-hu`, és megjön az ellenőrző parancs is.
 
-Claude Desktopban töltsd le a repót ZIP-ként, és töltsd fel skillként. Kézi telepítéshez másold a `SKILL.md`-t az ügynök skill mappájába.
+Claude Desktopban töltsd le a repót ZIP-ként, és töltsd fel skillként. Kézi telepítéshez másold a `SKILL.md`-t az agent skill mappájába.
 
 ## Használat
 
@@ -101,11 +99,11 @@ Teljes kör, pluginként telepítve:
 /humanizer-hu:ellenoriz FÁJL.md
 ```
 
-Ez előbb a scriptet futtatja, majd azt nézi át, amit regex nem lát: a 6. minta hármasát, a 14. homályos kapcsolatát, a 23. kitalált tényeit, a 25. előző verzióját és a 26. regiszterkeveredését.
+Ez előbb a scriptet futtatja, majd azt nézi át, amit regex nem lát: a 6. minta hármasát, a 14. homályos kapcsolatát, a 23. kitalált tényeit, a 25. előző verzióját és a 26. megszólításkeveredését.
 
 ## A 26 minta
 
-A minták a leggyakoribbal kezdődnek. A teljes leírás, szólistákkal és példákkal, a `SKILL.md`-ben van.
+A minták a leggyakoribbal kezdődnek. A teljes leírás, a kerülendő kifejezésekkel és példákkal, a `SKILL.md`-ben van.
 
 ### A. Színpadiasság
 
@@ -157,7 +155,7 @@ A minták a leggyakoribbal kezdődnek. A teljes leírás, szólistákkal és pé
 | 24 | Címsor megismételve | "## Hibakezelés" + "A hibakezelés fontos része a rendszernek." | Hagyd a címsort dolgozni |
 | 25 | Az előző verzióról írni | "a korábbi megközelítést váltja ki" | Írd le, mit csinál most |
 
-### F. Regiszter
+### F. Megszólítás
 
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
@@ -173,7 +171,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 | Folyó szöveg vagy felsorolás | Összefüggő gondolat bekezdésbe. Felsorolás csak tételes tartalomhoz. |
 | Alcímek | Csak ha az olvasó ugrani akar. A sablon szakaszai a címsorok. |
 | Zárójel | Csak új információ. Nincs zárójeles fordítás és nincs magyarázat az egyértelműhöz. |
-| Regiszter | Egy forma végig. A dokumentum fajtája dönt. |
+| Megszólítás | Egy forma végig. A dokumentum fajtája dönt. |
 | Részletesség | Az első mondat előtt dönts. Általánosítani szabad, kitalálni nem. |
 | Hang | Semleges és szakmai, váltakozó mondathosszal. Az írásminta felülír. |
 
@@ -181,7 +179,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 
 A 26 minta számozása a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatát követi, mert onnan indult a lista. A leképezés:
 
-- 1-9 és 12-25: azonos az eredetivel, magyar példákkal és szólistákkal. A 8. és a 21. minta szabálya a magyar tipográfiához igazodik.
+- 1-9 és 12-25: a téma és a számozás azonos, a tartalom magyar. A példák, a kerülendő kifejezések, a nyelvtani indoklás és a kivételek a magyar nyelvhez készültek; a 8. és a 21. minta szabálya a magyar tipográfiához igazodik.
 - 10: az eredeti "kötőjeles szópárok" helyett anglicizmusok és tükörfordítások, mert a kötőjeles szópárnak magyarul nincs értelme.
 - 11: az eredeti "passzív és hiányzó alany", kibővítve a magyar "kerül" és "történik" passzívpótlóval és a láncolt főnevesítéssel.
 - 26: új, csak a magyar verzióban. A tegezés és a magázás keveredése.
@@ -190,23 +188,24 @@ Amit a magyar verzió a mintákon felül hoz:
 
 - Csak magyar szöveget kezel. Ha angolt kap, jelzi, és az eredeti humanizert ajánlja.
 - Dokumentumszintű réteg és persona: tapasztalt magyar elemző, aki emberi olvasónak ír dokumentációt.
-- Az angol szakzsargon (sprint, backlog, deploy, ticket, endpoint) marad angolul, zárójeles magyar fordítás nélkül. A tükörfordítás-minta csak a szerkezetet nézi.
+- Az angol szakzsargon (agent, sprint, backlog, deploy, ticket, endpoint) marad angolul, zárójeles magyar fordítás nélkül. A tükörfordítás-minta csak a szerkezetet nézi.
 - Gondolatjel: a hosszú `—` sehol nem áll, címsorban sem. A szóközös `–` marad a számintervallumban, a kötőjeles tulajdonnévben és a felsorolás elválasztójaként, ahol a kettőspont foglalt.
 - Idézőjel: egyenes `"..."` áll a szövegben, a magyar `„...”` és az angol `“...”` helyén is. Publikálandó ügyfélszövegben marad a magyar alak.
 
 A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír át, a Humanizer-hu generáláshoz ad szabályokat. Az upstream továbbra is hasznos bemenet egy új mintához, de a fájl szerkezete már nem követi.
 
-A 12. minta szólistája megfigyelésen alapul, nem korpuszon. Ez a repo élő része: ha egy szó hiányzik vagy fölösleges, nyiss issue-t. A skill módosításának szabályai az [AGENTS.md](AGENTS.md) fájlban vannak; publikálás előtt a `python3 scripts/validate-package.py` ellenőrzi a csomagot.
+A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő része: ha egy szó hiányzik vagy fölösleges, nyiss issue-t. A skill módosításának szabályai az [AGENTS.md](AGENTS.md) fájlban vannak; publikálás előtt a `python3 scripts/validate-package.py` ellenőrzi a csomagot.
 
 ## Források
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) a mintalista forrása, a [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) gondozza.
 - [blader/humanizer](https://github.com/blader/humanizer) az eredeti skill, amelyből ez a projekt indult.
 - [docs/nyelveszeti-forrasok.md](docs/nyelveszeti-forrasok.md) gyűjti a mintákhoz talált magyar nyelvészeti hátteret, hivatkozásokkal: kizáró ellentét (1), halmozás (6), pro-drop és topikfolytonosság (7), -hat/-het és episztemikus modalitás (9), fordításnyelv és birtokos szórend (10), terpeszkedő szerkezet (11), igenévképző és alanyazonosság (15), a címek helyesírása (20).
-- A 12. minta szólistája, a dokumentumszintű döntések és a 8. minta címsoros megfigyelése megfigyelésen alapul, nem korpuszon. Magyar nyelvű LLM-szógyakorisági vizsgálatot kerestünk, de nem találtunk.
+- A 12. minta szójegyzéke, a dokumentumszintű döntések és a 8. minta címsoros megfigyelése megfigyelésen alapul, nem korpuszon. Magyar nyelvű LLM-szógyakorisági vizsgálatot kerestünk, de nem találtunk.
 
 ## Verziótörténet
 
+- 2.4.3 - Szóhasználat. Az "ügynök" helyett "agent": a szakma így hívja, az ügynök magyarul mást jelent, és a 10. minta szabálya épp az ilyen szakszavakat hagyja angolul. Az "agent" be is került a 10. minta szakszólistájába. A "Regiszter" helyett "Megszólítás", mert IT-környezetben a regiszter processzorregisztert jelent, és a repo nem nyelvészeknek szól; a skill amúgy is megszólításként magyarázta. A "szólista" helyett "szójegyzék", mert a szólista magyarul szólóénekest is jelent, és a Kerüld sorok nagy része nem szó, hanem kifejezés. A forrás skill kevésbé hangsúlyos: a bevezetőből kikerült, a licencben és a Források szakaszban marad, mert ott kötelező. Az "Eredet és eltérések" pontosabb lett: az eredetiből a számozás és a minták témája maradt, a tartalom magyar.
 - 2.4.2 - A README újraírva, a skill saját szabályaival. A szerkezetet és a formai követelményeket a feladat adta, a fogalmazást a SKILL.md; ez a projekt valódi használati esete. A Példa a telepítés elé került, mert a "kell-e ez nekem" kérdésre a rossz és a jó változat egymás mellett válaszol a leggyorsabban. A "Mit ad hozzá a magyar verzió" és az "Eredet" szakasz egybeolvadt, mert erősen fedték egymást. A tipográfiai karakterek inline kódba kerültek, amit a "Mit hagyj békén" kivesz a hatály alól. A csere egy valódi hibát is javított: a régi README keverte a tegezést és a magázást ("telepítheti" a tegező szövegben), ami a 26. minta megsértése volt a saját dokumentációnkban. A verziótörténet, a telepítési parancsok, a linkek és a mintaszámozás változatlanul átkerültek.
 - 2.4.1 - Az új lint első valódi találata a saját fájlon: a "Miért hangzik így az AI-szöveg" szakasz hat felsoroláspontja félkövér címkével állt. A félkövér itt nem csinált semmit, mert a címke amúgy is a sor elején áll, ponttal lezárva. Kiesett, a lista és a hat csoportnévre mutató leképezés megmaradt. A SKILL.md-ben ezzel nincs BIZTOS szintű lint-találat.
 - 2.4.0 - Ellenőrző mód, két szinten. A `scripts/lint-hu.py` magyar szöveget ellenőriz a minták ellen LLM nélkül, és a kerülendő kifejezéseket a SKILL.md Kerüld soraiból olvassa ki, hogy a kettő ne csússzon szét. Két szintet ad: a BIZTOS találat szabálysértés a darabszámtól függetlenül, a gyanús emberi döntést kér, mert a 12. minta saját szövege mondja ki, hogy egy szó egyszeri előfordulása még nem gépiesség. Az idézetblokkot és a táblázatsort kihagyja, a "Mit hagyj békén" szakasz alapján. A `commands/ellenoriz.md` a plugin parancsa: előbb a scriptet futtatja, majd azt nézi át, amihez ítélet kell. Mindkettő jelentést ad, egyik sem ír át semmit; a javításról a felhasználó dönt. A SKILL.md nem változott: az ellenőrzés hívó feladat, nem a skill dolga.

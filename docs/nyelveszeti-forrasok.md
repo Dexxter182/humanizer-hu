@@ -44,7 +44,7 @@ megnevezés, nem szakszó.
 
 ## Korpusz és detektálás
 
-Ha a §12 szólistájához valaha korpuszos alátámasztás kell, a szegedi (SZTE) magyar
+Ha a §12 szójegyzékéhez valaha korpuszos alátámasztás kell, a szegedi (SZTE) magyar
 nyelvű AI-szövegfelismerő a kézenfekvő kiindulópont: 350 ezres tanítókorpusz
 irodalomból, szakdolgozatokból, cikkekből és fórumokról. Osztályoz, nem magyaráz,
 tehát önmagában nem ad mintát, csak adatot.
@@ -282,7 +282,7 @@ konvenció, de a keresés nem erősítette meg, ezért kimaradt.
 
 ## Próba éles feladaton (2026-09-12)
 
-A skillt friss kontextusú ügynökkel próbáltuk ki, a docs/proba-prompt.md
+A skillt friss kontextusú agenttel próbáltuk ki, a docs/proba-prompt.md
 szerint: négy szöveg a skill nélkül, ugyanaz a négy a skillel, majd
 összevetés. A munkafájlok a próbát futtató session scratchpadjében voltak,
 tehát már nem érhetők el; a próba újrafuttatható.
@@ -327,10 +327,10 @@ szintű, cselekvő nélküli fogalmazás nyugodtan benne maradt.
    felsoroláson belüli elválasztásra nem. Ezt a §8 hosszú tárgyalása során
    sem vettük észre.
 
-3. **Regiszter és §26 nem fedi egymást.** A Regiszter alszakasz három
+3. **Megszólítás és §26 nem fedi egymást.** A Megszólítás alszakasz három
    formát sorol (tegezés, magázás, személytelen), a §26 viszont hivatkozik
-   a szerkesztői T/1-re is, ami a Regiszter listáján nincs rajta. Magyar
-   belső dokumentumban a T/1 természetes választás, és az ügynök nem tudta
+   a szerkesztői T/1-re is, ami a Megszólítás listáján nincs rajta. Magyar
+   belső dokumentumban a T/1 természetes választás, és az agent nem tudta
    eldönteni, szabályos-e. A §26 T/1 tétele 2026-09-12-én került be, tehát
    ezt az ellentmondást mi hoztuk létre.
 

@@ -1,12 +1,12 @@
-# Útmutató ügynököknek
+# Útmutató agenteknek
 
 Ez a fájl elmondja, hogyan lehet a Humanizer-hu-t módosítani anélkül, hogy a csomag vagy a prompt elromlana.
 
 ## Mi van a repóban
 
-A Humanizer-hu egy Markdownban írt ügynök-skill: a magyar szöveg megfogalmazási szabályait adja szöveg generálásához. A szerkezetet a hívó feladat adja, ez a skill a nyelvet. A `SKILL.md` a prompt, amit az ügynökök olvasnak. Nincs build lépés.
+A Humanizer-hu egy Markdownban írt agent-skill: a magyar szöveg megfogalmazási szabályait adja szöveg generálásához. A szerkezetet a hívó feladat adja, ez a skill a nyelvet. A `SKILL.md` a prompt, amit az agentek olvasnak. Nincs build lépés.
 
-Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két ügynök-eszközre korlátozza.
+Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két agent-eszközre korlátozza.
 
 ## Fő fájlok
 
@@ -14,7 +14,7 @@ Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két üg
 - `README.md` a telepítést, a használatot, a mintákat, az eredetet és a verziótörténetet írja le.
 - `.claude-plugin/plugin.json` a Claude plugint írja le, és a skill betöltőjét a gyökér `SKILL.md`-re irányítja.
 - `.claude-plugin/marketplace.json` teszi lehetővé, hogy a repót Claude marketplace-ként lehessen hozzáadni.
-- `agents/openai.yaml` a megjelenített nevet, a rövid leírást és az alapértelmezett promptot tartalmazza OpenAI-kompatibilis ügynökökhöz.
+- `agents/openai.yaml` a megjelenített nevet, a rövid leírást és az alapértelmezett promptot tartalmazza OpenAI-kompatibilis agentekhez.
 - `scripts/validate-package.py` ellenőrzi a csomagfájlokat és a közös értékeket.
 - `scripts/lint-hu.py` magyar szöveget ellenőriz a minták ellen, és jelentést ad. A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, hogy ne csússzon szét a kettő. Nem ír át semmit.
 - `commands/ellenoriz.md` a plugin ellenőrző parancsa: előbb a scriptet futtatja, majd azt nézi át, amihez ítélet kell. Szintén jelentést ad, nem javít.
@@ -31,7 +31,7 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
 - Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új megfigyelés csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. Ha egy minta nyelvtani vagy helyesírási állítást tesz, a hivatkozás a `docs/nyelveszeti-forrasok.md` fájlba kerüljön, ne a SKILL.md-be. A validátor a címsorokból számolja a darabszámot.
 - Verzió: ugyanaz a verzió legyen a `SKILL.md`-ben a `metadata.version` alatt, a README első verzióbejegyzésében és a `.claude-plugin/plugin.json`-ban. Ne adj a skillhez felső szintű `version` mezőt.
-- Kompatibilitás: a telepítési és használati utasítás maradjon ügynök-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
+- Kompatibilitás: a telepítési és használati utasítás maradjon agent-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
 - Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet.
 - Ellenőrzés: publikálás előtt futtasd: `python3 scripts/validate-package.py`, `npx skills add . --list`, `claude plugin validate .`.
 
@@ -61,6 +61,6 @@ Használj közérthető nyelvet a megjegyzésekben, promptokban, dokumentációb
 - A YAML metaadat maradjon érvényes.
 - A metaadat alatti prompt a termék.
 - A skill generálásra való. Ne írj bele átíró folyamatot, kimeneti jelentést vagy fájlkezelést; azok a hívó feladat dolgai. Az ellenőrzés is hívó feladat: a `commands/ellenoriz.md` a helye, nem a `SKILL.md`.
-- Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Kerüld:` szólista, a `Ne írd` egy mondat; ahol a gépiesség szerkezeti, ott állhat több soros példa.
+- Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Kerüld:` lista, a `Ne írd` egy mondat; ahol a gépiesség szerkezeti, ott állhat több soros példa.
 - Egy rövid, világos utasítás jobb, mint még egy kivétel vagy ismételt magyarázat.
-- A 12. minta szólistája megfigyelésen alapul. Új szó csak akkor kerüljön be, ha több AI-szövegben előfordult, és emberi szövegben ritka.
+- A 12. minta szójegyzéke megfigyelésen alapul. Új szó csak akkor kerüljön be, ha több AI-szövegben előfordult, és emberi szövegben ritka.
