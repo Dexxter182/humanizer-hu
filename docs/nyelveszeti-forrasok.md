@@ -280,18 +280,93 @@ egy lapcímre ne adjon hamis találatot.
 Nem került be: az a szabály, hogy a cím végére nem teszünk pontot. Ismert
 konvenció, de a keresés nem erősítette meg, ezért kimaradt.
 
+## Próba éles feladaton (2026-09-12)
+
+A skillt friss kontextusú ügynökkel próbáltuk ki, a docs/proba-prompt.md
+szerint: négy szöveg a skill nélkül, ugyanaz a négy a skillel, majd
+összevetés. A munkafájlok a próbát futtató session scratchpadjében voltak,
+tehát már nem érhetők el; a próba újrafuttatható.
+
+### Amit a próba igazolt
+
+A felszíni minták erősen működnek. Az alap készletben 13 "kerül" passzív
+volt, a skillesben egy sem. Eltűnt a hosszú gondolatjel, a görbe idézőjel,
+a félkövér címke és a chatbot-keret.
+
+Egy helyen a §11 tiltása tartalmat kényszerített a mondatba: a "a leginkább
+releváns tartalmak kerülnek az élére" helyett a skilles változat megmondja,
+mitől kerül előre valami. Ez a legjobb nyereség a próbában.
+
+Az incidensleírásnál a §14 és a §23 együtt azt hozta, amire terveztük: az
+alap verzió "Gyökérok" címmel állított valamit, amit utána visszavett, a
+skilles verzió címe "Amit az okról tudunk", és minden feltevés mellé odaírja,
+mi hiányzik az igazolásához.
+
+A Részletesség alszakasz működött: az ügyfélnek szóló szövegben a magas
+szintű, cselekvő nélküli fogalmazás nyugodtan benne maradt.
+
+### Javítandó
+
+1. **A fiktív feladat esete.** Ez a legmélyebb, és nemcsak a §23-at érinti.
+   A skill végig azt feltételezi, hogy van forrás. Ha a feladat maga kéri,
+   hogy találj ki egy példadokumentumot (mintaspecifikáció, sablonkitöltés,
+   oktatóanyag, demó), akkor a "csak azt állítsd, amit a forrás ad" és a
+   "írd meg a dokumentumot" közvetlenül ütközik, és a modell a feladat
+   mellett dönt. A próbában így született egy kitalált 429-es státuszkód és
+   egy téves dátum (2026 februárja a valós 2024 februárja helyett).
+   A nyitó bekezdés ad egy kivételt ("A szépirodalom kivétel, ott a kitalált
+   részlet a feladat"), de az illusztratív szakmai dokumentumra nem terjed
+   ki. Megfontolandó: a kivétel kiterjesztése azzal a feltétellel, hogy a
+   kitalált értékek felismerhetően példaértékek legyenek, ne valódinak
+   tálalt tények.
+
+2. **§8: lyuk a felsorolás-elválasztásnál.** Idővonalban és
+   változásnaplóban a "02:35 - esemény" alakban a kettőspont már foglalt,
+   tehát marad a kiskötőjel, ami rosszabb magyar, mint a szabályos szóközös
+   nagykötőjel. A §8 a címsorra ad alternatívát (kettőspont), a
+   felsoroláson belüli elválasztásra nem. Ezt a §8 hosszú tárgyalása során
+   sem vettük észre.
+
+3. **Regiszter és §26 nem fedi egymást.** A Regiszter alszakasz három
+   formát sorol (tegezés, magázás, személytelen), a §26 viszont hivatkozik
+   a szerkesztői T/1-re is, ami a Regiszter listáján nincs rajta. Magyar
+   belső dokumentumban a T/1 természetes választás, és az ügynök nem tudta
+   eldönteni, szabályos-e. A §26 T/1 tétele 2026-09-12-én került be, tehát
+   ezt az ellentmondást mi hoztuk létre.
+
+4. **A §23 és a Részletesség együtt üres mondatot szülhet.** A §23 kivette
+   a kitalált számot, a Részletesség megengedte az általánosítást, és
+   maradt egy tautológia: "a keresés gyorsabb lett, az eredménylista
+   hamarabb jelenik meg". Ehhez kapcsolódik, hogy a "Ha nem dönthető el,
+   kérdezz" nem működik autonóm generálásban, ahol nincs kit kérdezni. Kell
+   egy második kimenet arra az esetre: hagyd el a mondatot, vagy jelöld
+   meg, mi hiányzik.
+
+5. **§11: a "kerül" tiltás hatóköre.** A "kerül + -ra/-re főnév" mintára a
+   lexikális használat is ráillik szó szerint ("a lista elejére kerül",
+   "szóba kerül"), tartalmilag viszont nem. Szigorúbb olvasat rossz magyart
+   eredményezne. A tiltásnak ki kellene mondania, hogy igéből képzett
+   főnévre vonatkozik.
+
+6. **§19: metaadat-blokk.** Nem derül ki, hogy egy fejblokk ("Státusz:",
+   "Súlyosság:", "Időtartam:") félkövér címkés felsorolásnak számít-e.
+   Sablon híján a döntés az íróra marad, pedig ez bevett forma.
+
+7. **§21 ügyfélszövegben.** Publikálandó, végfelhasználónak szóló szövegben
+   az egyenes idézőjel rosszabb magyar, mint a „...”. A §21 indoklása
+   (Markdown, kód, terminál) belső szövegre meggyőző, ügyfélszövegre nem.
+   Eldöntendő, megéri-e ide egy kivétel.
+
+Mellékesen: a skillel készült szöveg is megszegte a §1-et ("nem egyszeri
+befektetés lenne, hanem állandó karbantartás") és egyszer a §12-t
+("valamint"). Az Ellenőrző kör tehát nem fog meg mindent, ami várható, de
+érdemes tudni.
+
 ## Nyitott kérdések
 
-A 26 minta végigjárása 2026-09-12-én lezárult, és a nyitott tételeket ugyanaznap
-végigvettük. Ami maradt:
-
-1. **Verziózás.** A 2.1.0 a tartalmi javítás volt. A 2.1.0 óta bekerült a
-   Részletesség alszakasz, a rovat-szakasz és a próza-folyó szöveg csere,
-   valamint két javítás a mintaválaszokon. Ez 2.2.0-t indokol.
-
-2. **Újrapróba éles feladaton.** A skillt nem futtattuk az átdolgozás óta.
-   Érdemes egy valódi feladattal ellenőrizni, hogy a Kerüld és a gépiesség
-   terminus, a Részletesség alszakasz és az új példák együtt jól működnek-e.
+A 26 minta végigjárása és a nyitott kérdések lezárása 2026-09-12-én megtörtént
+(2.2.0). Az éles próba viszont hét javítanivalót hozott, lásd fent. Amíg
+azokról nincs döntés, a lista itt üres.
 
 ### Lezárt tételek
 
@@ -302,16 +377,10 @@ végigvettük. Ami maradt:
   alapulnak, pontosítva lett.
 - A "jó eséllyel" nem került be a §9-be: bevett magyar fordulat, és a §9 a
   halmozást tiltja, nem az egy bizonytalanítót.
-- A cím végi pont nem AkH-szabály, hanem szerkesztési konvenció: a magyar
-  helyesírás nem ír elő ponthasználatot a fejezetcímek végén, a döntés attól
-  függ, hogy a cím szerkezeti egység vagy teljes mondat. Ezért nem került a
-  §20-ba, ami helyesírási tényeket állít.
-- A szándékos ködösítés a "Dokumentumszintű döntések" szakasz új
-  Részletesség alszakaszába került, a hívó feladat elsőbbségével együtt.
-- A példamondatok átvizsgálása megtörtént. Gépi szűrés a kerül passzívra, a
-  terpeszkedő szerkezetre, a §12 szólistájára, a hosszú gondolatjelre és a
-  görbe idézőjelre: tizenegy találat, mind a §8-ban és a §21-ben, ahol maga
-  az írásjel a téma. Két valódi hiba javítva: a §8 példájában a címsor és a
-  szöveg nem ugyanarról szólt, a §17 mintaválaszában pedig a "skálázódik"
-  elrejtette a cselekvőt. Három hármas felsorolás (§4, §15, §19) és a §6
-  összevetése az előző megoldással ellenőrizve és rendben.
+- A cím végi pont nem AkH-szabály, hanem szerkesztési konvenció, ezért nem
+  került a §20-ba.
+- A szándékos ködösítés a Részletesség alszakaszba került, a hívó feladat
+  elsőbbségével együtt.
+- A példamondatok átvizsgálása megtörtént; két hiba javítva (§8 címsor és
+  szöveg eltérése, §17 "skálázódik").
+- A skill éles próbája megtörtént, lásd a fenti szakaszt.
