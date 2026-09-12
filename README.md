@@ -129,8 +129,8 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
 | 22 | Chatbot-maradvány | "Remélem, segítettem! Szólj, ha..." | Tartalommal kezdj, ténnyel zárj |
-| 23 | Tudáskorlát és találgatás | "korlátozottan dokumentált... valószínűleg" | Mondd meg, mi ismert, vagy hagyd el |
-| 24 | Címsor megismételve | "## Teljesítmény" + "A sebesség számít." | Hagyd a címsort dolgozni |
+| 23 | Tudáskorlát és találgatás | "feltehetően a config.yaml-ban beállított korlát" | Mondd meg, mi ismert, vagy hagyd el |
+| 24 | Címsor megismételve | "## Hibakezelés" + "A hibakezelés fontos része a rendszernek." | Hagyd a címsort dolgozni |
 | 25 | Az előző verzióról írni | "a korábbi megközelítést váltja ki" | Írd le, mit csinál most |
 
 ### F. Regiszter
@@ -184,6 +184,7 @@ A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír á
 
 ## Verziótörténet
 
+- 2.1.0 - Mind a 26 minta végigjárva magyar szempontból. A "Figyeld" címke helyett "Kerüld", mert a skill ír, nem felismer; ugyanezért a "jel" helyett "gépiesség". A szabályokból kikerült minden konkrét dokumentumtípus, azokat csak a description tartja meg. Az életrajzi és enciklopédiás példaanyag helyére műszaki dokumentum lépett. A magyar-specifikus minták nyelvtani alapot kaptak: kizáró ellentét (1), halmozás (6), pro-drop és topikfolytonosság (7), -hat/-het és episztemikus modalitás (9), fordításnyelv és birtokos szórend (10), terpeszkedő szerkezet (11), alanyazonosság és igenévképző (15). Két tárgyi hiba javítva: a minden szót nagybetűző cím nem ismeretlen a magyarban, csak az állandó címekre áll (20), és a magyar idézőjelpár rosszul volt írva (21). A 21. minta megkapta a hiányzó "Ne írd" és "Így írd" párost, ami eddig egyedül nála hiányzott. Új fájl: docs/nyelveszeti-forrasok.md a hivatkozásokkal.
 - 2.0.0 - A skill generálásra való, nem átírásra: a hívó feladat adja a szerkezetet, ez a nyelvet, és a kimenet a kész szöveg. Új dokumentumszintű réteg (hosszúság, próza vagy felsorolás, alcímek, zárójel, regiszter, hang) és persona. A négylépéses átíró folyamat helyére egy hétpontos ellenőrző kör lép, az "Előtte/Utána" példák helyére "Ne írd/Így írd". A 8. minta már csak a hosszú gondolatjelet tiltja feltétel nélkül, a 21. tipográfiai szabállyá vált, a 19. abszolút: nincs félkövér kiemelés. Megszűnt a regiszter- és szakszó-szabály kettőzése, és az "önmagában gyenge" küszöb, aminek generálásnál nincs értelme. Mind a 26 minta megmaradt.
 - 1.1.0 - A skill új szöveg megírására is szolgál, nem csak átírásra: a description és a nyitó bekezdés mindkét módot egyenrangúan nevezi meg. A description teljesen magyar, trigger-kifejezésekkel ("humanizáld", "írd meg emberi hangon"), hajtogatott YAML blokkban.
 - 1.0.0 - Első kiadás. A blader/humanizer 3.0.0 magyar adaptációja: 26 minta hat csoportban, magyar példákkal. Új 10. minta (anglicizmusok és tükörfordítások), kibővített 11. minta ("kerül" passzív), új 26. minta (tegezés és magázás keveredése). Munkahelyi szöveg mint alapértelmezett hang, regiszterszabály, szakzsargon-kivétel, kötőjeles és egyenes idézőjeles tipográfia.

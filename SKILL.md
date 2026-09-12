@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -68,7 +68,7 @@ Ha kaptál írásmintát, olvasd el először, és igazodj a mondathosszához, s
 
 ## A. Színpadiasság
 
-A legerősebb és leggyakoribb jelek a mai modellek prózájában.
+A legerősebb és leggyakoribb gépies vonások a mai modellek prózájában.
 
 ### 1. Hamis ellentét (nem X, hanem Y)
 
@@ -157,7 +157,7 @@ A legerősebb és leggyakoribb jelek a mai modellek prózájában.
 ### 11. Passzív szerkezetek és elrejtett cselekvő
 
 **Kerüld:** kerül + -ra/-re főnév (bemutatásra kerül, elvégzésre került, kialakításra kerül, megvalósításra kerül, tárolásra kerül); sor kerül arra, hogy; történik + főnév (a mentés automatikusan történik); terpeszkedő szerkezet ott, ahol van azonos jelentésű egyszerű ige (módosítást hajt végre, ellenőrzést végez, döntést hoz); láncolt főnevesítés (a bejelentkezés elvégzését követően, a módosítás jóváhagyásának megtörténte után)
-**Probléma:** A szöveg elrejti, ki cselekszik. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös jele, és sűrűn jön, ezért erős; a modell azért nyúl érte, mert személytelen és formális akar lenni. Nevezd meg, ki mit csinál, és írj egyszerű igét ott, ahol van azonos jelentésű; ahol nincs, a szerkezet marad. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem gépies, és a folytatódó alany elhagyása sem az: az a §7 szerint helyes magyar.
+**Probléma:** A szöveg elrejti, ki cselekszik. A "kerül" passzívpótló a magyar AI-próza és a hivatali nyelv közös vonása, és sűrűn jön, ezért erős; a modell azért nyúl érte, mert személytelen és formális akar lenni. Nevezd meg, ki mit csinál, és írj egyszerű igét ott, ahol van azonos jelentésű; ahol nincs, a szerkezet marad. A bevett szakmai fordulat ("a rendszer biztosítja", "a felhasználó megadja") nem gépies, és a folytatódó alany elhagyása sem az: az a §7 szerint helyes magyar.
 **Ne írd:** "A bejelentkezés elvégzését követően a felhasználói adatok betöltésre kerülnek. Az eredmények mentése automatikusan történik."
 **Így írd:** "Bejelentkezés után a rendszer betölti a felhasználói adatokat, és automatikusan menti az eredményeket."
 
@@ -255,44 +255,44 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 22. Chatbot-maradvány
 
-**Kerüld:** Remélem, segítettem, Természetesen!, Persze!, Nagyszerű kérdés!, Teljesen igazad van, Szeretnéd, ha..., Elkészítsem...?, Folytassam?, szólj, ha, íme egy..., Kérdezz bátran
-**Probléma:** A chatbot üdvözlése, dicsérete, ajánlata vagy elköszönése olyan szövegbe kerül, aminek önállóan kell állnia. Ez a lista legbiztosabb jele, és a legkönnyebb elnézni, ha valódi tartalmat csomagol. A szöveg a tartalommal kezdődik és az utolsó ténnyel végződik.
+**Kerüld:** Remélem, segítettem, Remélem, ez segít, Természetesen!, Persze!, Nagyszerű kérdés!, Teljesen igazad van, Ahogy kérted, Elkészítettem, Szeretnéd, ha..., Elkészítsem...?, Folytassam?, Segíthetek még valamiben?, szólj, ha, Ha bármi kérdésed van, íme egy..., Kérdezz bátran
+**Probléma:** A chatbot üdvözlése, dicsérete, ajánlata vagy elköszönése olyan szövegbe kerül, aminek önállóan kell állnia. Ez a lista legmegbízhatóbb tétele, és a legkönnyebb elnézni, ha valódi tartalmat csomagol. Tegező és magázó alakban is jön ("szólj, ha", "szóljon, ha"). A szöveg a tartalommal kezdődik és az utolsó ténnyel végződik.
 **Ne írd:** "Nagyszerű kérdés! Íme egy áttekintés a jóváhagyási folyamatról. [...] Remélem, segítettem! Szólj, ha bármelyik lépést részletezzem."
 **Így írd:** "A kérelmet a közvetlen vezető hagyja jóvá, 50 000 Ft felett a pénzügyi igazgató is."
 
 ### 23. Tudáskorlát-nyilatkozatok és találgatás
 
-**Kerüld:** [dátum] szerinti állapot, a legutóbbi frissítésemig, bár a részletek korlátozottan állnak rendelkezésre, az elérhető információk alapján, nem nyilvános, nem széles körben dokumentált, a rendelkezésre álló forrásokban, visszahúzódó, kevés nyilvános adat, valószínűleg [alapította, tanult, kezdte], feltehetően, úgy vélik
-**Probléma:** A szöveg megemlíti, hol ér véget a modell tudása, vagy bevallja, hogy nem talált forrást, aztán egy hihető tippel tölti ki a rést. Generálásnál ez a legveszélyesebb minta, mert kitalált tényt visz be. Írd le, mit nem ad meg a forrás, vagy hagyd el a mondatot. Tippet soha ne adj elő tényként.
-**Ne írd:** "Bár az alapítás részletei korlátozottan dokumentáltak, a cég valószínűleg az 1990-es években jött létre."
-**Így írd:** "A cég alapítási dátuma az elérhető forrásokban nem szerepel."
+**Kerüld:** a legutóbbi frissítésemig, a tudásom [dátum]-ig terjed, [dátum] szerinti állapot saját tudáskorlátként, bár a részletek korlátozottan állnak rendelkezésre, az elérhető információk alapján, a rendelkezésre álló forrásokban, nem találtam rá utalást, de, ez csak következtetés, feltehetően, vélhetően, valószínűleg [érték, útvonal, verzió, név]
+**Probléma:** A szöveg megemlíti, hol ér véget a modell tudása, vagy bevallja, hogy nem talált forrást, aztán egy hihető tippel tölti ki a rést. Generálásnál ez a legveszélyesebb minta, mert kitalált tényt visz be, és műszaki szövegben a tipp konkrét alakot ölt: beállításnevet, útvonalat, verziószámot vagy API-t. A feltevés rendben van, ha feltevésként áll és ellenőrizhető; hibakeresésben és PoC-ban ez maga a munka. Nevet, útvonalat, verziót és értéket viszont ne találj ki, feltevésként sem. Írd le, mit nem ad meg a forrás, vagy hagyd el a mondatot.
+**Ne írd:** "A timeout oka nem derül ki a naplóból, de feltehetően a config.yaml-ban beállított 30 másodperces korlát."
+**Így írd:** "A timeout oka nem derül ki a naplóból. A leggyakoribb ok a kliensoldali korlát, de a konfiguráció ismerete nélkül ezt nem tudjuk megerősíteni."
 
 ### 24. A címsor megismétlése az első mondatban
 
-**Probléma:** A címsor után egy egysoros bekezdés megismétli a címet, mielőtt a valódi tartalom elkezdődne. A címsor után rögtön a tartalom jön.
+**Probléma:** A címsor után egy egysoros bekezdés megismétli a címet, mielőtt a valódi tartalom elkezdődne. Magyarul jellemzően úgy, hogy a cím szavát visszamondja, és fontosnak nyilvánítja. A címsor után rögtön a tartalom jön.
 **Ne írd:**
-> ## Teljesítmény
+> ## Hibakezelés
 >
-> A sebesség számít.
+> A hibakezelés a rendszer fontos része.
 >
-> Ha a felhasználó lassú oldalt kap, elmegy.
+> A szolgáltatás minden hibát naplóz, és a hívónak 4xx vagy 5xx kódot ad vissza.
 **Így írd:**
-> ## Teljesítmény
+> ## Hibakezelés
 >
-> Ha a felhasználó lassú oldalt kap, elmegy.
+> A szolgáltatás minden hibát naplóz, és a hívónak 4xx vagy 5xx kódot ad vissza.
 
 ### 25. Az előző verzióról írni
 
-**Probléma:** A dokumentáció és a kódmegjegyzés azt írja le, amit a kód lecserélt, a jelenlegi működés helyett. Az előző megoldást csak akkor említsd, ha a dokumentum maga a változásról szól.
+**Probléma:** A dokumentáció és a kódmegjegyzés azt írja le, amit a kód lecserélt, a jelenlegi működés helyett. A modell azért csinálja, mert a saját szerkesztését meséli el, nem a kész dolgot írja le; az olvasónak viszont a mostani működés kell. Az előző megoldást csak akkor említsd, ha a dokumentum maga a változásról szól.
 **Ne írd:** "Ez a függvény a korábbi megközelítést váltja ki, amely az összes elemen végigment, és O(n²) futásidőt okozott."
-**Így írd:** "Ez a függvény hash táblát használ O(1) kereséshez, így elkerüli a naiv bejárás O(n²) költségét."
+**Így írd:** "Ez a függvény hash táblában keresi az elemet, ezért a keresés O(1)."
 
 ## F. Regiszter
 
 ### 26. Tegezés és magázás keveredése
 
-**Kerüld:** tegező és magázó alak ugyanabban a szövegben ("kattints", majd "kattintson"); ön és maga váltakozása; személytelen szövegbe csúszó tegező mondat ("A rendszer naplózza a kérést. Ezt bármikor megnézheted."); felszólító mód váltakozása E/2 és T/1 között ("nyisd meg", majd "nyissuk meg")
-**Probléma:** Az ember egyszer dönt a regiszterről, a modell mondatonként. A keveredés magyar szövegben feltűnő és szinte mindig gépi. A választás szabálya a Regiszter szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
+**Kerüld:** tegező és magázó alak ugyanabban a szövegben ("kattints", majd "kattintson"); ön és maga váltakozása; az Ön és az ön váltakozása egy szövegen belül; személytelen szövegbe csúszó tegező mondat ("A rendszer naplózza a kérést. Ezt bármikor megnézheted."); a szerkesztői T/1 és a személytelen keveredése ("javasoljuk", majd "ajánlott"); felszólító mód váltakozása E/2 és T/1 között ("nyisd meg", majd "nyissuk meg")
+**Probléma:** Az ember egyszer dönt a regiszterről, a modell mondatonként. A keveredés magyar szövegben feltűnő és szinte mindig gépi. Az Ön nagy kezdőbetűje külön eset: a kisbetűs alak a szabályos, a nagybetűs a levélben szokásos tiszteletadás, egyik sem hiba, csak a váltogatásuk. A választás szabálya a Regiszter szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
 **Ne írd:** "A beállítások menüben módosíthatja a nyelvet. Kattints a Mentés gombra, és a rendszer elmenti a választásod."
 **Így írd:** "A beállítások menüben módosíthatja a nyelvet. Kattintson a Mentés gombra, a rendszer elmenti a választását."
 
