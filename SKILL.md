@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.1.0"
+  version: "2.2.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -136,11 +136,11 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 **Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar.
 **Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
 **Ne írd:**
-> ## Teljesítmény — mit mértünk
+> ## Migráció — mikor indul
 >
 > A migráció — amit eredetileg a következő sprintre terveztünk — hétfőn indul.
 **Így írd:**
-> ## Teljesítmény: mit mértünk
+> ## Migráció: mikor indul
 >
 > A migráció hétfőn indul, bár eredetileg a következő sprintre terveztük.
 
@@ -209,7 +209,7 @@ A tény alatta általában rendben van. Írd le a tényt, öltözet nélkül.
 **Kerüld:** szakértők szerint, megfigyelők szerint, iparági jelentések, egyes kritikusok, több publikáció; a best practice szerint, az iparági sztenderd szerint, általánosan elfogadott, hogy, a tapasztalatok azt mutatják; egy nagy szolgáltató neve indoklás helyett ("a Netflix is így csinálja")
 **Probléma:** Egy meg nem nevezett tekintély áll ott ahelyett, amit mondtak. Névtelen szakértők vagy egy ismert cég neve támaszt alá egy döntést, ahelyett hogy a saját követelmény tenné. Ha a forrás megnevezi a valódi forrást és azt, amit mondott, azt írd; egyébként hagyd el az állítást, és azzal indokolj, amit tudsz. Forrást soha ne találj ki. A hiányzó hivatkozás önmagában nem gépies; a legtöbb írás forrás nélküli.
 **Ne írd:** "A best practice szerint a mikroszolgáltatásokra bontás a helyes irány, és a nagy szolgáltatók is így csinálják."
-**Így írd:** "A riportok havonta futnak, a számlázás folyamatosan, ezért a kettő külön skálázódik. Emiatt választjuk szét őket."
+**Így írd:** "A riportok havonta futnak, a számlázás folyamatosan. Azért választjuk szét a két szolgáltatást, hogy külön skálázhassuk őket."
 
 ### 18. A létige kerülése
 

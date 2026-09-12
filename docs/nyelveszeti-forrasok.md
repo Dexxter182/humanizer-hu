@@ -282,34 +282,36 @@ konvenció, de a keresés nem erősítette meg, ezért kimaradt.
 
 ## Nyitott kérdések
 
-A 26 minta végigjárása 2026-09-12-én lezárult a 2.1.0 verzióval. Ami maradt:
+A 26 minta végigjárása 2026-09-12-én lezárult, és a nyitott tételeket ugyanaznap
+végigvettük. Ami maradt:
 
-1. **Záró ellenőrzés a példamondatokon.** Át kell nézni, hogy a minták saját
-   példái nem sértik-e valamelyik másik szabályt. Az "Így írd" sorok és a
-   Probléma-szövegek tisztán kell álljanak; a "Ne írd" sorok szándékosan
-   hibásak. Menet közben három gyenge "Így írd" sorra derült fény (§17, §19,
-   §25), tehát a hiba valós, és a többiben is lehet.
+1. **Verziózás.** A 2.1.0 a tartalmi javítás volt. A 2.1.0 óta bekerült a
+   Részletesség alszakasz, a rovat-szakasz és a próza-folyó szöveg csere,
+   valamint két javítás a mintaválaszokon. Ez 2.2.0-t indokol.
 
-2. **Szándékos ködösítés mint dokumentumszintű döntés.** Van, amikor a homályos
-   fogalmazás a feladat: release note, nagyon magas szintű összefoglaló,
-   néha ügyfélszöveg. A §11, §14 és §17 ilyenkor túl szigorú. Mintánkénti
-   kivétel helyett a "Dokumentumszintű döntések" szakaszba kívánkozik egy sor.
+2. **Újrapróba éles feladaton.** A skillt nem futtattuk az átdolgozás óta.
+   Érdemes egy valódi feladattal ellenőrizni, hogy a Kerüld és a gépiesség
+   terminus, a Részletesség alszakasz és az új példák együtt jól működnek-e.
 
-3. **"jó eséllyel" elhelyezése.** Kikerült a §10-ből, mert nem anglicizmus,
-   hanem bizonytalanító. A §9-be tartozna, de a §9 már lezárult, amikor ez
-   kiderült. Döntés kell: bemegy vagy elmarad.
+### Lezárt tételek
 
-4. **A cím végén nincs pont.** A §20-hoz tartozna, de a keresés nem erősítette
-   meg, ezért kimaradt. Ha valaki megtalálja az AkH pontos helyét, betehető.
-
-5. **Verziózás.** A 2.1.0 a tartalmi javítás. Ha a fenti tételek bemennek,
-   érdemes eldönteni, hogy 2.2.0 vagy 3.0.0 következik.
-
-A tételek átszámozódtak, amikor a negyedik (a forrásgyűjtemény elhelyezése)
-lezárult.
-
-Lezárt tételek: az "ez csak következtetés" a §9-ből a §23-ba került. A
-forrásgyűjtemény a README "Források" szakaszából, a SKILL.md "Forrás"
-szakaszából és az AGENTS.md mintaírási szabályaiból is linkelve van; a
-README korábbi állítása, hogy a magyar megfigyelések nem korpuszon
-alapulnak, pontosítva lett.
+- Az "ez csak következtetés" a §9-ből a §23-ba került.
+- A forrásgyűjtemény a README "Források" szakaszából, a SKILL.md "Forrás"
+  szakaszából és az AGENTS.md mintaírási szabályaiból is linkelve van. A
+  README korábbi állítása, hogy a magyar megfigyelések nem korpuszon
+  alapulnak, pontosítva lett.
+- A "jó eséllyel" nem került be a §9-be: bevett magyar fordulat, és a §9 a
+  halmozást tiltja, nem az egy bizonytalanítót.
+- A cím végi pont nem AkH-szabály, hanem szerkesztési konvenció: a magyar
+  helyesírás nem ír elő ponthasználatot a fejezetcímek végén, a döntés attól
+  függ, hogy a cím szerkezeti egység vagy teljes mondat. Ezért nem került a
+  §20-ba, ami helyesírási tényeket állít.
+- A szándékos ködösítés a "Dokumentumszintű döntések" szakasz új
+  Részletesség alszakaszába került, a hívó feladat elsőbbségével együtt.
+- A példamondatok átvizsgálása megtörtént. Gépi szűrés a kerül passzívra, a
+  terpeszkedő szerkezetre, a §12 szólistájára, a hosszú gondolatjelre és a
+  görbe idézőjelre: tizenegy találat, mind a §8-ban és a §21-ben, ahol maga
+  az írásjel a téma. Két valódi hiba javítva: a §8 példájában a címsor és a
+  szöveg nem ugyanarról szólt, a §17 mintaválaszában pedig a "skálázódik"
+  elrejtette a cselekvőt. Három hármas felsorolás (§4, §15, §19) és a §6
+  összevetése az előző megoldással ellenőrizve és rendben.
