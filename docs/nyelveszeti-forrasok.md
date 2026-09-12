@@ -229,20 +229,6 @@ pro-drop nyelv: az alany elhagyása szabályos, és a §7 elő is írja. A
 "alanytalan tőmondat" tétel kiesett, mert a példamondatnak ("Konfigurációs
 fájl nem szükséges.") van alanya, és jó magyar.
 
-## Nyitott kérdések
-
-Ide gyűlik, amit menet közben félretettünk.
-
-- "jó eséllyel": kikerült a §10-ből, mert nem anglicizmus. A §9-be tenném
-  bizonytalanítóként, de a §9 már lezárult. Döntés kell.
-- "ez csak következtetés": kikerült a §9-ből. A §23-ba való, amikor odaérünk.
-- Szándékos ködösítés: van, amikor a homályos fogalmazás a feladat, például
-  release note-ban vagy nagyon magas szintű összefoglalóban. A §11, §14 és
-  §17 ilyenkor túl szigorú. A dokumentumszintű réteg kezelhetné, de egyelőre
-  nincs benne. Megbeszélendő a kör végén.
-- A forrásgyűjtemény megjelenítése: README-szakasz, ez a fájl linkelve, vagy
-  a SKILL.md "Forrás" szakaszának bővítése.
-
 ## §15. Felületes határozói igenevek (-va/-ve)
 
 Terminológiai tisztázás: a -va/-ve **határozói igenévképző**, tehát képző, nem
@@ -268,12 +254,6 @@ A "farok" megnevezés az angol "tail" tükre volt, és a csomagból mindenhonnan
 kikerült: a §15 címéből és szövegéből, a README táblájából, valamint a §1
 "lecsípett tagadó farok" tételéből, ami helyett most "a mondat végére csapott
 tagadás" áll.
-- Záró ellenőrzés: a kör végén át kell nézni, hogy a minták saját
-  példamondatai nem sértik-e valamelyik másik szabályt. Az "Így írd" sorok
-  és a Probléma-szövegek tisztán kell álljanak; a "Ne írd" sorok
-  szándékosan hibásak. Eddig két gyenge "Így írd" sorra derült fény
-  menet közben (§17 és §19), tehát a hiba valós.
-
 ## §20. Dekoratív címsorok
 
 Helyesbítés: a korábbi szöveg azt állította, hogy a minden szót nagybetűző
@@ -299,3 +279,34 @@ egy lapcímre ne adjon hamis találatot.
 
 Nem került be: az a szabály, hogy a cím végére nem teszünk pontot. Ismert
 konvenció, de a keresés nem erősítette meg, ezért kimaradt.
+
+## Nyitott kérdések
+
+A 26 minta végigjárása 2026-09-12-én lezárult a 2.1.0 verzióval. Ami maradt:
+
+1. **Záró ellenőrzés a példamondatokon.** Át kell nézni, hogy a minták saját
+   példái nem sértik-e valamelyik másik szabályt. Az "Így írd" sorok és a
+   Probléma-szövegek tisztán kell álljanak; a "Ne írd" sorok szándékosan
+   hibásak. Menet közben három gyenge "Így írd" sorra derült fény (§17, §19,
+   §25), tehát a hiba valós, és a többiben is lehet.
+
+2. **Szándékos ködösítés mint dokumentumszintű döntés.** Van, amikor a homályos
+   fogalmazás a feladat: release note, nagyon magas szintű összefoglaló,
+   néha ügyfélszöveg. A §11, §14 és §17 ilyenkor túl szigorú. Mintánkénti
+   kivétel helyett a "Dokumentumszintű döntések" szakaszba kívánkozik egy sor.
+
+3. **"jó eséllyel" elhelyezése.** Kikerült a §10-ből, mert nem anglicizmus,
+   hanem bizonytalanító. A §9-be tartozna, de a §9 már lezárult, amikor ez
+   kiderült. Döntés kell: bemegy vagy elmarad.
+
+4. **A forrásgyűjtemény megjelenítése.** Ez a fájl most nincs sehonnan
+   linkelve. Három lehetőség: README-szakasz, ez a fájl linkelve, vagy a
+   SKILL.md "Forrás" szakaszának bővítése.
+
+5. **A cím végén nincs pont.** A §20-hoz tartozna, de a keresés nem erősítette
+   meg, ezért kimaradt. Ha valaki megtalálja az AkH pontos helyét, betehető.
+
+6. **Verziózás.** A 2.1.0 a tartalmi javítás. Ha a fenti tételek bemennek,
+   érdemes eldönteni, hogy 2.2.0 vagy 3.0.0 következik.
+
+Lezárt tételek: az "ez csak következtetés" a §9-ből a §23-ba került (kész).
