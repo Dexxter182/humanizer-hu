@@ -180,7 +180,8 @@ A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír á
 
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) a mintalista forrása, a [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) gondozza.
 - [blader/humanizer](https://github.com/blader/humanizer) az eredeti skill, amelyből ez a projekt indult.
-- A magyar nyelvi megfigyelések (10, 11, 26), a 12. minta szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.
+- [docs/nyelveszeti-forrasok.md](docs/nyelveszeti-forrasok.md) gyűjti a mintákhoz talált magyar nyelvészeti hátteret, hivatkozásokkal: kizáró ellentét (1), halmozás (6), pro-drop és topikfolytonosság (7), -hat/-het és episztemikus modalitás (9), fordításnyelv és birtokos szórend (10), terpeszkedő szerkezet (11), igenévképző és alanyazonosság (15), a címek helyesírása (20).
+- A 12. minta szólistája, a dokumentumszintű döntések és a 8. minta címsoros megfigyelése továbbra is megfigyelésen alapul, nem korpuszon. Magyar nyelvű LLM-szógyakorisági vizsgálatot kerestünk, de nem találtunk.
 
 ## Verziótörténet
 

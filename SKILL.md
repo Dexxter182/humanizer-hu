@@ -318,4 +318,4 @@ Változatlanul marad a kódblokk, az inline kód, a parancs, az útvonal, az URL
 
 ## Forrás
 
-A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvi megfigyelések (§10, a §11 bővítése, §26), a §12 szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem kurált korpuszon.
+A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvtani hátteret és a hozzá tartozó hivatkozásokat a repo `docs/nyelveszeti-forrasok.md` fájlja gyűjti. A §12 szólistája és a dokumentumszintű döntések megfigyelésen alapulnak, nem korpuszon.

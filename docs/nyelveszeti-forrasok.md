@@ -299,14 +299,17 @@ A 26 minta végigjárása 2026-09-12-én lezárult a 2.1.0 verzióval. Ami marad
    hanem bizonytalanító. A §9-be tartozna, de a §9 már lezárult, amikor ez
    kiderült. Döntés kell: bemegy vagy elmarad.
 
-4. **A forrásgyűjtemény megjelenítése.** Ez a fájl most nincs sehonnan
-   linkelve. Három lehetőség: README-szakasz, ez a fájl linkelve, vagy a
-   SKILL.md "Forrás" szakaszának bővítése.
-
-5. **A cím végén nincs pont.** A §20-hoz tartozna, de a keresés nem erősítette
+4. **A cím végén nincs pont.** A §20-hoz tartozna, de a keresés nem erősítette
    meg, ezért kimaradt. Ha valaki megtalálja az AkH pontos helyét, betehető.
 
-6. **Verziózás.** A 2.1.0 a tartalmi javítás. Ha a fenti tételek bemennek,
+5. **Verziózás.** A 2.1.0 a tartalmi javítás. Ha a fenti tételek bemennek,
    érdemes eldönteni, hogy 2.2.0 vagy 3.0.0 következik.
 
-Lezárt tételek: az "ez csak következtetés" a §9-ből a §23-ba került (kész).
+A tételek átszámozódtak, amikor a negyedik (a forrásgyűjtemény elhelyezése)
+lezárult.
+
+Lezárt tételek: az "ez csak következtetés" a §9-ből a §23-ba került. A
+forrásgyűjtemény a README "Források" szakaszából, a SKILL.md "Forrás"
+szakaszából és az AGENTS.md mintaírási szabályaiból is linkelve van; a
+README korábbi állítása, hogy a magyar megfigyelések nem korpuszon
+alapulnak, pontosítva lett.
