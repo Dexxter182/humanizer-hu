@@ -35,7 +35,7 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
 ## Tipográfia a repóban
 
-A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
+A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett a felsorolás elválasztóját kivéve, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
 
 ## Írásmód
 
@@ -50,7 +50,7 @@ Használj közérthető nyelvet a megjegyzésekben, promptokban, dokumentációb
 - Vedd ki az ismétlő és fölösleges szavakat.
 - Kevés rövidítés, a szakkifejezést magyarázd.
 - Kerüld a kettős tagadást.
-- Tartsd meg pontosan az azonosítókat, parancsokat, útvonalakat, sémamezőket, idézeteket, figyelt kifejezéseket és a viselkedést hordozó példákat.
+- Tartsd meg pontosan az azonosítókat, parancsokat, útvonalakat, sémamezőket, idézeteket, kerülendő kifejezéseket és a viselkedést hordozó példákat.
 - Tartsd meg a teljes technikai jelentést.
 - Az angol szakszavakat hagyd angolul, ha a csapat így használja őket.
 

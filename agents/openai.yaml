@@ -1,4 +1,4 @@
 interface:
   display_name: "Humanizer-hu"
-  short_description: "Magyar próza megfogalmazási szabályai szöveg generálásához"
-  default_prompt: "Use $humanizer-hu for the Hungarian prose rules while you write this document."
+  short_description: "Magyar szöveg megfogalmazási szabályai generáláshoz"
+  default_prompt: "Use $humanizer-hu for the Hungarian writing rules while you write this document."
