@@ -268,3 +268,34 @@ A "farok" megnevezés az angol "tail" tükre volt, és a csomagból mindenhonnan
 kikerült: a §15 címéből és szövegéből, a README táblájából, valamint a §1
 "lecsípett tagadó farok" tételéből, ami helyett most "a mondat végére csapott
 tagadás" áll.
+- Záró ellenőrzés: a kör végén át kell nézni, hogy a minták saját
+  példamondatai nem sértik-e valamelyik másik szabályt. Az "Így írd" sorok
+  és a Probléma-szövegek tisztán kell álljanak; a "Ne írd" sorok
+  szándékosan hibásak. Eddig két gyenge "Így írd" sorra derült fény
+  menet közben (§17 és §19), tehát a hiba valós.
+
+## §20. Dekoratív címsorok
+
+Helyesbítés: a korábbi szöveg azt állította, hogy a minden szót nagybetűző
+cím "a magyar helyesírásban nem létezik". Ez nem igaz. A magyar kétféle
+címet különböztet meg:
+
+- **Egyedi cím** (könyv, cikk, értekezés, és ide tartozik a dokumentum- és
+  szakaszcím is): csak az első szó és a tulajdonnévi elem nagybetűs.
+- **Állandó cím** (újság, hetilap, folyóirat): a többelemű címben minden szó
+  nagybetűs, az "és" kötőszó kivételével. Ezért helyes az "Élet és Irodalom".
+  A könyvtárügyi szabvány (MSZ 3424/2) az állandó címeknél is csak az első
+  elemet kezdi nagybetűvel.
+
+A minta tehát a szakaszcímre mond szabályt, és ezt most ki is mondja, hogy
+egy lapcímre ne adjon hamis találatot.
+
+- A magyar helyesírás szabályai. helyesiras.mta.hu.
+  https://helyesiras.mta.hu/helyesiras/default/akh12
+- A magyar helyesírás szabályai, A tulajdonnevek írása. Wikiforrás.
+  https://hu.wikisource.org/wiki/A_magyar_helyes%C3%ADr%C3%A1s_szab%C3%A1lyai/A_tulajdonnevek_%C3%ADr%C3%A1sa
+- Egyedi címek helyesírása.
+  https://blog.poet.hu/helyesirasi_kerdesek/egyedi-cimek-(koltoi-muvek-stb_)-helyesirasa
+
+Nem került be: az a szabály, hogy a cím végére nem teszünk pontot. Ismert
+konvenció, de a keresés nem erősítette meg, ezért kimaradt.

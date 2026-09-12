@@ -220,32 +220,36 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 19. Félkövér mint dekoráció
 
-**Szabály:** Ne emelj ki szavakat félkövérrel. Ha a sablon félkövér rovatcímkét ír elő, azt kövesd.
-**Probléma:** A modell minden felsoroláspontnak félkövér címkét és kettőspontot ad, és a bekezdésekben is kiemel szavakat. A kiemelés akkor működik, ha ritka; ha minden ponton ott van, semmit nem emel ki. A címkés listát írd prózává, ha a címkék önmagukban nem hordoznak információt.
+**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér rovatcímkét ír elő, azt kövesd.
+**Probléma:** Két külön szokás. A szövegközi kiemelés akkor működik, ha ritka; ha sok szó félkövér, semmi nem emelkedik ki. A félkövér címkés felsorolás pedig szerkezetet mutat ott, ahol nincs: ha a címkék önmagukban nem hordoznak információt, a lista prózában rövidebb és pontosabb.
 **Ne írd:**
+> A frissítés **jelentősen** javítja a **teljesítményt**.
+>
 > - **Felhasználói élmény:** A felhasználói élmény jelentősen javult az új felülettel.
 > - **Teljesítmény:** A teljesítmény optimalizált algoritmusokkal javult.
 > - **Biztonság:** A biztonságot végpontok közötti titkosítás erősíti.
 **Így írd:**
-> A frissítés új felületet hoz, optimalizált algoritmusokkal gyorsítja a betöltést, és végpontok közötti titkosítást ad.
+> A frissítés új kezdőképernyőt hoz, a terméklista betöltése 400 ezredmásodpercre gyorsult, és a kliens végpontok közötti titkosítással küld.
 
 ### 20. Dekoratív címsorok
 
 **Szabály:** A címsor mondatkezdő nagybetűs. Ne tegyél emojit, nyilat (→) vagy más díszt címsorba és listaelembe, és ne rakj vízszintes vonalat a szakaszok közé. A dokumentum ne induljon a saját címét ismétlő első szintű címsorral.
-**Probléma:** A címsor Minden Szavát Nagybetűvel írni angol szokás (Title Case), a magyar helyesírásban nem létezik, ezért egy előfordulás is egyértelműen gépies.
+**Probléma:** A címsor Minden Szavát Nagybetűvel írni angol szokás (Title Case). A magyar egyedi címben, így a dokumentum- és szakaszcímekben is, csak az első szó és a tulajdonnév nagybetűs; a minden szót nagybetűző alak az újságok és folyóiratok állandó címéé, szakaszcím sosem az. Az emoji, a nyíl és a vízszintes vonal figyelmet kér tartalom helyett.
 **Ne írd:**
-> ## Stratégiai Tárgyalások És Globális Partnerségek
+> ## Migrációs Terv És Visszaállítás
 >
-> 🚀 **Indulási fázis:** A termék Q3-ban indul
+> 🚀 A séma frissítése → a régi tábla olvasható marad
 **Így írd:**
-> ## Stratégiai tárgyalások és globális partnerségek
+> ## Migrációs terv és visszaállítás
 >
-> A termék Q3-ban indul.
+> A migráció a sémát a 4.2-es verzióra frissíti, a régi tábla pedig olvasható marad.
 
 ### 21. Tipográfiai idézőjelek
 
-**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „..." és az angol “...” helyett is. Kódblokkban, inline kódban és idézett azonosítóban ne nyúlj hozzá.
-**Probléma:** A magyar „..." önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít; itt tipográfiai egységesítésről van szó. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
+**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „...” és az angol “...” helyett is. Ugyanez a belső idézőjelre (»...«). Kódblokkban, inline kódban és idézett azonosítóban ne nyúlj hozzá.
+**Probléma:** A magyar „...” a szabályos alak, és önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít. Ez a skill mégis egyenest kér, egységesítésből: így a szöveg Markdownban, kódban és terminálban is ugyanúgy viselkedik. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
+**Ne írd:** A hibaüzenet szövege „A kérés lejárt”, az ügyfél pedig a “Mégse” gombot látja.
+**Így írd:** A hibaüzenet szövege "A kérés lejárt", az ügyfél pedig a "Mégse" gombot látja.
 
 ## E. Maradványok
 

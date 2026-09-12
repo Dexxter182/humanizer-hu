@@ -120,8 +120,8 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
-| 19 | Félkövér mint dekoráció | "**Teljesítmény:** A teljesítmény javult" | Kiemelés nélkül, prózában |
-| 20 | Dekoratív címsorok | "Stratégiai Tárgyalások És Partnerségek", emoji, nyíl, vonal | Mondatkezdő nagybetű, dísz nélkül |
+| 19 | Félkövér mint dekoráció | "**jelentősen** javítja", "**Teljesítmény:** A teljesítmény javult" | Kiemelés nélkül, prózában |
+| 20 | Dekoratív címsorok | "Migrációs Terv És Visszaállítás", emoji, nyíl, vonal | Mondatkezdő nagybetű, dísz nélkül |
 | 21 | Tipográfiai idézőjelek | „a projekt”, “a projekt” | "a projekt" |
 
 ### E. Maradványok
