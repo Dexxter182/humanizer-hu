@@ -16,6 +16,8 @@ Tartsd a skillt hordozhatónak. Ne írj olyan utasítást, ami egy vagy két üg
 - `.claude-plugin/marketplace.json` teszi lehetővé, hogy a repót Claude marketplace-ként lehessen hozzáadni.
 - `agents/openai.yaml` a megjelenített nevet, a rövid leírást és az alapértelmezett promptot tartalmazza OpenAI-kompatibilis ügynökökhöz.
 - `scripts/validate-package.py` ellenőrzi a csomagfájlokat és a közös értékeket.
+- `scripts/lint-hu.py` magyar szöveget ellenőriz a minták ellen, és jelentést ad. A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, hogy ne csússzon szét a kettő. Nem ír át semmit.
+- `commands/ellenoriz.md` a plugin ellenőrző parancsa: előbb a scriptet futtatja, majd azt nézi át, amihez ítélet kell. Szintén jelentést ad, nem javít.
 
 ## Viszony az eredetihez
 
@@ -58,7 +60,7 @@ Használj közérthető nyelvet a megjegyzésekben, promptokban, dokumentációb
 
 - A YAML metaadat maradjon érvényes.
 - A metaadat alatti prompt a termék.
-- A skill generálásra való. Ne írj bele átíró folyamatot, kimeneti jelentést vagy fájlkezelést; azok a hívó feladat dolgai.
+- A skill generálásra való. Ne írj bele átíró folyamatot, kimeneti jelentést vagy fájlkezelést; azok a hívó feladat dolgai. Az ellenőrzés is hívó feladat: a `commands/ellenoriz.md` a helye, nem a `SKILL.md`.
 - Minden minta a `Ne írd` és az `Így írd` párost adja. Ahol van `Kerüld:` szólista, a `Ne írd` egy mondat; ahol a gépiesség szerkezeti, ott állhat több soros példa.
 - Egy rövid, világos utasítás jobb, mint még egy kivétel vagy ismételt magyarázat.
 - A 12. minta szólistája megfigyelésen alapul. Új szó csak akkor kerüljön be, ha több AI-szövegben előfordult, és emberi szövegben ritka.
