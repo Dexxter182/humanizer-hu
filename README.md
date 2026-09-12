@@ -1,7 +1,5 @@
 # Humanizer-hu
 
-Humanizer-hu is a Hungarian writing-style skill for agents. The calling task supplies the structure of the document, this skill supplies the prose rules, so the generated Hungarian does not read as AI-written. It is a single Markdown file and works with any agent that can load skills. Hungarian only; for English use [blader/humanizer](https://github.com/blader/humanizer), which this project adapts. The rest of this README is in Hungarian.
-
 Az agenttel íratott magyar dokumentumon látszik, hogy gép írta: erőltetett hármasok, "kerül" passzív, felfújt jelzők, gondolatjel minden tagmondat között, tegezés és magázás váltakozva. A Humanizer-hu ezt a réteget cseréli le. 26 mintát ad hat csoportban, és egy dokumentumszintű döntéssort, ami az első mondat előtt lefut. A szerkezetet továbbra is a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), a skill a nyelvet adja hozzá. A minták magyar példákon állnak, magyar nyelvtani háttérrel, és kettőnek angolul nincs is értelme: a tükörfordításnak és a megszólításnak.
 
 ## Példa
@@ -66,7 +64,7 @@ A már legenerált szövegre ugyanezek a szabályok érvényesek:
 A második szakasz túl hosszú, írd rövidebbre, a humanizer-hu szabályai szerint.
 ```
 
-Gép-gép kimenetre (JSON, log, séma, parancs, strukturált adat) ne használd. Angol szövegre sem: arra az eredeti [blader/humanizer](https://github.com/blader/humanizer) való.
+Gép-gép kimenetre (JSON, log, séma, parancs, strukturált adat) ne használd. Angol szövegre sem.
 
 ### Hangillesztés
 
@@ -205,6 +203,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.4.4 - A README végig magyar, az angol bevezető kikerült. Sem a skill, sem a README nem irányítja át az angol szöveggel érkezőt a forrásprojektre, mert az más feladatra való: az meglévő szöveget ír át, ez generál. Az attribúció a Források és a Licenc szakaszban marad.
 - 2.4.3 - Szóhasználat: "agent", "megszólítás" és "szójegyzék" váltja az "ügynök", "regiszter" és "szólista" szót a skillben és a dokumentációban. Az "Eredet és eltérések" szakasz pontosabban írja le, mi maradt az eredetiből.
 - 2.4.2 - A README újraírva, a skill saját szabályaival. A Példa a telepítés elé került, a szakaszok átrendeződtek, és megszűnt a tegezés és a magázás keveredése.
 - 2.4.1 - Formázási javítás a SKILL.md-ben.
