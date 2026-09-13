@@ -1,8 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
   "name": "humanizer-hu",
-  "description": "Magyar szöveg megfogalmazási szabályai generáláshoz, hogy a kimenet ne hangozzon AI-nak.",
-  "version": "2.4.4",
+  "description": "Magyar írásstílus-skill agenteknek: a generált szöveg ne hangozzon AI-nak. Írás közben ad szabályokat, nem a kész szöveget javítja utólag. Csak azt állítja, amit a forrás tartalmaz.",
+  "version": "2.4.5",
   "author": {
     "name": "Dexxter182",
     "url": "https://github.com/Dexxter182"
@@ -11,13 +11,17 @@
   "repository": "https://github.com/Dexxter182/humanizer-hu",
   "license": "MIT",
   "keywords": [
+    "humanizer",
+    "hungarian",
+    "magyar",
+    "ai-writing",
+    "anti-slop",
+    "agent-skill",
+    "claude-skill",
     "writing",
     "editing",
-    "humanize",
     "prose",
-    "style",
-    "hungarian",
-    "magyar"
+    "style"
   ],
   "skills": [
     "./"

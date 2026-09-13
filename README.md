@@ -1,6 +1,15 @@
 # Humanizer-hu
 
-Az agenttel íratott magyar dokumentumon látszik, hogy gép írta: erőltetett hármasok, "kerül" passzív, felfújt jelzők, gondolatjel minden tagmondat között, tegezés és magázás váltakozva. A Humanizer-hu ezt a réteget cseréli le. 26 mintát ad hat csoportban, és egy dokumentumszintű döntéssort, ami az első mondat előtt lefut. A szerkezetet továbbra is a hívó feladat adja (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), a skill a nyelvet adja hozzá. A minták magyar példákon állnak, magyar nyelvtani háttérrel, és kettőnek angolul nincs is értelme: a tükörfordításnak és a megszólításnak.
+Magyar írásstílus-skill agenteknek, generáláshoz. A szabályok írás közben hatnak, nem a kész szöveg utólagos tisztításakor: a hívó feladat adja a szerkezetet (user story, specifikáció, ADR, jegy, dokumentáció, ügyfélszöveg), a Humanizer-hu a nyelvet. A másik alapszabálya, hogy csak azt állítja, amit a kérés vagy a forrás tartalmaz: nevet, számot, dátumot, idézetet és hivatkozást nem talál ki, hanem elkéri, vagy egyszerűbb mondatot ír.
+
+Az agenttel íratott magyar dokumentumon látszik, hogy gép írta: erőltetett hármasok, "kerül" passzív, felfújt jelzők, gondolatjel minden tagmondat között, tegezés és magázás váltakozva. A Humanizer-hu ezt a réteget cseréli le. 26 mintát ad hat csoportban, és egy dokumentumszintű döntéssort, ami az első mondat előtt lefut. A minták magyar példákon állnak, magyar nyelvtani háttérrel, és kettőnek angolul nincs is értelme: a tükörfordításnak és a megszólításnak.
+
+## Miben más
+
+- Dokumentumszintű réteg. Hosszúság, folyó szöveg vagy felsorolás, alcím, zárójel, megszólítás és részletesség az első mondat előtt dől el, mert ezek utólag, mondatonként nem javíthatók.
+- Magyar nyelvtani háttér. A "kerül" passzív, a terpeszkedő szerkezet, a pro-drop, a birtokos szórend és a magyar tipográfia saját mintát kap, a hivatkozások a [docs/nyelveszeti-forrasok.md](docs/nyelveszeti-forrasok.md) fájlban vannak.
+- Gépi ellenőrzés. A `scripts/lint-hu.py` LLM nélkül jelzi a szabálysértéseket, tehát nem az a modell nézi át a szöveget, amelyik írta. A mintalistát a `SKILL.md`-ből olvassa, és nem ír át semmit.
+- Hangillesztés. Írásmintából átveszi a mondathosszt, a szóválasztást és az írásjeleket, és a minta felülírja a skill saját tipográfiai szabályait.
 
 ## Példa
 
@@ -36,6 +45,8 @@ npx skills add Dexxter182/humanizer-hu --global
 ```
 
 A `--global` nélkül csak az aktuális projektbe települ. A `--agent <n>` vagy `--agent '*'` kapcsolóval választható, melyik agent kapja meg; utána töltsd újra a skilleket. A skill a `/humanizer-hu` parancsra hallgat.
+
+A Skills CLI jelenleg 79 agenthez telepít, köztük a Claude Code, a Codex, a Cursor, a GitHub Copilot, a Gemini CLI, a Windsurf, a Zed és az OpenCode. A teljes listát az `npx skills add . --agent '?'` hibaüzenete írja ki.
 
 Claude Code 2.1.142 vagy újabb alatt pluginként is telepíthető:
 
@@ -82,6 +93,8 @@ A skill a minta ritmusát, szóválasztását, írásjeleit és szándékos furc
 ## Ellenőrzés
 
 A skill generáláshoz ad szabályokat. A kész szöveg átnézése külön futtatási mód, és jelentést ad, nem javít: megmondja, hol és melyik minta sérül, a javításról utána te döntesz.
+
+Gépi kör azért van a csomagban, mert a szabályokat ugyanaz a modell sérti meg, amelyik a szöveget írta, és a saját kimenetét nézi át a legrosszabbul. A `lint-hu.py` LLM nélkül fut, így a találatai nem attól függnek, melyik modell olvassa a szöveget. Regex viszont csak a kimondott kifejezéseket látja, ezért a két kör egymás mellett áll: a script a biztosat fogja meg, a `/humanizer-hu:ellenoriz` azt, amihez olvasni kell.
 
 Gépi kör, LLM nélkül:
 
@@ -203,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.4.5 - A README a két megkülönböztető szabállyal kezd: a skill generálás közben hat, és nem talál ki tényt. Új "Miben más" szakasz a dokumentumszintű rétegről, a magyar nyelvtani háttérről, a lintről és a hangillesztésről. A csomagleírások és a kulcsszavak bővültek, hogy a skill megtalálható legyen, a telepítési szakasz megnevezi a támogatott agenteket, az Ellenőrzés szakasz pedig megmondja, miért van a csomagban gépi kör.
 - 2.4.4 - A README végig magyar, az angol bevezető kikerült. Sem a skill, sem a README nem irányítja át az angol szöveggel érkezőt a forrásprojektre, mert az más feladatra való: az meglévő szöveget ír át, ez generál. Az attribúció a Források és a Licenc szakaszban marad.
 - 2.4.3 - Szóhasználat: "agent", "megszólítás" és "szójegyzék" váltja az "ügynök", "regiszter" és "szólista" szót a skillben és a dokumentációban. Az "Eredet és eltérések" szakasz pontosabban írja le, mi maradt az eredetiből.
 - 2.4.2 - A README újraírva, a skill saját szabályaival. A Példa a telepítés elé került, a szakaszok átrendeződtek, és megszűnt a tegezés és a magázás keveredése.

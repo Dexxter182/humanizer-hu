@@ -10,9 +10,21 @@
     {
       "name": "humanizer-hu",
       "source": "./",
-      "description": "Magyar szöveg megfogalmazási szabályai generáláshoz, hogy a kimenet ne hangozzon AI-nak.",
+      "description": "Magyar írásstílus-skill agenteknek: a generált szöveg ne hangozzon AI-nak. Írás közben ad szabályokat, nem a kész szöveget javítja utólag. Csak azt állítja, amit a forrás tartalmaz.",
       "license": "MIT",
-      "keywords": ["writing", "editing", "humanize", "prose", "style", "hungarian", "magyar"]
+      "keywords": [
+        "humanizer",
+        "hungarian",
+        "magyar",
+        "ai-writing",
+        "anti-slop",
+        "agent-skill",
+        "claude-skill",
+        "writing",
+        "editing",
+        "prose",
+        "style"
+      ]
     }
   ]
 }
