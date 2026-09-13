@@ -528,7 +528,7 @@ a skilles futás a forrás kimondott hiányát is jelezte, a skill nélküli nem
 
 Tartalmilag viszont itt bukott ki a legélesebben a következő tétel.
 
-## Lezárt tétel: a Hosszúság szabály levág forrásbeli tényt (2.5.0)
+## Részben lezárt tétel: a Hosszúság szabály levág forrásbeli tényt (2.5.0)
 
 ### Mi történt
 
@@ -581,6 +581,26 @@ nem a forrás lefedettségére, és hogy egy szakasz feldolgozásánál annak mi
 ténye a szövegbe kerül. A Részletesség alszakasz ezzel nem ütközik: az arról
 szól, mennyit árul el a szöveg egy tényről, nem arról, hogy egy forrásbeli
 szakasz kihagyható-e.
+
+### A javítás visszamérése
+
+A 2.5.0-s skillel mindkét érintett modell újrafutott.
+
+A gyors chatmodellnél a javítás fogott: a levágott bekezdés szó szerint
+visszakerült, a lint továbbra is tiszta, a szöveg száz karakterrel hosszabb.
+
+A kisebb Claude-modellnél nem fogott. Négy új futásból egyik sem említi az
+ősfeltöltést, ugyanúgy, mint a 2.4.9-es körben. A formai oldal ráadásul
+zajosabb lett: a 2.4.9-ben négyből egy futásban volt BIZTOS találat (összesen
+öt), a 2.5.0-ban négyből háromban (összesen kilenc), és a találatok jórészt a
+félkövér story-sablonból jönnek ("Mint felhasználó, szeretném"). Négy-négy
+minta mellett ez lehet szórás is, de a Hosszúság szakasz a javítással hosszabb
+lett, és gyengébb modellnél a hosszabb szabályszöveg hígítja a figyelmet.
+
+A tétel ezért nem lezárt. Amit tudunk: a megfogalmazás ott segít, ahol a modell
+elég erős ahhoz, hogy a szabályt pontosan alkalmazza. Ahol nem, ott a
+lefedettséget nem a stílusszabály fogja megoldani, hanem a hívó feladat
+pontosabb kérése vagy egy ellenőrző kör.
 
 ### Hogyan reprodukálható
 
