@@ -512,3 +512,70 @@ Egy tétel ötödször jött elő, most már öt modellcsaládnál: a user story
 sablonja. A §19 megengedi a félkövér címkét, ha a sablon előírja, csak épp nem
 dönthető el, mi számít sablonnak, amikor a hívó feladat nem ad formátumot. Ez a
 nyitott tételek közül a legtöbbet jelzett.
+
+### 2026-09-13, 2.4.9, egy gyors chatmodell
+
+| | Skill nélkül | Skillel |
+| --- | --- | --- |
+| Lint BIZTOS | 13 | 0 |
+| Ebből görbe idézőjel | 12 | 0 |
+| Sor eleji félkövér | 3 | 0 |
+| Kimondott hiány jelezve | nem | igen |
+| Karakter | 4155 | 4114 |
+
+Formailag ez a mérés legnagyobb javulása: tizenhárom szabálysértésből nulla, és
+a skilles futás a forrás kimondott hiányát is jelezte, a skill nélküli nem.
+
+Tartalmilag viszont itt bukott ki a legélesebben a következő tétel.
+
+## Nyitott tétel: a Hosszúság szabály levág forrásbeli tényt
+
+### Mi történt
+
+A gyors chatmodell skill nélküli futása megírta a 2.5.2 első bekezdését:
+
+> Az ősfeltöltés során a DB ág motorkerékpárnál W1, tehergépkocsinál W3 értéket
+> tölthet. Az alkalmazás logikája ősfeltöltés nélkül is működik.
+
+Ugyanaz a modell, ugyanaz a forrás, ugyanaz a feladat, skillel: ez a bekezdés
+eltűnt. A skilles futás két storyt írt, mindkettőt a felugró ablakról.
+
+Ugyanez a mintázat a kisebb Claude-modellnél is megvolt: mind a négy skilles
+futás pontosan hat tényt fedett le a tízből, és mind a négyszer ugyanaz a négy
+hiányzott, köztük az ősfeltöltés. A két erős Claude-modellnél a jelenség nem
+jelentkezett, ott a skilles futások is teljes fedést adtak.
+
+### Melyik szabály okozza
+
+A Hosszúság alszakasz első mondata: "Írj annyit, amennyit a feladat kér, és ne
+többet."
+
+A feladat ebben a mérésben kifejezetten a szakasz lefedését kérte ("annyi
+storyt írj, amennyire a szakasz bomlik"). A skill saját elve szerint a hívó
+feladat felülír, mégis a rövidség nyert.
+
+### Miért nem egyértelmű a szabály
+
+A "ne többet" két különböző dolgot tilthat, és a szöveg nem választja szét őket:
+
+- ne írj tartalmatlan tölteléket (bevezető, összefoglalás, záró gondolat), ami a
+  szabály eredeti célja, és amit a szakasz többi mondata is ezzel magyaráz
+- ne fedd le a forrás minden szakaszát, ami nem volt cél, viszont a gyengébb
+  modellek így olvassák
+
+A második olvasat ellen a skillben nincs mondat. A Részletesség alszakasz a
+mennyiségről szól, de az általánosítás és a kitalálás határáról, nem arról,
+hogy egy forrásbeli szakasz kihagyható-e.
+
+### Mit kell eldönteni
+
+Kell-e a Hosszúság szabály mellé egy mondat, ami kimondja, hogy a rövidítés a
+megfogalmazásra vonatkozik, nem a forrás lefedettségére. És ha igen, hogyan
+viszonyul ez a Részletesség alszakaszhoz, ami épp azt engedi meg, hogy szélesebb
+közönségnek szóló szövegben ne szerepeljen minden részlet.
+
+### Hogyan reprodukálható
+
+A mérési készlet két futása: a gyors chatmodell skill nélküli és skilles
+kimenete, illetve a kisebb Claude-modell négy skilles futása. Mind a repón
+kívül, a mérési könyvtárban.
