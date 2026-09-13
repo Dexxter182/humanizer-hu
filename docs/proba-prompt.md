@@ -356,3 +356,44 @@ feladat kell, ami kivételhelyzetbe viszi a szabályokat.
   csak a felsoroláspont élén álló félkövér címkét keresi.
 - A `kerül megjelenítésre` fordított szórendű "kerül" passzív. A BIZTOS minta
   csak a `megjelenítésre kerül` sorrendet fogja.
+
+### 2026-09-13, 2.4.7, ugyanez a mérés egy gyengébb modellen
+
+Az Opus-mérés gyengéje, hogy a viszonyítási alap hibátlan volt, tehát a skillnek
+nem maradt hely javítani. Ugyanez a forrás és ugyanez a két kimenet lefutott a
+kisebb, gyorsabb modellel is, kondíciónként négy futással.
+
+| | Skill nélkül | Teljes skill |
+| --- | --- | --- |
+| Leltári tény | 5, 7, 7, 4 | 6, 6, 6, 6 |
+| Lint BIZTOS | 2 futásban | egyikben sem |
+| Reklámnyelv az összefoglalóban | 3 futásban | egyikben sem |
+| Karakter átlaga | 5793 | 3448 |
+| Token átlaga | 54 112 | 70 308 |
+
+Itt a viszonyítási alap végre hibázik, és a hibák pont azok, amikre a skill
+készült. A skill nélküli összefoglalók kitalált tényeket állítanak: az egyik
+differenciált díjazásról ír, pedig a forrás díjat sehol nem említ, a másik
+"intelligensen optimalizált alapértékekről" és "információ-gazdaságosságról". A
+§12 és a §16 szókincse is megjelenik (`zökkenőmentes`, `egyedülálló`), és két
+futásban BIZTOS lint-találat is van, egy "kerül" passzív és két hosszú
+gondolatjel.
+
+A skilles ág egyik futásában sincs sem BIZTOS találat, sem reklámnyelv, sem
+kitalált állítás. A maradék gyanús találatok is enyhébbek: főleg a §18
+létigekerülése (`rendelkezik`, `biztosít`, `kínál`).
+
+A másik különbség az egyöntetűség. A négy skilles futás pontosan ugyanazt a hat
+tényt fedte le, a négy skill nélküli négy és hét között ingadozott, futásonként
+más összetételben. A skill tehát nemcsak az átlagot javítja, hanem a szórást is
+csökkenti, és éles munkában ez ér többet.
+
+Amit viszont a skill nem old meg: egyik ág sem fedte le a 2.5.2 első bekezdését,
+az ősfeltöltésről és a DB ágról szólót, és a férőhely szerinti besorolás
+kihagyását sem. Az erősebb modell ezt kilencből kilencszer megírta. A hiányzó
+tények tehát modellképesség kérdése, nem szabálykérdés: a skill a kitalálást
+fogja meg, a kifelejtést nem.
+
+A tokenmérés itt is a skill ellen szól: a betöltése 30 százalékkal drágítja a
+futást. Cserébe a kimenet 40 százalékkal rövidebb, mert a kitalált tartalom
+kimarad belőle.
