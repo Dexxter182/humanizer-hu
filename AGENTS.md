@@ -31,13 +31,13 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
 - Minták: a minták 1-től hézag nélkül számozottak, a legerősebb és leggyakoribb elöl. Egy új megfigyelés csak akkor kap saját mintát, ha egyetlen meglévő minta sem foglalja már magában; inkább illeszd be egy meglévőbe. Ha mintát adsz hozzá, veszel el vagy számozol át, frissítsd a README tábláit, a README szakaszcímét, az Eredet szakaszt és minden §hivatkozást. Ha egy minta nyelvtani vagy helyesírási állítást tesz, a hivatkozás a `docs/nyelveszeti-forrasok.md` fájlba kerüljön, ne a SKILL.md-be. A validátor a címsorokból számolja a darabszámot.
 - Verzió: ugyanaz a verzió legyen a `SKILL.md`-ben a `metadata.version` alatt, a README első verzióbejegyzésében és a `.claude-plugin/plugin.json`-ban. Ne adj a skillhez felső szintű `version` mezőt.
-- Kompatibilitás: a telepítési és használati utasítás maradjon agent-semleges. A Claude Code, OpenCode, Codex nevek példák, nem korlátok.
+- Kompatibilitás: a telepítési és használati utasítás maradjon agent-semleges. A Claude Code, az OpenCode és a Codex név csak példa: a skill bármelyik agent-eszközzel működik.
 - Történet: minden viselkedésváltozáshoz vagy nem nyilvánvaló javításhoz írj rövid README verziójegyzetet. A verziótörténetet felhasználó olvassa, ezért azt írd le, mi változott, ne azt, hogy miért. Az indoklás a commit üzenetbe és a `docs/nyelveszeti-forrasok.md` fájlba való.
 - Ellenőrzés: publikálás előtt futtasd: `python3 scripts/validate-package.py`, `npx skills add . --list`, `claude plugin validate .`.
 
 ## Tipográfia a repóban
 
-A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett a felsorolás elválasztóját kivéve, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
+A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett a felsorolás elválasztóját kivéve, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. Ez a projekt saját szabálya, és erősebb a §19 sablon-kivételénél: a repóban nincs olyan sablon, ami félkövér címkét írna elő, tehát arra az ágra a README-ben nem lehet hivatkozni. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
 
 ## Írásmód
 

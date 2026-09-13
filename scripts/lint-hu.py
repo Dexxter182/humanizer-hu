@@ -26,6 +26,22 @@ LEIRO = re.compile(
 )
 FOLYTATAS = re.compile(r"^(hogy|hanem|ha|majd|de|illetve|valójában|azt|amely|ami)\b", re.I)
 
+# Egyszavas tételeknél a ragozott alak is találat: a §18 "szolgál" a szövegben
+# "szolgáló" alakban jelenik meg. Csak ezek a végződések állhatnak a tő után, és
+# csak hat betűnél hosszabb tőnél, hogy a rövid szavak ne hozzanak téves találatot.
+RAGOK = ("ott", "ett", "ött", "nak", "nek", "ja", "je", "va", "ve", "ni", "tt",
+         "an", "en", "ó", "ő", "i", "t")
+
+
+def szoveg_mintaja(kifejezes: str) -> re.Pattern:
+    """A kifejezés keresőmintája, egyszavas tőnél a ragozott alakokkal együtt."""
+    hatar_elott, hatar_utan = r"(?<![\w\u00c0-\u017f])", r"(?![\w\u00c0-\u017f])"
+    tors = re.escape(kifejezes)
+    if " " not in kifejezes and len(kifejezes) >= 6:
+        valtozatok = "|".join(re.escape(r) for r in sorted(RAGOK, key=len, reverse=True))
+        tors += f"(?:{valtozatok})?"
+    return re.compile(hatar_elott + tors + hatar_utan)
+
 
 def kerulendo_kifejezesek(skill: str) -> tuple[dict[str, tuple[int, re.Pattern]], int]:
     """A Kerüld sorokból kiszedi a kereshető kifejezéseket. Visszaadja a
@@ -59,7 +75,7 @@ def kerulendo_kifejezesek(skill: str) -> tuple[dict[str, tuple[int, re.Pattern]]
                 kihagyott += 1
                 continue
             k = tiszta.lower()
-            talalt.setdefault(k, (szam, re.compile(r"(?<![\w\u00c0-\u017f])" + re.escape(k) + r"(?![\w\u00c0-\u017f])")))
+            talalt.setdefault(k, (szam, szoveg_mintaja(k)))
     return talalt, kihagyott
 
 
@@ -197,6 +213,10 @@ def main() -> int:
           "mondja ki, hogy egy szó egyszeri előfordulása még nem gépiesség.")
     print("Amit ez a script nem lát: §6 hármas, §14 homályos kapcsolat, "
           "§23 kitalált tény, §25 előző verzió, §26 regiszterkeveredés.")
+    print("A több szavas kifejezéseket szó szerint keresi, tehát azok ragozott "
+          "alakját elszalasztja; egyszavas tételnél a ragozott alak is találat.")
+    print("A §21 kivételét nem ismeri: publikálandó ügyfélszövegben a magyar "
+          "idézőjel szabályos, ott a görbe idézőjel találata téves riasztás.")
     return 1 if (strict and biztos_db) else 0
 
 

@@ -102,7 +102,7 @@ Gépi kör, LLM nélkül:
 python3 scripts/lint-hu.py FÁJL.md
 ```
 
-A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát a mintákkal együtt frissül. Két szintet ad: a BIZTOS találat szabálysértés a darabszámtól függetlenül, a gyanús emberi döntést kér. Az idézetblokkot és a táblázatsort kihagyja, mert a "Mit hagyj békén" szakasz szerint az idézet nem számít.
+A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát a mintákkal együtt frissül. Az egyszavas tételeket ragozott alakban is megtalálja, a több szavasakat szó szerint keresi. Két szintet ad: a BIZTOS találat szabálysértés a darabszámtól függetlenül, a gyanús emberi döntést kér. Az idézetblokkot és a táblázatsort kihagyja, mert a "Mit hagyj békén" szakasz szerint az idézet nem számít.
 
 Teljes kör, pluginként telepítve:
 
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.4.6 - A §20 kivételt kap: az önálló fájl, például egy README, a saját címét viszi H1-ként. A lint az egyszavas kerülendő tételeket ragozott alakban is megtalálja, és kiírja, hogy a §21 ügyfélszöveg-kivételét nem ismeri. A `SKILL.md` és az `AGENTS.md` két mondata átfogalmazva, mert maguk is a §1 alakját mutatták.
 - 2.4.5 - A README a két megkülönböztető szabállyal kezd: a skill generálás közben hat, és nem talál ki tényt. Új "Miben más" szakasz a dokumentumszintű rétegről, a magyar nyelvtani háttérről, a lintről és a hangillesztésről. A csomagleírások és a kulcsszavak bővültek, hogy a skill megtalálható legyen, a telepítési szakasz megnevezi a támogatott agenteket, az Ellenőrzés szakasz pedig megmondja, miért van a csomagban gépi kör.
 - 2.4.4 - A README végig magyar, az angol bevezető kikerült. Sem a skill, sem a README nem irányítja át az angol szöveggel érkezőt a forrásprojektre, mert az más feladatra való: az meglévő szöveget ír át, ez generál. Az attribúció a Források és a Licenc szakaszban marad.
 - 2.4.3 - Szóhasználat: "agent", "megszólítás" és "szójegyzék" váltja az "ügynök", "regiszter" és "szólista" szót a skillben és a dokumentációban. Az "Eredet és eltérések" szakasz pontosabban írja le, mi maradt az eredetiből.
