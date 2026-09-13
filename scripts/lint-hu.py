@@ -87,6 +87,15 @@ BIZTOS = [
     (11, re.compile(r"\b\w+(?:ásra|ésre)\s+kerül\w*", re.I), "kerül passzív"),
     (11, re.compile(r"\b\w+(?:ás|és)a?\s+(?:automatikusan\s+)?történik\b", re.I), "történik + főnév"),
 ]
+# A SKILL.md szerkezeti címkéi nem dekoráció: a promptot ezek tagolják.
+SKILL_CIMKE = re.compile(r"^\*\*(Kerüld|Szabály|Probléma|Ne írd|Így írd):\*\*\s*")
+FELKOVER = re.compile(r"\*\*[^*]+\*\*")
+# Soronként egy §19 találat, ebben a sorrendben. A dekoráció három alakja.
+FELKOVER_BIZTOS = (
+    (re.compile(r"\s*[-*]\s+\*\*"), "félkövér címke a felsorolásban"),
+    (re.compile(r"^\s*\*\*[^*]+"), "félkövér a sor elején"),
+    (re.compile(r"\*\*[^*]{1,40}:\*\*"), "félkövér címke"),
+)
 CIMSOR_EMOJI = re.compile(r"[\U0001F300-\U0001FAFF←-⇿✀-➿✨⭐]")
 # Azonosító-előtag a címsor elején: "1.", "2.5.1", "A.", "US-2", "ADR-002:".
 # Ezek nem a cím szavai, tehát a Title Case vizsgálat előtt le kell venni őket,
@@ -144,6 +153,8 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
         if nyers.lstrip().startswith(">") or nyers.lstrip().startswith("|"):
             continue
         sor = tisztit(nyers)
+        if sajat_skill:
+            sor = SKILL_CIMKE.sub("", sor)
 
         for szam, rx, mit in BIZTOS:
             if sajat_skill and minta in (8, 21) and szam in (8, 21):
@@ -166,8 +177,14 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
             if nagyok:
                 talalatok.append(("biztos", i, 20, " ".join(nagyok), "Title Case a címsorban"))
 
-        if re.match(r"\s*[-*]\s+\*\*", sor):
-            talalatok.append(("biztos", i, 19, sor.strip()[:40], "félkövér címke a felsorolásban"))
+        for rx, mit in FELKOVER_BIZTOS:
+            if rx.match(sor) if rx.pattern.startswith(("\\s*[-*]", "^")) else rx.search(sor):
+                talalatok.append(("biztos", i, 19, sor.strip()[:40], mit))
+                break
+        else:
+            if FELKOVER.search(sor):
+                # Mondat belsejében a félkövér lehet sablonelőírás, ezért ítéletet kér.
+                talalatok.append(("gyanús", i, 19, "félkövér kiemelés", "kiemelés a szövegben"))
 
         if not (sajat_skill and nyers.startswith("#")):
             kisbetus = sor.lower()

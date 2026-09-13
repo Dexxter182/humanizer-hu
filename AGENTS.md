@@ -37,7 +37,7 @@ Tartsd szinkronban a `SKILL.md`-t és a `README.md`-t.
 
 ## Tipográfia a repóban
 
-A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett a felsorolás elválasztóját kivéve, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. Ez a projekt saját szabálya, és erősebb a §19 sablon-kivételénél: a repóban nincs olyan sablon, ami félkövér címkét írna elő, tehát arra az ágra a README-ben nem lehet hivatkozni. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni.
+A repo saját szövegei ugyanazokat a szabályokat követik, amiket a skill előír: egyenes idézőjel, kötőjel gondolatjel helyett a felsorolás elválasztóját kivéve, félkövér csak ott, ahol a promptban szerkezeti címke (Kerüld, Szabály, Probléma, Ne írd, Így írd). A `README.md` és ez a fájl nem használ félkövért. Ez a projekt saját szabálya, és erősebb a §19 sablon-kivételénél: a repóban nincs olyan sablon, ami félkövér címkét írna elő, tehát arra az ágra a README-ben nem lehet hivatkozni. A `SKILL.md` "Ne írd" példáiban a gondolatjel, az emoji, a görbe idézőjel és a félkövér szándékos: azt mutatják, mit kell elkerülni. A `commands/` promptjai és a `docs/proba-prompt.md` szerkezeti címkéhez használnak félkövért; a lint ezeket jelzi, a CI viszont csak a `SKILL.md`, a `README.md` és az `AGENTS.md` fájlt nézi szigorú módban.
 
 ## Írásmód
 

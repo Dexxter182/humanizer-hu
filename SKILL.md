@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.4.8"
+  version: "2.4.9"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül

@@ -348,7 +348,7 @@ változat ezen a feladaton semmit nem veszít, és 7,5 százalékot spórol. Ami
 mér, az épp a Probléma bekezdések tartalma, vagyis a kivételek. Ahhoz olyan
 feladat kell, ami kivételhelyzetbe viszi a szabályokat.
 
-### Nyitott lint-hibák
+### Nyitott lint-hibák (a félkövér azóta javítva)
 
 Éles kimeneten előjött két szerkezet, amit a script nem lát:
 
@@ -433,3 +433,47 @@ félreérti.
 
 A tokenmérés mindhárom szinten ugyanazt mutatja: a skill betöltése 29 és 36
 százalék közötti többletet jelent.
+
+### 2026-09-13, 2.4.9, Gemini-kör és a §19 újrapontozása
+
+Egy negyedik modell, másik gyártótól, a felhasználó céges előfizetésén,
+chatfelületen. Kondíciónként egy futás, Gemini 3.6 Thinking.
+
+| | Skill nélkül | Teljes skill |
+| --- | --- | --- |
+| Lint BIZTOS | 11 | 0 |
+| Lint gyanús | 5 | 0 |
+| Sor eleji félkövér | 10 | 0 |
+| `Mint ... felhasználó` tükörfordítás | 2 | 0 |
+| Kitalált szó | 5 | 0 |
+| Karakter | 4900 | 4237 |
+
+A skill nélküli futás kitalálta a parkolási díjat, kétszer is, pedig a forrás
+díjról egy szót sem ír. Ugyanaz a hiba, amit a kisebb Claude-modell is
+elkövetett ugyanezen a hiányon: két különböző gyártó modellje ugyanoda talál ki
+tartalmat. Mellette `precízebb`, `dinamikus`, `intelligensebbé`,
+`zökkenőmentes`, és a platformlistát is átírta. A skilles futásban egyik sincs,
+és a kimondott hiányt is pontosan jelezte.
+
+Ez az első gyártófüggetlen mérés: a skill eddig csak Claude-modelleken futott,
+ahol felmerülhetett, hogy a saját családjára van hangolva.
+
+A §19 újrapontozása: a Gemini-futás tíz sor eleji félkövér címkéje mutatta
+meg, hogy a lint a §19 első felét nem látta: csak a felsoroláspont élén álló
+címkét kereste. A szabály most a sor eleji félkövért és a félkövér címkét is
+fogja, a mondat belsejében álló kiemelés pedig gyanús szintre került.
+
+Ezzel mind a 27 eddigi futás újrapontozódott, és a kép megváltozott:
+
+| Ág | BIZTOS találatos futások |
+| --- | --- |
+| Erős modell, skill nélkül | 3-ból 2 (0, 5, 5) |
+| Középső modell, skill nélkül | 4-ből 3 (7, 3, 0, 8) |
+| Kisebb modell, skill nélkül | 4-ből 4 (10, 13, 10, 2) |
+| Másik gyártó, skill nélkül | 1-ből 1 (11) |
+| Bármelyik modell, skillel | 12-ből 1 (a kisebb modell egyik futása, 5) |
+
+A korábbi bejegyzések nulla BIZTOS találatot írtak az erős modell futásaira. Az
+a szám a lint vakságát mérte, nem a szövegét. A félkövér dekoráció tehát a
+skill legkövetkezetesebb, modellfüggetlen hatása, és eddig egyszerűen nem
+láttuk.
