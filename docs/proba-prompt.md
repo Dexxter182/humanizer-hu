@@ -267,7 +267,8 @@ Három különbség maradt:
   ("Néhány részlet még egyeztetésre vár"), és a jelentésében külön kiírta, hogy
   emiatt kerülte a T/1-et. A §26 Kerüld sora mindkét változatban benne van, a
   keveredés magyarázata viszont csak a teljesben. Egy adatpont amellett, hogy a
-  Probléma bekezdés dolgozik.
+  Probléma bekezdés dolgozik. (Ezt a megismételt mérés megcáfolta, lásd a
+  következő bejegyzést.)
 - A forrás önellentmondását (a parkolási kategória két különböző neve) a skill
   nélküli és a karcsú futás csendben feloldotta az egyik alak választásával. A
   teljes futás általánosított ("külön kategóriával megy a zónalekérdezésbe"),
@@ -300,3 +301,49 @@ A lint négy BIZTOS találata mind téves riasztás volt, és új hibát mutat: 
 `## US-2 A besorolás...` alakú címsorban az azonosító-előtag után álló névelőt
 a script a cím második szavának nézi, és Title Case-t jelez. A számozott
 előtagot ismeri, a betűs azonosítót nem.
+
+### 2026-09-13, 2.4.7, a mérés megismételve, kondíciónként három minta
+
+Ugyanaz a forrás, ugyanaz a két kimenet, kondíciónként három futás.
+
+| | Skill nélkül | Teljes skill | Karcsú skill |
+| --- | --- | --- | --- |
+| Leltári tény | 10/10, 10/10, 10/10 | 10/10, 10/10, 10/10 | 10/10, 10/10, 10/10 |
+| Kimondott hiány jelezve | 3/3 | 3/3 | 3/3 |
+| Kitalált szám vagy azonosító | 0 | 0 | 0 |
+| Lint BIZTOS | 0 | 0 | 0 |
+| §12 "valamint" | 3/3 | 1/3 | 1/3 |
+| §26 megszólításkeveredés | 0/3 | 1/3 | 1/3 |
+| Story darabszám | 7, 6, 5 | 4, 3, 4 | 3, 3, 3 |
+| Karakter átlaga | 5094 | 4338 | 4124 |
+| Token átlaga | 68 243 | 92 514 | 86 069 |
+
+Négy következtetés.
+
+A tényhűség kilenc futásból kilencszer teljes, kitalált szám és azonosító
+sehol. Ez a feladattípus tehát nem méri a §23-at, és nincs értelme tovább
+futtatni rajta. A következő mérés olyan kimenetet kérjen, ami többet kíván,
+mint amennyit a forrás ad: becslést, ütemezést vagy kockázatelemzést.
+
+A skill mérhető hatása ezen a feladaton a tömörítés és a tagolás. Ugyanazt a
+tíz tényt a skill nélküli futások hét, hat és öt storyba osztották, a skillesek
+három vagy négy storyba, és a szöveg is rövidebb lett. A karcsú változat
+csinálta a legegyöntetűbben, mindhárom futásban három storyval. A
+dokumentumszintű réteg tehát dolgozik, és a Probléma sorok nélkül is.
+
+Az első mérés §26-os következtetése téves volt. A megismételt mérésben a
+megszólítás egyszer a teljes skillel keveredett és egyszer a karcsúval, a
+viszonyítási alapban egyszer sem. Nem a karcsúsítás ejti el a szabályt: a §26 és
+a Megszólítás szakasz nem elég egyértelmű ahhoz, hogy bármelyik változat
+megbízhatóan betartsa. Új nyitott tétel, és annál súlyosabb, hogy a skill
+nélküli futásokban nem fordult elő.
+
+A tokenkülönbség kisebb, mint az egymintás becslés mutatta. A teljes skill 36,
+a karcsú 26 százalékkal fogyaszt többet a viszonyítási alapnál, a kettő közötti
+különbség 6445 token, vagyis 7,5 százalék. Az első mérés tizenháromezret
+mutatott, mert a teljes ág első futása kiugró volt.
+
+Ez a mérés tehát nem zárja le a karcsúsítás kérdését, de szűkíti: a karcsú
+változat ezen a feladaton semmit nem veszít, és 7,5 százalékot spórol. Amit nem
+mér, az épp a Probléma bekezdések tartalma, vagyis a kivételek. Ahhoz olyan
+feladat kell, ami kivételhelyzetbe viszi a szabályokat.
