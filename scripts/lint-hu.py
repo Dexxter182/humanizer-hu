@@ -88,6 +88,10 @@ BIZTOS = [
     (11, re.compile(r"\b\w+(?:ás|és)a?\s+(?:automatikusan\s+)?történik\b", re.I), "történik + főnév"),
 ]
 CIMSOR_EMOJI = re.compile(r"[\U0001F300-\U0001FAFF←-⇿✀-➿✨⭐]")
+# Azonosító-előtag a címsor elején: "1.", "2.5.1", "A.", "US-2", "ADR-002:".
+# Ezek nem a cím szavai, tehát a Title Case vizsgálat előtt le kell venni őket,
+# különben a cím valódi kezdőszava második szónak látszik.
+CIMSOR_ELOTAG = re.compile(r"(?:[0-9]+(?:\.[0-9]+)*\.?|[A-F]\.|[^\W\d_]{1,12}[-_]?[0-9]+)[.:]?")
 KISSZO = {"és", "vagy", "a", "az", "de", "mint", "hogy", "ha", "nem", "is", "meg"}
 
 
@@ -151,7 +155,9 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
             cim = sor.lstrip("#").strip()
             if CIMSOR_EMOJI.search(cim):
                 talalatok.append(("biztos", i, 20, cim[:40], "dísz a címsorban"))
-            szavak = [w for w in cim.split() if not re.fullmatch(r"[0-9]+\.|[A-F]\.", w)]
+            szavak = cim.split()
+            while szavak and CIMSOR_ELOTAG.fullmatch(szavak[0]):
+                szavak.pop(0)
             nagyok = [w for w in szavak[1:] if w[:1].isupper() and w.lower() in KISSZO]
             if nagyok:
                 talalatok.append(("biztos", i, 20, " ".join(nagyok), "Title Case a címsorban"))
@@ -212,7 +218,7 @@ def main() -> int:
     print("A gyanús találat nem hiba: emberi döntést kér. A §12 saját szövege "
           "mondja ki, hogy egy szó egyszeri előfordulása még nem gépiesség.")
     print("Amit ez a script nem lát: §6 hármas, §14 homályos kapcsolat, "
-          "§23 kitalált tény, §25 előző verzió, §26 regiszterkeveredés.")
+          "§23 kitalált tény, §25 előző verzió, §26 megszólításkeveredés.")
     print("A több szavas kifejezéseket szó szerint keresi, tehát azok ragozott "
           "alakját elszalasztja; egyszavas tételnél a ragozott alak is találat.")
     print("A §21 kivételét nem ismeri: publikálandó ügyfélszövegben a magyar "
