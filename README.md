@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.4.8 - A lint a kettőspont utáni nagybetűt mondatkezdésnek veszi, nem címstílusnak, ezért az `US-2.5.2-4: A felugró ablak` alakú címsorra nem jelez Title Case-t.
 - 2.4.7 - A lint két javítása. A címsor azonosító-előtagját ("US-2", "ADR-002", "2.5.1") már nem nézi a cím szavának, ezért nem jelez Title Case-t a mögötte álló névelőre. A kimenet szóhasználata követi a 2.4.3-at: megszólításkeveredés a regiszterkeveredés helyett.
 - 2.4.6 - A §20 kivételt kap: az önálló fájl, például egy README, a saját címét viszi H1-ként. A lint az egyszavas kerülendő tételeket ragozott alakban is megtalálja, és kiírja, hogy a §21 ügyfélszöveg-kivételét nem ismeri. A `SKILL.md` és az `AGENTS.md` két mondata átfogalmazva, mert maguk is a §1 alakját mutatták.
 - 2.4.5 - A README a két megkülönböztető szabállyal kezd: a skill generálás közben hat, és nem talál ki tényt. Új "Miben más" szakasz a dokumentumszintű rétegről, a magyar nyelvtani háttérről, a lintről és a hangillesztésről. A csomagleírások és a kulcsszavak bővültek, hogy a skill megtalálható legyen, a telepítési szakasz megnevezi a támogatott agenteket, az Ellenőrzés szakasz pedig megmondja, miért van a csomagban gépi kör.

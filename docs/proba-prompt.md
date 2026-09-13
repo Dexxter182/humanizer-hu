@@ -397,3 +397,39 @@ fogja meg, a kifelejtést nem.
 A tokenmérés itt is a skill ellen szól: a betöltése 30 százalékkal drágítja a
 futást. Cserébe a kimenet 40 százalékkal rövidebb, mert a kitalált tartalom
 kimarad belőle.
+
+### 2026-09-13, 2.4.7, a három képességszint összevetése
+
+Ugyanaz a forrás, ugyanaz a két kimenet, három modellen, kondíciónként négy
+futással a két gyengébbnél és hárommal a legerősebbnél. A lint mindenhol az
+azóta javított változat.
+
+| | Erős modell | Középső modell | Kisebb modell |
+| --- | --- | --- | --- |
+| Tényfedés skill nélkül | teljes | teljes, egy hiánnyal | 4-7 tíz leltári tényből |
+| Tényfedés skillel | teljes | teljes | hat tíz tényből, mind a négy futásban ugyanaz |
+| Lint BIZTOS skill nélkül | 0 | 0 | 3 találat két futásban |
+| Lint BIZTOS skillel | 0 | 0 | 0 |
+| Kitalált állítás skill nélkül | nincs | nincs | három futásban |
+| Kitalált állítás skillel | nincs | nincs | nincs |
+
+A törés a középső és a kisebb modell között van, nem feljebb. A középső modell
+skill nélkül is lefedi az ősfeltöltést, a férőhely kihagyását és az inaktív
+gombot, tehát azt a három tényt is, amit a kisebb modell egyik ága sem talált
+el, és sem kitalált állítás, sem BIZTOS lint-találat nincs a szövegeiben.
+
+Ebből az következik, hogy a skill tényhűségi haszna a kisebb modelleknél
+jelentkezik. A két erősebbnél a haszna más természetű: a terjedelem és a
+tagolás kiszámíthatóvá válik, a szöveg rövidebb lesz, és eltűnnek az egyszavas
+gyanús találatok is.
+
+A megszólítás tizenegy skilles futásból kettőben keveredett, a középső és az
+erős modellnél egyszer-egyszer (`jelöljük` és `várunk` személytelen szöveg
+mellett, illetve `egyeztetjük Önökkel`). A kisebb modell négy futásából egyszer
+sem, mert ott a szöveg végig személytelen maradt. A szabály tehát nem a
+modellképességen bukik el, hanem a saját megfogalmazásán: minél inkább képes egy
+modell regisztert váltani, annál valószínűbb, hogy a Megszólítás szakaszt
+félreérti.
+
+A tokenmérés mindhárom szinten ugyanazt mutatja: a skill betöltése 29 és 36
+százalék közötti többletet jelent.

@@ -158,7 +158,11 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
             szavak = cim.split()
             while szavak and CIMSOR_ELOTAG.fullmatch(szavak[0]):
                 szavak.pop(0)
-            nagyok = [w for w in szavak[1:] if w[:1].isupper() and w.lower() in KISSZO]
+            # Kettőspont és pont után a nagybetű mondatkezdés, nem címstílus.
+            nagyok = [
+                w for elozo, w in zip(szavak, szavak[1:])
+                if not elozo.endswith((":", ".")) and w[:1].isupper() and w.lower() in KISSZO
+            ]
             if nagyok:
                 talalatok.append(("biztos", i, 20, " ".join(nagyok), "Title Case a címsorban"))
 
