@@ -347,3 +347,12 @@ Ez a mérés tehát nem zárja le a karcsúsítás kérdését, de szűkíti: a 
 változat ezen a feladaton semmit nem veszít, és 7,5 százalékot spórol. Amit nem
 mér, az épp a Probléma bekezdések tartalma, vagyis a kivételek. Ahhoz olyan
 feladat kell, ami kivételhelyzetbe viszi a szabályokat.
+
+### Nyitott lint-hibák
+
+Éles kimeneten előjött két szerkezet, amit a script nem lát:
+
+- A sor eleji `**Címke:**` félkövér a §19 első felét sérti, a script viszont
+  csak a felsoroláspont élén álló félkövér címkét keresi.
+- A `kerül megjelenítésre` fordított szórendű "kerül" passzív. A BIZTOS minta
+  csak a `megjelenítésre kerül` sorrendet fogja.
