@@ -178,7 +178,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 
 | Döntés | Szabály |
 | --- | --- |
-| Hosszúság | Annyit, amennyit a feladat kér. Nincs bevezető és nincs záró gondolat. |
+| Hosszúság | Annyit, amennyit a feladat kér. Nincs bevezető és nincs záró gondolat. A rövidítés a megfogalmazást éri, nem a forrás tényeit. |
 | Folyó szöveg vagy felsorolás | Összefüggő gondolat bekezdésbe. Felsorolás csak tételes tartalomhoz. |
 | Alcímek | Csak ha az olvasó ugrani akar. A sablon szakaszai a címsorok. |
 | Zárójel | Csak új információ. Nincs zárójeles fordítás és nincs magyarázat az egyértelműhöz. |
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.5.0 - A Hosszúság szabály kimondja, hogy a rövidítés a megfogalmazásra vonatkozik, nem a forrás lefedettségére: ha a feladat egy szakasz feldolgozását kéri, annak minden ténye a szövegbe kerül. Mérés mutatta meg, hogy a korábbi alak gyengébb modelleknél forrásbeli tényt vágott le.
 - 2.4.9 - A lint a §19 első felét is nézi: a sor eleji félkövért és a félkövér címkét BIZTOS találatként jelzi, a mondat belsejében álló kiemelést gyanúsként. Eddig csak a felsoroláspont élén álló címkét kereste.
 - 2.4.8 - A lint a kettőspont utáni nagybetűt mondatkezdésnek veszi, nem címstílusnak, ezért az `US-2.5.2-4: A felugró ablak` alakú címsorra nem jelez Title Case-t.
 - 2.4.7 - A lint két javítása. A címsor azonosító-előtagját ("US-2", "ADR-002", "2.5.1") már nem nézi a cím szavának, ezért nem jelez Title Case-t a mögötte álló névelőre. A kimenet szóhasználata követi a 2.4.3-at: megszólításkeveredés a regiszterkeveredés helyett.

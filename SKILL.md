@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.4.9"
+  version: "2.5.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -42,7 +42,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 
 ### Hosszúság
 
-Írj annyit, amennyit a feladat kér, és ne többet. A rövid dokumentum nem lesz jobb bevezető bekezdéstől, semminek nem kell összefoglalnia magát a végén, és semmihez nem kell záró gondolat. Ha a sablon szakaszokat ad, azok a határok.
+Írj annyit, amennyit a feladat kér, és ne többet. A rövid dokumentum nem lesz jobb bevezető bekezdéstől, semminek nem kell összefoglalnia magát a végén, és semmihez nem kell záró gondolat. Ha a sablon szakaszokat ad, azok a határok. A rövidítés a megfogalmazásra vonatkozik, nem a forrás lefedettségére: a körülírást, az ismétlést és a keretmondatokat hagyd el, a forrás tényeit ne. Ha a feladat egy szakasz vagy dokumentum feldolgozását kéri, annak minden ténye kerüljön bele.
 
 ### Folyó szöveg vagy felsorolás
 

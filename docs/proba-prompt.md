@@ -528,7 +528,7 @@ a skilles futás a forrás kimondott hiányát is jelezte, a skill nélküli nem
 
 Tartalmilag viszont itt bukott ki a legélesebben a következő tétel.
 
-## Nyitott tétel: a Hosszúság szabály levág forrásbeli tényt
+## Lezárt tétel: a Hosszúság szabály levág forrásbeli tényt (2.5.0)
 
 ### Mi történt
 
@@ -573,6 +573,14 @@ Kell-e a Hosszúság szabály mellé egy mondat, ami kimondja, hogy a rövidít�
 megfogalmazásra vonatkozik, nem a forrás lefedettségére. És ha igen, hogyan
 viszonyul ez a Részletesség alszakaszhoz, ami épp azt engedi meg, hogy szélesebb
 közönségnek szóló szövegben ne szerepeljen minden részlet.
+
+### A döntés
+
+A 2.5.0 kimondja a szabályban, hogy a rövidítés a megfogalmazásra vonatkozik,
+nem a forrás lefedettségére, és hogy egy szakasz feldolgozásánál annak minden
+ténye a szövegbe kerül. A Részletesség alszakasz ezzel nem ütközik: az arról
+szól, mennyit árul el a szöveg egy tényről, nem arról, hogy egy forrásbeli
+szakasz kihagyható-e.
 
 ### Hogyan reprodukálható
 
