@@ -477,3 +477,38 @@ A korábbi bejegyzések nulla BIZTOS találatot írtak az erős modell futásair
 a szám a lint vakságát mérte, nem a szövegét. A félkövér dekoráció tehát a
 skill legkövetkezetesebb, modellfüggetlen hatása, és eddig egyszerűen nem
 láttuk.
+
+### 2026-09-13, 2.4.9, négy chatfelületes modell
+
+A negyedik és ötödik gyártói modellcsalád, chatfelületen, a felhasználó céges
+előfizetésein. Kondíciónként egy futás. A tokenfogyasztás itt nem mérhető, és
+nem is lenne összevethető az agent-futásokkal.
+
+| Modell | Skill nélkül | Skillel | Megjegyzés |
+| --- | --- | --- | --- |
+| Gemini 3.6 Thinking | 11 BIZTOS | 0 | skill nélkül kitalálta a parkolási díjat |
+| Gemini 3.1 Pro | 3 BIZTOS | 0 | a skilles futás is kitalált egy indokot |
+| Gemini 3.6 Flash | 7 BIZTOS | 3 BIZTOS | angol sablon skill nélkül |
+| ChatGPT 5.6 Sol extraHigh | 6 BIZTOS | 0 | teljes tényfedés mindkét ágon |
+
+Három következtetés.
+
+A félkövér dekoráció az egyetlen minta, ami minden gyártónál, minden skill
+nélküli futásban megjelent, háromtól tizenegy találatig. Skillel négyből három
+modellnél nullára ment. Ez a skill legkövetkezetesebb hatása.
+
+A tényhűség viszont a modellen múlik, nem a skillen. A ChatGPT-futás mindkét
+ágon lefedte az ősfeltöltést is, amit a Gemini-család egyik futása sem, és amit
+a kisebb Claude-modell sem talált el. A skill a kitalálást szűri, a kifelejtést
+nem pótolja.
+
+A skill nem garancia. A Gemini 3.1 Pro a skill jelenlétében is okot talált ki
+egy leíráshoz ("a pontosabb parkolási és e-matrica díjszabás miatt", a forrás
+díjról egy szót sem ír), és egyik Pro-futás sem jelezte a forrás kimondott
+hiányát, pedig azt minden más modell skilles futása jelezte. A Flash pedig
+megtartotta a félkövér sablont, csak a nyelvét fordította magyarra.
+
+Egy tétel ötödször jött elő, most már öt modellcsaládnál: a user story félkövér
+sablonja. A §19 megengedi a félkövér címkét, ha a sablon előírja, csak épp nem
+dönthető el, mi számít sablonnak, amikor a hívó feladat nem ad formátumot. Ez a
+nyitott tételek közül a legtöbbet jelzett.
