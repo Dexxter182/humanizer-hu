@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.8.1"
+  version: "2.9.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -133,8 +133,8 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 
 ### 8. Gondolatjel mint univerzális kötőelem
 
-**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar. Felsorolásban, ahol a tétel és a hozzá tartozó szöveg között tényleg elválasztó kell és a kettőspont foglalt (idővonal, változásnapló), a szóközös nagykötőjel ( – ) marad.
-**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025), idő- és dátumintervallum (01:40–03:15, 2026-09-10–2026-09-12) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
+**Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—) és dupla kötőjelet ( -- ). Ahol két tagmondat viszonyát jelölnéd gondolatjellel, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot; a magányos szóközös gondolatjel ( – ) két tagmondat között ugyanez a hiba. Ha a közbevetés tényleg kell, első helyen a zárójel vagy az átírás. Ha mégis gondolatjeles, akkor páros: szóközös nagykötőjel nyitja és zárja, mint a zárójel, és dokumentumonként ritka. Kötőjelet ( - ) gondolatjelnek ne írj, az más írásjel. Címsorban gondolatjel nem áll, ott a "Cím: alcím" alak a magyar. Felsorolásban, ahol a tétel és a hozzá tartozó szöveg között tényleg elválasztó kell és a kettőspont foglalt (idővonal, változásnapló), a szóközös nagykötőjel ( – ) marad.
+**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – a szabályos magyar gondolatjel, a közbevetés jele, ezért páros alakban maradhat; magányosan, tagmondatok között viszont ugyanaz a döntéskerülés más karakterrel. A páros alak azért követhető, mert felismerhető: kettő áll egy mondatban, és a mondat nélkülük is megáll. A tapadó nagykötőjel marad: számintervallum (2024–2025), idő- és dátumintervallum (01:40–03:15, 2026-09-10–2026-09-12) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
 **Ne írd:**
 > ## Migráció — mikor indul
 >
@@ -306,7 +306,7 @@ Mielőtt visszaadod a szöveget, olvasd át egyszer, és nézd meg ezt a hetet. 
 
 1. Hamis ellentét, üres tagadó féllel (§1)
 2. Egysoros zárás vagy búcsúzó bekezdés (§2, §13)
-3. Hosszú gondolatjel (§8)
+3. Gondolatjel tagmondatok között (§8)
 4. Erőltetett hármas (§6)
 5. Félkövér címke a felsorolásban (§19)
 6. "Kerül" passzív (§11)

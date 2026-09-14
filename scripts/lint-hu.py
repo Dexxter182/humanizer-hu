@@ -98,6 +98,8 @@ FELKOVER_BIZTOS = (
     (re.compile(r"^\s*\*\*[^*]+"), "félkövér a sor elején"),
     (re.compile(r"\*\*[^*]{1,40}:\*\*"), "félkövér címke"),
 )
+GONDOLATJEL = re.compile(r"(?:(?<=\s)|^)–(?=\s|$)")
+LISTA_TETEL = re.compile(r"\s*(?:[-*+]|\d+[.)])\s")
 CIMSOR_EMOJI = re.compile(r"[\U0001F300-\U0001FAFF←-⇿✀-➿✨⭐]")
 # Azonosító-előtag a címsor elején: "1.", "2.5.1", "A.", "US-2", "ADR-002:".
 # Ezek nem a cím szavai, tehát a Title Case vizsgálat előtt le kell venni őket,
@@ -165,6 +167,15 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool, publikalt: bool = 
                 continue  # a §21 kivétele: publikálandó szövegben a magyar idézőjel szabályos
             for m in rx.finditer(sor):
                 talalatok.append(("biztos", i, szam, m.group(0).strip(), mit))
+
+        # §8: a magányos szóközös gondolatjel tagmondatok között; a páros közbevetés
+        # és a felsorolás elválasztója marad. Címsorban egy is sok.
+        if not (sajat_skill and minta == 8):
+            db = len(GONDOLATJEL.findall(sor))
+            if db and sor.startswith("#"):
+                talalatok.append(("biztos", i, 8, sor.strip()[:40], "gondolatjel a címsorban"))
+            elif db % 2 == 1 and not LISTA_TETEL.match(sor):
+                talalatok.append(("biztos", i, 8, sor.strip()[:40], "magányos gondolatjel"))
 
         if sor.startswith("#"):
             cim = sor.lstrip("#").strip()

@@ -132,7 +132,7 @@ A minták a leggyakoribbal kezdődnek. A teljes leírás, a kerülendő kifejez�
 | --- | --- | --- | --- |
 | 6 | Erőltetett hármasok | "gyors, megbízható és könnyen bővíthető" | Annyi elem, amennyit a jelentés kér |
 | 7 | Ismétlődő mondatkezdés | "A rendszer... A rendszer... A rendszer..." | Vond össze, vagy hagyd el az alanyt |
-| 8 | Gondolatjel mint kötőelem | "## Teljesítmény — mit mértünk" | Kettőspont a címben; pont, vessző, zárójel a mondatban |
+| 8 | Gondolatjel mint kötőelem | "## Teljesítmény — mit mértünk" | Kettőspont a címben; pont, vessző, zárójel a mondatban; közbevetésre ritkán páros – |
 | 9 | Halmozott bizonytalanítás | "esetleg akár talán" | "lehet" |
 | 10 | Anglicizmusok és tükörfordítások | "Ez egy jelentős kihívás", "navigálni a kihívások között" | Magyar szerkezet, a szakszó marad angolul |
 | 11 | Passzív és elrejtett cselekvő | "betöltésre kerülnek", "a mentés automatikusan történik" | Nevezd meg, ki mit csinál |
@@ -200,7 +200,7 @@ Amit a magyar verzió a mintákon felül hoz:
 - Csak magyar szöveget kezel. Ha angolt kap, jelzi, és az eredeti humanizert ajánlja.
 - Dokumentumszintű réteg és persona: tapasztalt magyar elemző, aki emberi olvasónak ír dokumentációt.
 - Az angol szakzsargon (agent, sprint, backlog, deploy, ticket, endpoint) marad angolul, zárójeles magyar fordítás nélkül, ha az olvasó fejlesztő vagy szakmai szereplő. Nem technikai olvasónak a magyar szó jár. A tükörfordítás-minta csak a szerkezetet nézi.
-- Gondolatjel: a hosszú `—` sehol nem áll, címsorban sem. A szóközös `–` marad a számintervallumban, a kötőjeles tulajdonnévben és a felsorolás elválasztójaként, ahol a kettőspont foglalt.
+- Gondolatjel: a hosszú `—` sehol nem áll, címsorban sem, és a magányos szóközös `–` sem tagmondatok között. Páros közbevetésként a szóközös `–` ritkán maradhat. Tapadva marad a számintervallumban és a kötőjeles tulajdonnévben, szóközzel a felsorolás elválasztójaként, ahol a kettőspont foglalt.
 - Idézőjel és dátum: egyenes `"..."` áll a szövegben, a magyar `„...”` és az angol `“...”` helyén is, a dátum pedig ISO alakban. Publikálandó szövegben marad a magyar idézőjel és a kiírt magyar dátum.
 
 A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír át, a Humanizer-hu generáláshoz ad szabályokat. Az upstream továbbra is hasznos bemenet egy új mintához, de a fájl szerkezete már nem követi.
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.9.0 - A §8 gondolatjelszabálya követi a magyar helyesírást. A közbevetéshez eddig kötőjelet írt elő, ami más írásjel; most a zárójel vagy az átírás az első, és ha mégis gondolatjeles, akkor páros szóközös nagykötőjel, ritkán. A magányos szóközös gondolatjel tagmondatok között tilos marad, és a lint BIZTOS találatként jelzi, a címsorbeli gondolatjellel együtt.
 - 2.8.1 - A Forrás szakasz kikerült a SKILL.md-ből: a promptban nem volt szerepe, a README Források szakasza tartalmazza.
 - 2.8.0 - Négy pontosítás külső bírálatból. Publikálandó szövegben a dátum kiírt magyar alakban áll, ahogy az idézőjel is. A §19 engedi a felület elemének nevét (gomb, menüpont) félkövérrel vagy inline kóddal használati útmutatóban. A szakzsargon-kivétel a fejlesztő és a szakmai olvasóhoz kötött, nem technikai olvasónak a magyar szó jár. A lint `--published` kapcsolója publikálandó szövegben nem jelzi a görbe idézőjelet.
 - 2.7.0 - A §23 kimondja, mi a teendő, ha a feladat a forrásnál több döntést kíván (user story, terv, becslés): a hiányzó döntés megjelölt javaslatként kerül a szövegbe, azzal együtt, hogy mit nem dönt el a forrás. Tényként állítani ugyanúgy tilos.

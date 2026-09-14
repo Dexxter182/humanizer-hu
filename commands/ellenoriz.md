@@ -26,7 +26,7 @@ Ez a szabálykészletet a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát mind
 a mintákkal együtt frissül. Két szintet ad:
 
 - **BIZTOS**: szabálysértés a darabszámtól függetlenül (hosszú gondolatjel,
-  görbe idézőjel, Title Case-szerű címsor, dísz a címsorban, `kerül` passzív,
+  magányos gondolatjel tagmondatok között, görbe idézőjel, Title Case-szerű címsor, dísz a címsorban, `kerül` passzív,
   félkövér címke a felsorolásban).
 - **gyanús**: emberi döntést kér. A §12 saját szövege mondja ki, hogy egy szó
   egyszeri előfordulása még nem gépiesség. Ezeket mérlegeld, ne jelentsd

@@ -637,3 +637,36 @@ amennyit a forrás ad. A mostani forrás mögött ott van a saját forrása, az 
 igénye, és abból user storyt írni pont ilyen feladat: az igény nem tartalmazza a
 megvalósítás részleteit, a story viszont azokat kérné. Ez lesz a következő kör
 bemenete.
+
+### 2026-09-14, 2.9.0, a §8 gondolatjelszabály visszamérése
+
+A 2.9.0 a közbevetéshez eddig előírt kötőjel helyett a zárójelet vagy az
+átírást kéri, és ha mégis gondolatjeles, a páros szóközös nagykötőjelet
+engedi. A kérdés az volt, hogy az engedély visszahozza-e a gondolatjelet mint
+mondatszervező eszközt. Ugyanaz a forrás, ugyanaz a két kimenet, friss
+sessionben, a 2.9.0-s skill a promptba másolva: négy futás a kisebb
+Claude-modellen, négy a közepesen.
+
+| Kondíció | Futás | Hosszú gondolatjel | Szóközös gondolatjel | Lint BIZTOS |
+| :---- | :---- | :---- | :---- | :---- |
+| 2.4.x és 2.5.0, kisebb modell | 8 | 0 | 0 | 0, 0, 6, 0, 1, 3, 5, 0 |
+| 2.4.x, közepes modell | 4 | 0 | 0 | 0, 0, 1, 0 |
+| 2.9.0, kisebb modell | 4 | 0 | 0 | 1, 1, 4, 1 |
+| 2.9.0, közepes modell | 4 | 0 | 0 | 0, 0, 0, 0 |
+
+A nyolc új futásban egyetlen gondolatjel sincs, sem hosszú, sem szóközös, sem
+magányos, sem páros. A lint találatai ugyanazok, mint a korábbi körökben: a
+kisebb modellnél a "kerül" passzív (§11) és a félkövér sorkezdő címke (§19), a
+közepesnél semmi. A §8 új, magányos gondolatjelre és címsorbeli gondolatjelre
+figyelő ellenőrzése egyik futásban sem talált semmit.
+
+A mérés korlátja, hogy ez a feladat skill nélkül sem hív gondolatjelet: a
+korábbi viszonyítási futásokban nullától háromig fordult elő. Amit a mérés
+kimond: az engedélyezett páros alak nem hozta vissza a szokást. Amit nem mond
+ki: hogy a modell helyesen használja a páros alakot ott, ahol tényleg
+közbevetés kell. Ehhez olyan feladat kellene, ami prózát kér, és amelyben a
+viszonyítási alap gondolatjelet használ.
+
+A futások a mérési könyvtárban: h13-h16 és s9-s12, a prompt a 4-es számú.
+Az egyik kisebb modellen futó kör a kimenetet nem fájlba írta, hanem válaszban
+adta vissza; a szöveg változtatás nélkül került a fájlba.

@@ -122,10 +122,13 @@ a gondolat beszúrásának jele. A hosszú gondolatjel (—, kvirtmínusz) angol
 írásjel, a magyar tipográfia nem használja.
 
 Ebből következik, hogy a szakasz címe angol jelre gondol magyar névvel: az
-"em dash" lett "gondolatjel", holott magyarul a gondolatjel a "–". A tiltást
-ettől függetlenül megtartottuk, de a mintában ki van mondva, hogy ez
-stílusdöntés, nem helyesírási kérdés: a szóközös "–" szabályos magyar alak,
-csak a karaktercsere meghagyná a döntéskerülő szokást.
+"em dash" lett "gondolatjel", holott magyarul a gondolatjel a "–". A 2.9.0
+előtt a minta a közbevetéshez szóközös kötőjelet írt elő, és a szabályos "–"
+alakot is kerülte, stílusdöntésként. Ez helyesírási hibát írt elő egy
+stílusjegy ellen, ezért a 2.9.0 a határt máshol húzza: a magányos "–"
+tagmondatok között tilos, mert ott ugyanaz a döntéskerülés más karakterrel;
+a páros, nyitó és záró "–" közbevetésként maradhat, mert szerkezetileg
+felismerhető, és a zárójel áll előtte a sorban.
 
 - Gondolatjel és nagykötőjel. Wikipédia.
   https://hu.wikipedia.org/wiki/Gondolatjel_%C3%A9s_nagyk%C3%B6t%C5%91jel
