@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.8.1 - A Forrás szakasz kikerült a SKILL.md-ből: a promptban nem volt szerepe, a README Források szakasza tartalmazza.
 - 2.8.0 - Négy pontosítás külső bírálatból. Publikálandó szövegben a dátum kiírt magyar alakban áll, ahogy az idézőjel is. A §19 engedi a felület elemének nevét (gomb, menüpont) félkövérrel vagy inline kóddal használati útmutatóban. A szakzsargon-kivétel a fejlesztő és a szakmai olvasóhoz kötött, nem technikai olvasónak a magyar szó jár. A lint `--published` kapcsolója publikálandó szövegben nem jelzi a görbe idézőjelet.
 - 2.7.0 - A §23 kimondja, mi a teendő, ha a feladat a forrásnál több döntést kíván (user story, terv, becslés): a hiányzó döntés megjelölt javaslatként kerül a szövegbe, azzal együtt, hogy mit nem dönt el a forrás. Tényként állítani ugyanúgy tilos.
 - 2.6.0 - Hét pontosítás mérésből. A Megszólítás két tengelyre vált: az olvasó megszólítása és az író megnevezése külön dől el, és a keveredés csak egy tengelyen belül hiba. A §19 megmondja, mi számít sablonnak. A §8 kimondja az idő- és dátumintervallum alakját, a dátum a folyó szövegben is ISO. A §24 a tartalmatlan mondatot tiltja, nem a szóegyezést. A §21 kivétele minden publikálandó szövegre áll. A felsorolás tétele háromnál több elemnél önálló listára bomlik.

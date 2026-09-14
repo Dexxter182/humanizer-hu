@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.8.0"
+  version: "2.8.1"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -319,7 +319,3 @@ Nézd a bekezdések alakját is, ne csak a mondatokat: a két mondatra osztott e
 A kerülendő kifejezés idézetben, címben és tulajdonnévben nem számít annak, sem olyan szövegrészben, ami magáról a kifejezésről beszél. A levél és a hozzászólás megszólítása és elköszönése régebbi a chatbotoknál.
 
 Változatlanul marad a kódblokk, az inline kód, a parancs, az útvonal, az URL, az azonosító, a sémamező, a YAML metaadat, az adat és a linkcél. A sablon szakaszcímei és kötelező formája szintén: ha a hívó feladat formát ad, az nyer.
-
-## Forrás
-
-A minták a Wikipedia ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) oldaláról származnak, amelyet a WikiProject AI Cleanup gondoz, a [blader/humanizer](https://github.com/blader/humanizer) 3.0.0-s változatán keresztül. A magyar nyelvtani hátteret és a hozzá tartozó hivatkozásokat a repo `docs/nyelveszeti-forrasok.md` fájlja gyűjti. A §12 szójegyzéke és a dokumentumszintű döntések megfigyelésen alapulnak, nem korpuszon.
