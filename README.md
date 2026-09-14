@@ -182,7 +182,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 | Folyó szöveg vagy felsorolás | Összefüggő gondolat bekezdésbe. Felsorolás csak tételes tartalomhoz. |
 | Alcímek | Csak ha az olvasó ugrani akar. A sablon szakaszai a címsorok. |
 | Zárójel | Csak új információ. Nincs zárójeles fordítás és nincs magyarázat az egyértelműhöz. |
-| Megszólítás | Egy forma végig. A dokumentum fajtája dönt. |
+| Megszólítás | Két tengely: az olvasó megszólítása és az író megnevezése. Mindkettő egy forma végig. |
 | Részletesség | Az első mondat előtt dönts. Általánosítani szabad, kitalálni nem. |
 | Hang | Semleges és szakmai, váltakozó mondathosszal. Az írásminta felülír. |
 
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.6.0 - Hét pontosítás mérésből. A Megszólítás két tengelyre vált: az olvasó megszólítása és az író megnevezése külön dől el, és a keveredés csak egy tengelyen belül hiba. A §19 megmondja, mi számít sablonnak. A §8 kimondja az idő- és dátumintervallum alakját, a dátum a folyó szövegben is ISO. A §24 a tartalmatlan mondatot tiltja, nem a szóegyezést. A §21 kivétele minden publikálandó szövegre áll. A felsorolás tétele háromnál több elemnél önálló listára bomlik.
 - 2.5.0 - A Hosszúság szabály kimondja, hogy a rövidítés a megfogalmazásra vonatkozik, nem a forrás lefedettségére: ha a feladat egy szakasz feldolgozását kéri, annak minden ténye a szövegbe kerül. Mérés mutatta meg, hogy a korábbi alak gyengébb modelleknél forrásbeli tényt vágott le.
 - 2.4.9 - A lint a §19 első felét is nézi: a sor eleji félkövért és a félkövér címkét BIZTOS találatként jelzi, a mondat belsejében álló kiemelést gyanúsként. Eddig csak a felsoroláspont élén álló címkét kereste.
 - 2.4.8 - A lint a kettőspont utáni nagybetűt mondatkezdésnek veszi, nem címstílusnak, ezért az `US-2.5.2-4: A felugró ablak` alakú címsorra nem jelez Title Case-t.

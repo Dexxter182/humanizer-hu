@@ -85,6 +85,7 @@ BIZTOS = [
     (8, re.compile(r"(?<=\s)--(?=\s)"), "dupla kötőjel"),
     (21, re.compile(r"[„“”»«]"), "görbe idézőjel"),
     (11, re.compile(r"\b\w+(?:ásra|ésre)\s+kerül\w*", re.I), "kerül passzív"),
+    (11, re.compile(r"\bkerül\w*\s+\w+(?:ásra|ésre)\b", re.I), "kerül passzív, fordított szórend"),
     (11, re.compile(r"\b\w+(?:ás|és)a?\s+(?:automatikusan\s+)?történik\b", re.I), "történik + főnév"),
 ]
 # A SKILL.md szerkezeti címkéi nem dekoráció: a promptot ezek tagolják.

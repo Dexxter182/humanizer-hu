@@ -607,3 +607,33 @@ pontosabb kérése vagy egy ellenőrző kör.
 A mérési készlet két futása: a gyors chatmodell skill nélküli és skilles
 kimenete, illetve a kisebb Claude-modell négy skilles futása. Mind a repón
 kívül, a mérési könyvtárban.
+
+### 2026-09-14, 2.6.0, a nyitott tételek lezárása
+
+A mérésekből gyűlt kilenc tételből hét döntést kapott, egy kódjavítás volt, egy
+pedig mérésre vár.
+
+| Tétel | Döntés |
+| --- | --- |
+| Megszólítás és §26 | Két tengelyre válik: az olvasó megszólítása és az író megnevezése. A hiba az egy tengelyen belüli váltás; a két tengely együtt szabályos. |
+| §19 sablon | Sablon az, amit a hívó feladat vagy egy megadott fájl formaként előír. A műfaji szokás nem az. A szövegtörzsben a félkövér figyelemfelhívásra sem való. |
+| §8 időintervallum | Tapadó nagykötőjel, ugyanúgy, mint a számintervallum. |
+| Dátum | ISO alak a folyó szövegben is, a toldalék kötőjellel. |
+| §20 kontra §24 | Nem a szóegyezés a hiba, hanem a tartalmatlan mondat. |
+| §21 idézőjel | A kivétel minden publikálandó szövegre áll, nem csak ügyfélszövegre. |
+| §6 kontra felsorolás | Háromnál több elemnél a tétel önálló felsorolásra vagy táblázatra bomlik. |
+| Lint: fordított szórend | Javítva, a `kerül megjelenítésre` alakot is fogja. |
+| §23 kontra Részletesség | Elhalasztva, mérés kell hozzá. |
+
+A megszólítás döntése három mérésbeli esetet old fel egyszerre. Az
+`egyeztetjük Önökkel` és a személytelen leírás mellé írt `várunk` és `jelöljük`
+eddig szabálysértésnek számított, pedig mindkettő következetes: az olvasót
+magázza vagy nem szólítja meg, az írót T/1-ben nevezi meg.
+
+### A következő mérés anyaga
+
+A §23 és a Részletesség viszonyához olyan feladat kell, ami többet kíván, mint
+amennyit a forrás ad. A mostani forrás mögött ott van a saját forrása, az ügyfél
+igénye, és abból user storyt írni pont ilyen feladat: az igény nem tartalmazza a
+megvalósítás részleteit, a story viszont azokat kérné. Ez lesz a következő kör
+bemenete.

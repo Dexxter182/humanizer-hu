@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.5.0"
+  version: "2.6.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -46,7 +46,7 @@ Ezek a döntések az első mondat előtt születnek, és utólag nem javítható
 
 ### Folyó szöveg vagy felsorolás
 
-Az összefüggő gondolatok bekezdésben állnak. Felsorolást akkor írj, ha a tartalom tényleg tételes: lépések sorrendben, egymást kizáró opciók, mezők, feltételek. Egy gondolatmenet nem lesz áttekinthetőbb attól, hogy minden mondata külön pontba kerül: a felsorolás elrejti a tagmondatok közötti viszonyt, amit a folyó szöveg kimond.
+Az összefüggő gondolatok bekezdésben állnak. Felsorolást akkor írj, ha a tartalom tényleg tételes: lépések sorrendben, egymást kizáró opciók, mezők, feltételek. Egy gondolatmenet nem lesz áttekinthetőbb attól, hogy minden mondata külön pontba kerül: a felsorolás elrejti a tagmondatok közötti viszonyt, amit a folyó szöveg kimond. Ha egy tétel háromnál több elemet sorol fel, önálló felsorolás vagy táblázat lesz belőle.
 
 ### Alcímek
 
@@ -58,7 +58,7 @@ Zárójelbe akkor tegyél valamit, ha új információt ad. Ne fordítsd le zár
 
 ### Megszólítás
 
-Egy szövegben egy forma van végig: tegezés, magázás (ön, maga), személytelen fogalmazás ("a felhasználó", "a rendszer") vagy szerkesztői T/1 ("javasoljuk", "a következőket mértük"). A dokumentum fajtája dönt: a belső, szakmai olvasónak szóló szöveg személytelen vagy szerkesztői T/1, az ügyfélnek szóló önöz. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
+Két döntés, és mindkettő végigmegy a szövegen. Az első, hogyan szólítod meg az olvasót: tegezés, magázás (ön, maga), vagy sehogy. A második, hogyan nevezed meg az írót: személytelenül ("a rendszer naplózza") vagy szerkesztői T/1-ben ("javasoljuk", "a következőket mértük"). A hiba az, ha egy tengelyen belül vált a szöveg. A két tengely együtt szabályos: a magázott olvasó és a T/1-ben megnevezett író egy mondatban is megfér ("egyeztetjük Önökkel"). A dokumentum fajtája dönt: az ügyfélnek szóló szöveg önöz, a belső, szakmai olvasónak szóló jellemzően nem szólítja meg az olvasót. Ha a hívó feladat vagy a sablon mást ír elő, az nyer. Ha ebből sem dönthető el, kérdezz. A felismerés a §26-ban van.
 
 ### Részletesség
 
@@ -66,7 +66,7 @@ Döntsd el az első mondat előtt, mennyit árul el a szöveg. Alapértelmezésb
 
 ### Hang és szakszavak
 
-A hang semleges és szakmai: nem chatbot, nem hivatalnok. Váltogasd a mondathosszt. Az angol szakzsargon (sprint, backlog, deploy, release, feature, ticket, endpoint, pull request és a hasonlók) a csapat közös nyelve, hagyd angolul; a §10 a szerkezeti tükörfordításokat érinti, a szakszavakat nem.
+A hang semleges és szakmai: nem chatbot, nem hivatalnok. Váltogasd a mondathosszt. A dátum ISO alakban áll a folyó szövegben is (2026-09-10), a toldalék kötőjellel kapcsolódik (2026-09-10-én). Az angol szakzsargon (sprint, backlog, deploy, release, feature, ticket, endpoint, pull request és a hasonlók) a csapat közös nyelve, hagyd angolul; a §10 a szerkezeti tükörfordításokat érinti, a szakszavakat nem.
 
 Ha kaptál írásmintát, olvasd el először, és igazodj a mondathosszához, szóválasztásához, írásjeleihez, mondatkezdéseihez és átvezetéseihez. A minta felülírja az alábbi mintákat, a §8-at is: ha a minta gondolatjelet használ, tartsd nagyjából ugyanazt az arányt.
 
@@ -134,7 +134,7 @@ A legerősebb és leggyakoribb gépies vonások a mai modellek szövegeiben.
 ### 8. Gondolatjel mint univerzális kötőelem
 
 **Szabály:** A szöveg nem tartalmaz hosszú gondolatjelet (—). Ahol két tagmondat viszonyát jelölnéd vele, tegyél pontot, vesszőt, kettőspontot vagy zárójelet, vagy írd át a mondatot. Ha a közbevetés tényleg kell, szóközös kötőjelet használj ( - ). Ugyanez a dupla kötőjelre ( -- ) és a szóközös gondolatjelre ( – ). Címsorban sem áll, ott a "Cím: alcím" alak a magyar. Felsorolásban, ahol a tétel és a hozzá tartozó szöveg között tényleg elválasztó kell és a kettőspont foglalt (idővonal, változásnapló), a szóközös nagykötőjel ( – ) marad.
-**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
+**Probléma:** A gondolatjel megspórolja a döntést, hogyan viszonyul két tagmondat, ezért a modell mindenhová ezt teszi. A leggyakoribb és legárulkodóbb helye a címsor, "Cím — alcím" alakban; magyar címsorba erre kettőspont való, vagy semmi. A hosszú gondolatjel (—) angol írásjel, a magyar tipográfia nem használja. A szóközös – viszont szabályos magyar gondolatjel, épp a közbevetés jele; ez a skill mégis kerüli, mert a gépiesség a szokásban van, nem a karakterben, és a csere csak átöltözteti. A tapadó nagykötőjel marad: számintervallum (2024–2025), idő- és dátumintervallum (01:40–03:15, 2026-09-10–2026-09-12) és kötőjeles tulajdonnév (Budapest–Bécs). Kódblokkban, inline kódban, parancsban, útvonalban és URL-ben ne nyúlj hozzá.
 **Ne írd:**
 > ## Migráció — mikor indul
 >
@@ -224,7 +224,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 19. Félkövér mint dekoráció
 
-**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd. A fejblokk mezőcímkéi ("Státusz:", "Súlyosság:") sem dekoráció, azok maradhatnak.
+**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd; sablon az, amit a hívó feladat vagy egy megadott fájl formaként előír, a műfaji szokás (user story, ADR) nem az. A szövegtörzsben a félkövér figyelemfelhívásra sem való. A fejblokk mezőcímkéi ("Státusz:", "Súlyosság:") sem dekoráció, azok maradhatnak.
 **Probléma:** Két külön szokás. A szövegközi kiemelés akkor működik, ha ritka; ha sok szó félkövér, semmi nem emelkedik ki. A félkövér címkés felsorolás pedig szerkezetet mutat ott, ahol nincs: ha a címkék önmagukban nem hordoznak információt, a lista folyó szövegben rövidebb és pontosabb.
 **Ne írd:**
 > A frissítés **jelentősen** javítja a **teljesítményt**.
@@ -250,8 +250,8 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 21. Tipográfiai idézőjelek
 
-**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „...” és az angol “...” helyett is. Ugyanez a belső idézőjelre (»...«). Kódblokkban, inline kódban, idézett azonosítóban és publikálandó ügyfélszövegben ne nyúlj hozzá.
-**Probléma:** A magyar „...” a szabályos alak, és önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít. Ez a skill mégis egyenest kér, egységesítésből: így a szöveg Markdownban, kódban és terminálban is ugyanúgy viselkedik. Publikálandó ügyfélszövegben viszont marad a „...”, mert ott ez az indok nem áll. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
+**Szabály:** Egyenes idézőjelet írj ("..."), a magyar „...” és az angol “...” helyett is. Ugyanez a belső idézőjelre (»...«). Kódblokkban, inline kódban, idézett azonosítóban és publikálandó szövegben ne nyúlj hozzá.
+**Probléma:** A magyar „...” a szabályos alak, és önmagában nem gépies, mert a legtöbb szerkesztő automatikusan görbít. Ez a skill mégis egyenest kér, egységesítésből: így a szöveg Markdownban, kódban és terminálban is ugyanúgy viselkedik. Publikálandó szövegben viszont marad a „...”, mert ott ez az indok nem áll. Az angol “...” viszont gépiességre vall: magyar szövegben egyik szerkesztő sem állítja elő.
 **Ne írd:** A hibaüzenet szövege „A kérés lejárt”, az ügyfél pedig a “Mégse” gombot látja.
 **Így írd:** A hibaüzenet szövege "A kérés lejárt", az ügyfél pedig a "Mégse" gombot látja.
 
@@ -273,7 +273,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 24. A címsor megismétlése az első mondatban
 
-**Probléma:** A címsor után egy egysoros bekezdés megismétli a címet, mielőtt a valódi tartalom elkezdődne. Magyarul jellemzően úgy, hogy a cím szavát visszamondja, és fontosnak nyilvánítja. A címsor után rögtön a tartalom jön.
+**Probléma:** A címsor után egy egysoros bekezdés megismétli a címet, mielőtt a valódi tartalom elkezdődne. Magyarul jellemzően úgy, hogy a cím szavát visszamondja, és fontosnak nyilvánítja. A címsor után rögtön a tartalom jön. Nem a szóegyezés a hiba, hanem a tartalmatlan mondat: ha az első mondat új tényt visz, használhatja a cím szavait.
 **Ne írd:**
 > ## Hibakezelés
 >
@@ -296,7 +296,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 ### 26. Tegezés és magázás keveredése
 
 **Kerüld:** tegező és magázó alak ugyanabban a szövegben ("kattints", majd "kattintson"); ön és maga váltakozása; az Ön és az ön váltakozása egy szövegen belül; személytelen szövegbe csúszó tegező mondat ("A rendszer naplózza a kérést. Ezt bármikor megnézheted."); a szerkesztői T/1 és a személytelen keveredése ("javasoljuk", majd "ajánlott"); felszólító mód váltakozása E/2 és T/1 között ("nyisd meg", majd "nyissuk meg")
-**Probléma:** Az ember egyszer dönt a megszólításról, a modell mondatonként. A keveredés magyar szövegben feltűnő és szinte mindig gépi. Az Ön nagy kezdőbetűje külön eset: a kisbetűs alak a szabályos, a nagybetűs a levélben szokásos tiszteletadás, egyik sem hiba, csak a váltogatásuk. A választás szabálya a Megszólítás szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
+**Probléma:** Az ember egyszer dönt a megszólításról, a modell mondatonként. A két tengely keveredése nem hiba: a magázott olvasó és a szerkesztői T/1-ben megnevezett író megfér egy szövegben. A hiba az egy tengelyen belüli váltás. A keveredés magyar szövegben feltűnő és szinte mindig gépi. Az Ön nagy kezdőbetűje külön eset: a kisbetűs alak a szabályos, a nagybetűs a levélben szokásos tiszteletadás, egyik sem hiba, csak a váltogatásuk. A választás szabálya a Megszólítás szakaszban van; itt azt vidd végig, amit ott eldöntöttél. Idézeten és párbeszéden belül a keveredés maradhat.
 **Ne írd:** "A beállítások menüben módosíthatja a nyelvet. Kattints a Mentés gombra, és a rendszer elmenti a választásod."
 **Így írd:** "A beállítások menüben módosíthatja a nyelvet. Kattintson a Mentés gombra, a rendszer elmenti a választását."
 
