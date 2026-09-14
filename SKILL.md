@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.6.0"
+  version: "2.7.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -267,7 +267,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 ### 23. Tudáskorlát-nyilatkozatok és találgatás
 
 **Kerüld:** a legutóbbi frissítésemig, a tudásom [dátum]-ig terjed, [dátum] szerinti állapot saját tudáskorlátként, bár a részletek korlátozottan állnak rendelkezésre, az elérhető információk alapján, a rendelkezésre álló forrásokban, nem találtam rá utalást, de, ez csak következtetés, feltehetően, vélhetően, valószínűleg [érték, útvonal, verzió, név]
-**Probléma:** A szöveg megemlíti, hol ér véget a modell tudása, vagy bevallja, hogy nem talált forrást, aztán egy hihető tippel tölti ki a rést. Generálásnál ez a legveszélyesebb minta, mert kitalált tényt visz be, és műszaki szövegben a tipp konkrét alakot ölt: beállításnevet, útvonalat, verziószámot vagy API-t. A feltevés rendben van, ha feltevésként áll és ellenőrizhető; hibakeresésben és PoC-ban ez maga a munka. Nevet, útvonalat, verziót és értéket viszont ne találj ki, feltevésként sem. Írd le, mit nem ad meg a forrás, vagy hagyd el a mondatot.
+**Probléma:** A szöveg megemlíti, hol ér véget a modell tudása, vagy bevallja, hogy nem talált forrást, aztán egy hihető tippel tölti ki a rést. Generálásnál ez a legveszélyesebb minta, mert kitalált tényt visz be, és műszaki szövegben a tipp konkrét alakot ölt: beállításnevet, útvonalat, verziószámot vagy API-t. A feltevés rendben van, ha feltevésként áll és ellenőrizhető; hibakeresésben és PoC-ban ez maga a munka. Nevet, útvonalat, verziót és értéket viszont ne találj ki, feltevésként sem. Írd le, mit nem ad meg a forrás, vagy hagyd el a mondatot. Ha a feladat olyan dokumentumot kér, amiben a forrásnál több döntés kell (user story, terv, becslés), a hiányzó döntést javaslatként írd meg: jelöld, hogy javaslat, és mondd meg, mit nem dönt el a forrás. Tényként állítani ugyanúgy tilos.
 **Ne írd:** "A timeout oka nem derül ki a naplóból, de feltehetően a config.yaml-ban beállított 30 másodperces korlát."
 **Így írd:** "A timeout oka nem derül ki a naplóból. A leggyakoribb ok a kliensoldali korlát, de a konfiguráció ismerete nélkül ezt nem tudjuk megerősíteni."
 

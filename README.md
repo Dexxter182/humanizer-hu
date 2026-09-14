@@ -162,7 +162,7 @@ A minták a leggyakoribbal kezdődnek. A teljes leírás, a kerülendő kifejez�
 | # | Minta | Ne írd | Így írd |
 | --- | --- | --- | --- |
 | 22 | Chatbot-maradvány | "Remélem, segítettem! Szólj, ha..." | Tartalommal kezdj, ténnyel zárj |
-| 23 | Tudáskorlát és találgatás | "feltehetően a config.yaml-ban beállított korlát" | Mondd meg, mi ismert, vagy hagyd el |
+| 23 | Tudáskorlát és találgatás | "feltehetően a config.yaml-ban beállított korlát" | Mondd meg, mi ismert; a hiányzó döntés megjelölt javaslat |
 | 24 | Címsor megismételve | "## Hibakezelés" + "A hibakezelés fontos része a rendszernek." | Hagyd a címsort dolgozni |
 | 25 | Az előző verzióról írni | "a korábbi megközelítést váltja ki" | Írd le, mit csinál most |
 
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.7.0 - A §23 kimondja, mi a teendő, ha a feladat a forrásnál több döntést kíván (user story, terv, becslés): a hiányzó döntés megjelölt javaslatként kerül a szövegbe, azzal együtt, hogy mit nem dönt el a forrás. Tényként állítani ugyanúgy tilos.
 - 2.6.0 - Hét pontosítás mérésből. A Megszólítás két tengelyre vált: az olvasó megszólítása és az író megnevezése külön dől el, és a keveredés csak egy tengelyen belül hiba. A §19 megmondja, mi számít sablonnak. A §8 kimondja az idő- és dátumintervallum alakját, a dátum a folyó szövegben is ISO. A §24 a tartalmatlan mondatot tiltja, nem a szóegyezést. A §21 kivétele minden publikálandó szövegre áll. A felsorolás tétele háromnál több elemnél önálló listára bomlik.
 - 2.5.0 - A Hosszúság szabály kimondja, hogy a rövidítés a megfogalmazásra vonatkozik, nem a forrás lefedettségére: ha a feladat egy szakasz feldolgozását kéri, annak minden ténye a szövegbe kerül. Mérés mutatta meg, hogy a korábbi alak gyengébb modelleknél forrásbeli tényt vágott le.
 - 2.4.9 - A lint a §19 első felét is nézi: a sor eleji félkövért és a félkövér címkét BIZTOS találatként jelzi, a mondat belsejében álló kiemelést gyanúsként. Eddig csak a felsoroláspont élén álló címkét kereste.
