@@ -102,7 +102,7 @@ Gépi kör, LLM nélkül:
 python3 scripts/lint-hu.py FÁJL.md
 ```
 
-A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát a mintákkal együtt frissül. Az egyszavas tételeket ragozott alakban is megtalálja, a több szavasakat szó szerint keresi. Két szintet ad: a BIZTOS találat szabálysértés a darabszámtól függetlenül, a gyanús emberi döntést kér. Az idézetblokkot és a táblázatsort kihagyja, mert a "Mit hagyj békén" szakasz szerint az idézet nem számít.
+A kerülendő kifejezéseket a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát a mintákkal együtt frissül. Az egyszavas tételeket ragozott alakban is megtalálja, a több szavasakat szó szerint keresi. Két szintet ad: a BIZTOS találat szabálysértés a darabszámtól függetlenül, a gyanús emberi döntést kér. Az idézetblokkot és a táblázatsort kihagyja, mert a "Mit hagyj békén" szakasz szerint az idézet nem számít. Publikálandó szöveghez a `--published` kapcsoló jár: ott a magyar idézőjel szabályos, a script nem jelzi.
 
 Teljes kör, pluginként telepítve:
 
@@ -199,9 +199,9 @@ Amit a magyar verzió a mintákon felül hoz:
 
 - Csak magyar szöveget kezel. Ha angolt kap, jelzi, és az eredeti humanizert ajánlja.
 - Dokumentumszintű réteg és persona: tapasztalt magyar elemző, aki emberi olvasónak ír dokumentációt.
-- Az angol szakzsargon (agent, sprint, backlog, deploy, ticket, endpoint) marad angolul, zárójeles magyar fordítás nélkül. A tükörfordítás-minta csak a szerkezetet nézi.
+- Az angol szakzsargon (agent, sprint, backlog, deploy, ticket, endpoint) marad angolul, zárójeles magyar fordítás nélkül, ha az olvasó fejlesztő vagy szakmai szereplő. Nem technikai olvasónak a magyar szó jár. A tükörfordítás-minta csak a szerkezetet nézi.
 - Gondolatjel: a hosszú `—` sehol nem áll, címsorban sem. A szóközös `–` marad a számintervallumban, a kötőjeles tulajdonnévben és a felsorolás elválasztójaként, ahol a kettőspont foglalt.
-- Idézőjel: egyenes `"..."` áll a szövegben, a magyar `„...”` és az angol `“...”` helyén is. Publikálandó ügyfélszövegben marad a magyar alak.
+- Idézőjel és dátum: egyenes `"..."` áll a szövegben, a magyar `„...”` és az angol `“...”` helyén is, a dátum pedig ISO alakban. Publikálandó szövegben marad a magyar idézőjel és a kiírt magyar dátum.
 
 A 2.0.0 óta a két projekt célja eltér: az eredeti meglévő szöveget ír át, a Humanizer-hu generáláshoz ad szabályokat. Az upstream továbbra is hasznos bemenet egy új mintához, de a fájl szerkezete már nem követi.
 
@@ -216,6 +216,7 @@ A 12. minta szójegyzéke megfigyelésen alapul, nem korpuszon. Ez a repo élő 
 
 ## Verziótörténet
 
+- 2.8.0 - Négy pontosítás külső bírálatból. Publikálandó szövegben a dátum kiírt magyar alakban áll, ahogy az idézőjel is. A §19 engedi a felület elemének nevét (gomb, menüpont) félkövérrel vagy inline kóddal használati útmutatóban. A szakzsargon-kivétel a fejlesztő és a szakmai olvasóhoz kötött, nem technikai olvasónak a magyar szó jár. A lint `--published` kapcsolója publikálandó szövegben nem jelzi a görbe idézőjelet.
 - 2.7.0 - A §23 kimondja, mi a teendő, ha a feladat a forrásnál több döntést kíván (user story, terv, becslés): a hiányzó döntés megjelölt javaslatként kerül a szövegbe, azzal együtt, hogy mit nem dönt el a forrás. Tényként állítani ugyanúgy tilos.
 - 2.6.0 - Hét pontosítás mérésből. A Megszólítás két tengelyre vált: az olvasó megszólítása és az író megnevezése külön dől el, és a keveredés csak egy tengelyen belül hiba. A §19 megmondja, mi számít sablonnak. A §8 kimondja az idő- és dátumintervallum alakját, a dátum a folyó szövegben is ISO. A §24 a tartalmatlan mondatot tiltja, nem a szóegyezést. A §21 kivétele minden publikálandó szövegre áll. A felsorolás tétele háromnál több elemnél önálló listára bomlik.
 - 2.5.0 - A Hosszúság szabály kimondja, hogy a rövidítés a megfogalmazásra vonatkozik, nem a forrás lefedettségére: ha a feladat egy szakasz feldolgozását kéri, annak minden ténye a szövegbe kerül. Mérés mutatta meg, hogy a korábbi alak gyengébb modelleknél forrásbeli tényt vágott le.

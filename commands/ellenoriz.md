@@ -19,6 +19,9 @@ Futtasd:
 python3 ${CLAUDE_PLUGIN_ROOT}/scripts/lint-hu.py <fájl>
 ```
 
+Ha a szöveg publikálandó (ügyféllevél, cikk), add hozzá a `--published`
+kapcsolót: ott a magyar idézőjel szabályos, a §21 találata nem hiba.
+
 Ez a szabálykészletet a `SKILL.md` `Kerüld` soraiból olvassa ki, tehát mindig
 a mintákkal együtt frissül. Két szintet ad:
 

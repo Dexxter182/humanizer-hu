@@ -8,7 +8,7 @@ description: >
   (JSON, log, séma, parancs) ne.
 license: MIT
 metadata:
-  version: "2.7.0"
+  version: "2.8.0"
 ---
 
 # Humanizer-hu: magyar szöveg AI-jelek nélkül
@@ -66,7 +66,7 @@ Döntsd el az első mondat előtt, mennyit árul el a szöveg. Alapértelmezésb
 
 ### Hang és szakszavak
 
-A hang semleges és szakmai: nem chatbot, nem hivatalnok. Váltogasd a mondathosszt. A dátum ISO alakban áll a folyó szövegben is (2026-09-10), a toldalék kötőjellel kapcsolódik (2026-09-10-én). Az angol szakzsargon (sprint, backlog, deploy, release, feature, ticket, endpoint, pull request és a hasonlók) a csapat közös nyelve, hagyd angolul; a §10 a szerkezeti tükörfordításokat érinti, a szakszavakat nem.
+A hang semleges és szakmai: nem chatbot, nem hivatalnok. Váltogasd a mondathosszt. A dátum ISO alakban áll a folyó szövegben is (2026-09-10), a toldalék kötőjellel kapcsolódik (2026-09-10-én). Publikálandó szövegben a kiírt magyar alak áll (2026. szeptember 10.), ugyanazon az alapon, amin a §21 ott a magyar idézőjelet hagyja meg. Az angol szakzsargon (sprint, backlog, deploy, release, feature, ticket, endpoint, pull request és a hasonlók) a csapat közös nyelve, hagyd angolul; a §10 a szerkezeti tükörfordításokat érinti, a szakszavakat nem. Ez a fejlesztőnek és a szakmai olvasónak szól. Nem technikai olvasónak (ügyfélszolgálati levél, publikus cikk, B2C szöveg) a magyar szó jár, ahol van (kiadás, funkció, hibajegy), és a szakszó csak akkor marad, ha az olvasó maga is azt használja.
 
 Ha kaptál írásmintát, olvasd el először, és igazodj a mondathosszához, szóválasztásához, írásjeleihez, mondatkezdéseihez és átvezetéseihez. A minta felülírja az alábbi mintákat, a §8-at is: ha a minta gondolatjelet használ, tartsd nagyjából ugyanazt az arányt.
 
@@ -224,7 +224,7 @@ Sablonok és vizuális szerkesztők is tiszta formázást adnak. A gépiesség a
 
 ### 19. Félkövér mint dekoráció
 
-**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd; sablon az, amit a hívó feladat vagy egy megadott fájl formaként előír, a műfaji szokás (user story, ADR) nem az. A szövegtörzsben a félkövér figyelemfelhívásra sem való. A fejblokk mezőcímkéi ("Státusz:", "Súlyosság:") sem dekoráció, azok maradhatnak.
+**Szabály:** Ne emelj ki szavakat félkövérrel a szövegben, és ne adj félkövér címkét a felsorolás pontjainak. Ha a sablon félkövér címkét ír elő, azt kövesd; sablon az, amit a hívó feladat vagy egy megadott fájl formaként előír, a műfaji szokás (user story, ADR) nem az. A szövegtörzsben a félkövér figyelemfelhívásra sem való. A fejblokk mezőcímkéi ("Státusz:", "Súlyosság:") sem dekoráció, azok maradhatnak. Használati útmutatóban a felület elemének neve (gomb, menüpont, mező) félkövér vagy inline kód lehet, mert az olvasó azt keresi a képernyőn; ez funkcionális kiemelés, nem ritmus.
 **Probléma:** Két külön szokás. A szövegközi kiemelés akkor működik, ha ritka; ha sok szó félkövér, semmi nem emelkedik ki. A félkövér címkés felsorolás pedig szerkezetet mutat ott, ahol nincs: ha a címkék önmagukban nem hordoznak információt, a lista folyó szövegben rövidebb és pontosabb.
 **Ne írd:**
 > A frissítés **jelentősen** javítja a **teljesítményt**.

@@ -7,6 +7,7 @@ hogy egyetlen igazságforrás maradjon.
 Használat:
     python3 scripts/lint-hu.py FÁJL [FÁJL ...]
     python3 scripts/lint-hu.py --strict FÁJL     # 1-es kilépőkód, ha van biztos találat
+    python3 scripts/lint-hu.py --published FÁJL  # publikálandó szöveg: a §21 görbe idézőjele nem találat
 """
 
 from __future__ import annotations
@@ -125,7 +126,7 @@ def tisztit(sor: str) -> str:
     return sor
 
 
-def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
+def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool, publikalt: bool = False) -> list[tuple]:
     sorok = ut.read_text(encoding="utf-8").split("\n")
     elo = kodmentes(sorok)
     talalatok = []
@@ -160,6 +161,8 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
         for szam, rx, mit in BIZTOS:
             if sajat_skill and minta in (8, 21) and szam in (8, 21):
                 continue  # ezek a minták maguk nevezik meg a tiltott jelet
+            if publikalt and szam == 21:
+                continue  # a §21 kivétele: publikálandó szövegben a magyar idézőjel szabályos
             for m in rx.finditer(sor):
                 talalatok.append(("biztos", i, szam, m.group(0).strip(), mit))
 
@@ -199,6 +202,7 @@ def ellenoriz(ut: Path, kifejezesek: dict, sajat_skill: bool) -> list[tuple]:
 def main() -> int:
     argv = sys.argv[1:]
     strict = "--strict" in argv
+    publikalt = "--published" in argv
     fajlok = [a for a in argv if not a.startswith("--")]
     if not fajlok:
         print(__doc__)
@@ -214,7 +218,7 @@ def main() -> int:
         if not ut.is_file():
             print(f"Nem olvasható: {nev}")
             continue
-        talalatok = ellenoriz(ut, kifejezesek, ut.resolve() == SKILL)
+        talalatok = ellenoriz(ut, kifejezesek, ut.resolve() == SKILL, publikalt)
         biztos = [t for t in talalatok if t[0] == "biztos"]
         gyanus = [t for t in talalatok if t[0] == "gyanús"]
         biztos_db += len(biztos)
@@ -243,8 +247,9 @@ def main() -> int:
           "§23 kitalált tény, §25 előző verzió, §26 megszólításkeveredés.")
     print("A több szavas kifejezéseket szó szerint keresi, tehát azok ragozott "
           "alakját elszalasztja; egyszavas tételnél a ragozott alak is találat.")
-    print("A §21 kivételét nem ismeri: publikálandó ügyfélszövegben a magyar "
-          "idézőjel szabályos, ott a görbe idézőjel találata téves riasztás.")
+    if not publikalt:
+        print("A §21 kivételét a --published kapcsoló adja: publikálandó szövegben a "
+              "magyar idézőjel szabályos, ott a görbe idézőjel találata téves riasztás.")
     return 1 if (strict and biztos_db) else 0
 
 
